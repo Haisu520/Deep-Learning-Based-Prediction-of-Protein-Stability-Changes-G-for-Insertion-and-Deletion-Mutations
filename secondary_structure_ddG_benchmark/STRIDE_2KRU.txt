@@ -1,0 +1,121 @@
+REM  --------------------------------------------------------------------  2KRU
+REM                                                                        2KRU
+REM  STRIDE: Knowledge-based secondary structure assignment                2KRU
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         2KRU
+REM                                                                        2KRU
+REM  Residue accessible surface area calculation                           2KRU
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 2KRU
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       2KRU
+REM                                                                        2KRU
+REM  ------------------------ General information -----------------------  2KRU
+REM                                                                        2KRU
+HDR  OXIDOREDUCTASE                          22-DEC-09   2KRU              2KRU
+CMP  MOL_ID: 1;                                                            2KRU
+CMP   MOLECULE: LIGHT-INDEPENDENT PROTOCHLOROPHYLLIDE REDUCTASE SU         2KRU
+CMP   CHAIN: A;                                                            2KRU
+CMP   FRAGMENT: RESIDUES 484-537;                                          2KRU
+CMP   SYNONYM: LI-POR SUBUNIT B, DPOR SUBUNIT B;                           2KRU
+CMP   EC: 1.18.-.-;                                                        2KRU
+CMP   ENGINEERED: YES                                                      2KRU
+SRC  MOL_ID: 1;                                                            2KRU
+SRC   ORGANISM_SCIENTIFIC: CHLOROBACULUM TEPIDUM;                          2KRU
+SRC   ORGANISM_TAXID: 1097;                                                2KRU
+SRC   STRAIN: TLS;                                                         2KRU
+SRC   GENE: BCHB, CT2151;                                                  2KRU
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 2KRU
+SRC   EXPRESSION_SYSTEM_TAXID: 562;                                        2KRU
+SRC   EXPRESSION_SYSTEM_STRAIN: BL21(DE3)+ MAGIC;                          2KRU
+SRC   EXPRESSION_SYSTEM_VECTOR: PET 21-23C                                 2KRU
+AUT  Y.HE,A.ELETSKY,D.LEE,C.CICCOSANTI,H.JANJUA,T.B.ACTON,R.XIAO,          2KRU
+AUT   J.K.EVERETT,G.T.MONTELIONE,T.SZYPERSKI,NORTHEAST STRUCTURAL          2KRU
+AUT   CONSORTIUM (NESG)                                                    2KRU
+REM                                                                        2KRU
+REM  -------------------- Secondary structure summary -------------------  2KRU
+REM                                                                        2KRU
+CHN  /home/proj/stride/tmp/tmp882hhIpdb A                                  2KRU
+REM                                                                        2KRU
+REM                .         .         .         .         .               2KRU
+SEQ  1    MGELSWTAEAEKMLGKVPFFVRKKVRKNTDNYAREIGEPVVTADVFRKAK   50          2KRU
+STR           EE HHHHHHHH  TTTHHHHHHHHHHHHHHHH TTEE HHHHHHHH               2KRU
+REM                                                                        2KRU
+REM                .                                                       2KRU
+SEQ  51   EHLGGLEHHHHHH                                        63          2KRU
+STR       HHHH    TTTT                                                     2KRU
+REM                                                                        2KRU
+REM                                                                        2KRU
+REM                                                                        2KRU
+LOC  AlphaHelix   ALA     8 A      GLY     15 A                            2KRU
+LOC  AlphaHelix   VAL    21 A      ILE     36 A                            2KRU
+LOC  AlphaHelix   ALA    43 A      GLY     54 A                            2KRU
+LOC  Strand       SER     5 A      TRP      6 A                            2KRU
+LOC  Strand       VAL    40 A      VAL     41 A                            2KRU
+LOC  TurnI        PRO    18 A      VAL     21 A                            2KRU
+LOC  TurnVIII     GLU    38 A      VAL     41 A                            2KRU
+LOC  TurnVIII     HIS    59 A      HIS     62 A                            2KRU
+REM                                                                        2KRU
+REM  --------------- Detailed secondary structure assignment-------------  2KRU
+REM                                                                        2KRU
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      2KRU
+ASG  MET A    1    1    C          Coil    360.00     96.82     224.6      2KRU
+ASG  GLY A    2    2    C          Coil   -135.85     21.72      40.9      2KRU
+ASG  GLU A    3    3    C          Coil   -107.18    153.31     134.9      2KRU
+ASG  LEU A    4    4    C          Coil    -81.01    176.50      31.1      2KRU
+ASG  SER A    5    5    E        Strand    -87.11    121.49      63.6      2KRU
+ASG  TRP A    6    6    E        Strand   -106.49    132.12      36.2      2KRU
+ASG  THR A    7    7    C          Coil    -98.18    157.60      33.1      2KRU
+ASG  ALA A    8    8    H    AlphaHelix    -61.04    -25.16      75.8      2KRU
+ASG  GLU A    9    9    H    AlphaHelix    -66.22    -46.44     122.6      2KRU
+ASG  ALA A   10   10    H    AlphaHelix    -72.46    -42.26       0.0      2KRU
+ASG  GLU A   11   11    H    AlphaHelix    -66.79    -30.47      75.0      2KRU
+ASG  LYS A   12   12    H    AlphaHelix    -60.30    -35.31     146.8      2KRU
+ASG  MET A   13   13    H    AlphaHelix    -79.98    -35.41      56.8      2KRU
+ASG  LEU A   14   14    H    AlphaHelix    -69.32    -28.38       2.4      2KRU
+ASG  GLY A   15   15    H    AlphaHelix    -68.85    -10.77      32.8      2KRU
+ASG  LYS A   16   16    C          Coil    -89.71      0.08     158.3      2KRU
+ASG  VAL A   17   17    C          Coil   -107.57    131.96      35.0      2KRU
+ASG  PRO A   18   18    T          Turn    -50.36    142.70      65.4      2KRU
+ASG  PHE A   19   19    T          Turn    -56.85    -29.00     159.8      2KRU
+ASG  PHE A   20   20    T          Turn    -82.44     -8.70     147.6      2KRU
+ASG  VAL A   21   21    H    AlphaHelix   -120.69     -1.22      44.1      2KRU
+ASG  ARG A   22   22    H    AlphaHelix    -62.09    -39.86      95.8      2KRU
+ASG  LYS A   23   23    H    AlphaHelix    -69.94    -30.79     143.5      2KRU
+ASG  LYS A   24   24    H    AlphaHelix    -61.47    -45.39     136.5      2KRU
+ASG  VAL A   25   25    H    AlphaHelix    -75.81    -50.69      27.7      2KRU
+ASG  ARG A   26   26    H    AlphaHelix    -61.28    -43.07      82.9      2KRU
+ASG  LYS A   27   27    H    AlphaHelix    -70.17    -35.11     127.4      2KRU
+ASG  ASN A   28   28    H    AlphaHelix    -67.71    -45.27      62.2      2KRU
+ASG  THR A   29   29    H    AlphaHelix    -63.97    -35.61       1.4      2KRU
+ASG  ASP A   30   30    H    AlphaHelix    -58.08    -47.87      19.2      2KRU
+ASG  ASN A   31   31    H    AlphaHelix    -70.46    -30.97      98.1      2KRU
+ASG  TYR A   32   32    H    AlphaHelix    -68.97    -48.74      28.2      2KRU
+ASG  ALA A   33   33    H    AlphaHelix    -62.86    -39.07       0.0      2KRU
+ASG  ARG A   34   34    H    AlphaHelix    -64.91    -37.58     131.5      2KRU
+ASG  GLU A   35   35    H    AlphaHelix    -63.67    -41.14     144.8      2KRU
+ASG  ILE A   36   36    H    AlphaHelix    -84.99    -16.41      80.9      2KRU
+ASG  GLY A   37   37    C          Coil     96.36     38.00      61.5      2KRU
+ASG  GLU A   38   38    T          Turn   -120.75    112.72      68.9      2KRU
+ASG  PRO A   39   39    T          Turn    -73.85    -22.40      78.3      2KRU
+ASG  VAL A   40   40    E        Strand   -118.87    113.33      50.3      2KRU
+ASG  VAL A   41   41    E        Strand    -77.20    106.61       0.0      2KRU
+ASG  THR A   42   42    C          Coil   -101.01   -176.07      37.7      2KRU
+ASG  ALA A   43   43    H    AlphaHelix    -65.65    -36.16      28.0      2KRU
+ASG  ASP A   44   44    H    AlphaHelix    -66.55    -44.29      85.5      2KRU
+ASG  VAL A   45   45    H    AlphaHelix    -64.01    -44.89       1.8      2KRU
+ASG  PHE A   46   46    H    AlphaHelix    -61.09    -39.27      12.6      2KRU
+ASG  ARG A   47   47    H    AlphaHelix    -60.93    -51.27      80.8      2KRU
+ASG  LYS A   48   48    H    AlphaHelix    -62.50    -40.40     106.0      2KRU
+ASG  ALA A   49   49    H    AlphaHelix    -63.35    -44.45       0.0      2KRU
+ASG  LYS A   50   50    H    AlphaHelix    -61.19    -47.99      53.3      2KRU
+ASG  GLU A   51   51    H    AlphaHelix    -60.93    -35.41      92.6      2KRU
+ASG  HIS A   52   52    H    AlphaHelix    -69.13    -43.67     117.3      2KRU
+ASG  LEU A   53   53    H    AlphaHelix    -78.72    -39.45      77.3      2KRU
+ASG  GLY A   54   54    H    AlphaHelix    169.38     76.20      32.8      2KRU
+ASG  GLY A   55   55    C          Coil    -88.55     76.56      33.2      2KRU
+ASG  LEU A   56   56    C          Coil    -95.49    -11.87     146.3      2KRU
+ASG  GLU A   57   57    C          Coil    -69.05    143.60      79.0      2KRU
+ASG  HIS A   58   58    C          Coil   -119.26     98.17     183.0      2KRU
+ASG  HIS A   59   59    T          Turn   -147.87     63.70     135.4      2KRU
+ASG  HIS A   60   60    T          Turn    -76.22    -21.98     196.9      2KRU
+ASG  HIS A   61   61    T          Turn   -102.45     96.44     147.4      2KRU
+ASG  HIS A   62   62    T          Turn   -100.99    -42.33     149.0      2KRU
+ASG  HIS A   63   63    C          Coil     65.22    360.00     215.7      2KRU

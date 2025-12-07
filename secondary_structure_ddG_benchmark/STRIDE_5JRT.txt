@@ -1,0 +1,119 @@
+REM  --------------------------------------------------------------------  5JRT
+REM                                                                        5JRT
+REM  STRIDE: Knowledge-based secondary structure assignment                5JRT
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         5JRT
+REM                                                                        5JRT
+REM  Residue accessible surface area calculation                           5JRT
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 5JRT
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       5JRT
+REM                                                                        5JRT
+REM  ------------------------ General information -----------------------  5JRT
+REM                                                                        5JRT
+HDR  SIGNALING PROTEIN                       06-MAY-16   5JRT              5JRT
+CMP  MOL_ID: 1;                                                            5JRT
+CMP   MOLECULE: TANKYRASE-2;                                               5JRT
+CMP   CHAIN: A;                                                            5JRT
+CMP   FRAGMENT: UNP RESIDUES 867-940;                                      5JRT
+CMP   SYNONYM: TANK2,ADP-RIBOSYLTRANSFERASE DIPHTHERIA TOXIN-LIKE          5JRT
+CMP   POLY [ADP-RIBOSE] POLYMERASE 5B,TNKS-2,TRF1-INTERACTING ANKY         5JRT
+CMP   RELATED ADP-RIBOSE POLYMERASE 2,TANKYRASE II,TANKYRASE-LIKE          5JRT
+CMP   TANKYRASE-RELATED PROTEIN;                                           5JRT
+CMP   EC: 2.4.2.30;                                                        5JRT
+CMP   ENGINEERED: YES                                                      5JRT
+SRC  MOL_ID: 1;                                                            5JRT
+SRC   ORGANISM_SCIENTIFIC: HOMO SAPIENS;                                   5JRT
+SRC   ORGANISM_COMMON: HUMAN;                                              5JRT
+SRC   ORGANISM_TAXID: 9606;                                                5JRT
+SRC   GENE: TNKS2, PARP5B, TANK2, TNKL;                                    5JRT
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 5JRT
+SRC   EXPRESSION_SYSTEM_TAXID: 562                                         5JRT
+AUT  S.GUETTLER,L.MARIOTTI,N.CRONIN                                        5JRT
+REM                                                                        5JRT
+REM  -------------------- Secondary structure summary -------------------  5JRT
+REM                                                                        5JRT
+CHN  /home/proj/stride/tmp/tmpzSPQM8pdb A                                  5JRT
+REM                                                                        5JRT
+REM                .         .         .         .         .               5JRT
+SEQ  1    VDFSITQFVRNLGLEHLMDIFEREQITLRVLVEMGHKELKEIGINAYGHR   50          5JRT
+STR         HHHHHHHHHH  GGGHHHHHHH   HHHHH   HHHHHHH    HHHH               5JRT
+REM                                                                        5JRT
+REM                .                                                       5JRT
+SEQ  51   EKLIKGVERLISGQ                                       64          5JRT
+STR       HHHHHHHHHHHHH                                                    5JRT
+REM                                                                        5JRT
+REM                                                                        5JRT
+REM                                                                        5JRT
+LOC  AlphaHelix   PHE   876 A      LEU    885 A                            5JRT
+LOC  AlphaHelix   MET   891 A      GLU    897 A                            5JRT
+LOC  AlphaHelix   LEU   901 A      VAL    905 A                            5JRT
+LOC  AlphaHelix   HIS   909 A      ILE    915 A                            5JRT
+LOC  AlphaHelix   TYR   920 A      GLY    936 A                            5JRT
+LOC  310Helix     GLU   888 A      LEU    890 A                            5JRT
+REM                                                                        5JRT
+REM  --------------- Detailed secondary structure assignment-------------  5JRT
+REM                                                                        5JRT
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      5JRT
+ASG  VAL A  874    1    C          Coil    360.00    126.37     127.9      5JRT
+ASG  ASP A  875    2    C          Coil    -99.05    109.66      53.1      5JRT
+ASG  PHE A  876    3    H    AlphaHelix    -82.88    -21.65     158.0      5JRT
+ASG  SER A  877    4    H    AlphaHelix    -64.56    -37.26      54.1      5JRT
+ASG  ILE A  878    5    H    AlphaHelix    -66.27    -39.53       4.8      5JRT
+ASG  THR A  879    6    H    AlphaHelix    -57.33    -45.86      34.3      5JRT
+ASG  GLN A  880    7    H    AlphaHelix    -62.64    -45.13      63.1      5JRT
+ASG  PHE A  881    8    H    AlphaHelix    -60.95    -45.96      21.2      5JRT
+ASG  VAL A  882    9    H    AlphaHelix    -71.39    -39.37       0.0      5JRT
+ASG  ARG A  883   10    H    AlphaHelix    -60.53    -40.10     136.7      5JRT
+ASG  ASN A  884   11    H    AlphaHelix    -62.46    -30.43     131.5      5JRT
+ASG  LEU A  885   12    H    AlphaHelix    -82.94     -4.28      42.5      5JRT
+ASG  GLY A  886   13    C          Coil     68.72     28.71      61.0      5JRT
+ASG  LEU A  887   14    C          Coil   -112.47     28.00       3.0      5JRT
+ASG  GLU A  888   15    G      310Helix    -57.01    -24.07     109.4      5JRT
+ASG  HIS A  889   16    G      310Helix    -63.15    -20.38     115.5      5JRT
+ASG  LEU A  890   17    G      310Helix    -86.18     -6.90       7.8      5JRT
+ASG  MET A  891   18    H    AlphaHelix    -58.82    -29.11      11.0      5JRT
+ASG  ASP A  892   19    H    AlphaHelix    -60.29    -37.23      86.9      5JRT
+ASG  ILE A  893   20    H    AlphaHelix    -71.72    -51.33      19.4      5JRT
+ASG  PHE A  894   21    H    AlphaHelix    -57.85    -39.64       0.7      5JRT
+ASG  GLU A  895   22    H    AlphaHelix    -67.39    -48.14     125.0      5JRT
+ASG  ARG A  896   23    H    AlphaHelix    -61.50    -34.29     149.8      5JRT
+ASG  GLU A  897   24    H    AlphaHelix    -89.01      1.17      85.0      5JRT
+ASG  GLN A  898   25    C          Coil     56.24     44.35     161.3      5JRT
+ASG  ILE A  899   26    C          Coil    -88.17    121.81      17.3      5JRT
+ASG  THR A  900   27    C          Coil    -97.59    167.84      54.7      5JRT
+ASG  LEU A  901   28    H    AlphaHelix    -61.23    -40.44      29.5      5JRT
+ASG  ARG A  902   29    H    AlphaHelix    -59.65    -37.76     220.0      5JRT
+ASG  VAL A  903   30    H    AlphaHelix    -72.01    -46.02      71.1      5JRT
+ASG  LEU A  904   31    H    AlphaHelix    -53.89    -38.60       1.5      5JRT
+ASG  VAL A  905   32    H    AlphaHelix    -55.51    -31.11      40.6      5JRT
+ASG  GLU A  906   33    C          Coil    -93.19      2.23     157.8      5JRT
+ASG  MET A  907   34    C          Coil    -93.00    128.13      24.1      5JRT
+ASG  GLY A  908   35    C          Coil   -106.44   -167.18      22.8      5JRT
+ASG  HIS A  909   36    H    AlphaHelix    -54.74    -43.58      48.2      5JRT
+ASG  LYS A  910   37    H    AlphaHelix    -57.07    -51.98     102.1      5JRT
+ASG  GLU A  911   38    H    AlphaHelix    -66.76    -41.64      75.1      5JRT
+ASG  LEU A  912   39    H    AlphaHelix    -69.74    -37.79       0.8      5JRT
+ASG  LYS A  913   40    H    AlphaHelix    -64.63    -36.62     126.4      5JRT
+ASG  GLU A  914   41    H    AlphaHelix    -57.18    -39.65     141.6      5JRT
+ASG  ILE A  915   42    H    AlphaHelix    -88.13      2.89      19.0      5JRT
+ASG  GLY A  916   43    C          Coil     97.10     19.51      24.4      5JRT
+ASG  ILE A  917   44    C          Coil    -88.56     86.95       1.0      5JRT
+ASG  ASN A  918   45    C          Coil    -74.09    -28.88     126.0      5JRT
+ASG  ALA A  919   46    C          Coil    -87.52    124.80      43.0      5JRT
+ASG  TYR A  920   47    H    AlphaHelix    -53.43    -43.39     141.2      5JRT
+ASG  GLY A  921   48    H    AlphaHelix    -61.42    -35.27      47.2      5JRT
+ASG  HIS A  922   49    H    AlphaHelix    -70.35    -40.99      55.5      5JRT
+ASG  ARG A  923   50    H    AlphaHelix    -65.52    -42.26      14.0      5JRT
+ASG  GLU A  924   51    H    AlphaHelix    -61.87    -39.31      60.5      5JRT
+ASG  LYS A  925   52    H    AlphaHelix    -62.84    -40.00     105.7      5JRT
+ASG  LEU A  926   53    H    AlphaHelix    -69.88    -49.45       1.0      5JRT
+ASG  ILE A  927   54    H    AlphaHelix    -61.35    -44.46      26.8      5JRT
+ASG  LYS A  928   55    H    AlphaHelix    -71.55    -30.40      46.7      5JRT
+ASG  GLY A  929   56    H    AlphaHelix    -63.77    -39.25      10.1      5JRT
+ASG  VAL A  930   57    H    AlphaHelix    -68.98    -46.02      11.4      5JRT
+ASG  GLU A  931   58    H    AlphaHelix    -55.93    -43.97     107.7      5JRT
+ASG  ARG A  932   59    H    AlphaHelix    -72.18    -35.18     181.2      5JRT
+ASG  LEU A  933   60    H    AlphaHelix    -62.28    -43.20      79.8      5JRT
+ASG  ILE A  934   61    H    AlphaHelix    -68.60    -50.74     101.1      5JRT
+ASG  SER A  935   62    H    AlphaHelix    -67.04    -30.52      98.4      5JRT
+ASG  GLY A  936   63    H    AlphaHelix    -69.51    -26.25      71.6      5JRT
+ASG  GLN A  937   64    C          Coil    -97.43    360.00     120.9      5JRT

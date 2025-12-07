@@ -1,0 +1,122 @@
+REM  --------------------------------------------------------------------  1TG0
+REM                                                                        1TG0
+REM  STRIDE: Knowledge-based secondary structure assignment                1TG0
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         1TG0
+REM                                                                        1TG0
+REM  Residue accessible surface area calculation                           1TG0
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 1TG0
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       1TG0
+REM                                                                        1TG0
+REM  ------------------------ General information -----------------------  1TG0
+REM                                                                        1TG0
+HDR  CONTRACTILE PROTEIN                     28-MAY-04   1TG0              1TG0
+CMP  MOL_ID: 1;                                                            1TG0
+CMP   MOLECULE: MYOSIN TAIL REGION-INTERACTING PROTEIN MTI1;               1TG0
+CMP   CHAIN: A;                                                            1TG0
+CMP   FRAGMENT: SH3 DOMAIN;                                                1TG0
+CMP   SYNONYM: BBC1 PROTEIN;                                               1TG0
+CMP   ENGINEERED: YES                                                      1TG0
+SRC  MOL_ID: 1;                                                            1TG0
+SRC   ORGANISM_SCIENTIFIC: SACCHAROMYCES CEREVISIAE;                       1TG0
+SRC   ORGANISM_COMMON: BAKER'S YEAST;                                      1TG0
+SRC   ORGANISM_TAXID: 4932;                                                1TG0
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 1TG0
+SRC   EXPRESSION_SYSTEM_TAXID: 562                                         1TG0
+AUT  P.KURSULA,I.KURSULA,F.LEHMANN,Y.H.SONG,M.WILMANNS                     1TG0
+REM                                                                        1TG0
+REM  -------------------- Secondary structure summary -------------------  1TG0
+REM                                                                        1TG0
+CHN  /home/proj/stride/tmp/tmpy_X8tzpdb A                                  1TG0
+REM                                                                        1TG0
+REM                .         .         .         .         .               1TG0
+SEQ  1    EPEVPFKVVAQFPYKSDYEDDLNFEKDQEIIVTSVEDAEWYFGEYQDSNG   50          1TG0
+STR         TTTEEEEETTTB   TTTB  BTTTEEEEEEEEEETTEEEEEEETTTT               1TG0
+REM                                                                        1TG0
+REM                .                                                       1TG0
+SEQ  51   DVIEGIFPKSFVAVQG                                     66          1TG0
+STR        EEEEEEEGGGEEE                                                   1TG0
+REM                                                                        1TG0
+REM                                                                        1TG0
+REM                                                                        1TG0
+LOC  310Helix     LYS    59 A      PHE     61 A                            1TG0
+LOC  Strand       PHE     6 A      ALA     10 A                            1TG0
+LOC  Strand       GLN    28 A      ASP     37 A                            1TG0
+LOC  Strand       TRP    40 A      GLN     46 A                            1TG0
+LOC  Strand       VAL    52 A      PRO     58 A                            1TG0
+LOC  Strand       VAL    62 A      VAL     64 A                            1TG0
+LOC  TurnIV       GLU     3 A      PHE      6 A                            1TG0
+LOC  TurnVIII     ALA    10 A      PRO     13 A                            1TG0
+LOC  TurnI        TYR    18 A      ASP     21 A                            1TG0
+LOC  TurnII       GLU    25 A      GLN     28 A                            1TG0
+LOC  TurnI        ASP    37 A      TRP     40 A                            1TG0
+LOC  TurnI        ASP    47 A      GLY     50 A                            1TG0
+REM                                                                        1TG0
+REM  --------------- Detailed secondary structure assignment-------------  1TG0
+REM                                                                        1TG0
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      1TG0
+ASG  GLU A    1    1    C          Coil    360.00    168.03     138.3      1TG0
+ASG  PRO A    2    2    C          Coil    -75.56    160.33      52.0      1TG0
+ASG  GLU A    3    3    T          Turn    -79.55    148.39     175.4      1TG0
+ASG  VAL A    4    4    T          Turn    -60.95    148.87      60.7      1TG0
+ASG  PRO A    5    5    T          Turn    -80.41    146.86      98.5      1TG0
+ASG  PHE A    6    6    E        Strand   -150.27    155.23      18.8      1TG0
+ASG  LYS A    7    7    E        Strand    -87.52    142.99     104.0      1TG0
+ASG  VAL A    8    8    E        Strand   -132.05    163.02       0.0      1TG0
+ASG  VAL A    9    9    E        Strand   -128.42    126.01      31.9      1TG0
+ASG  ALA A   10   10    E        Strand    -61.04    127.76       0.0      1TG0
+ASG  GLN A   11   11    T          Turn    -88.98    -22.74      86.5      1TG0
+ASG  PHE A   12   12    T          Turn   -146.01    152.80     122.5      1TG0
+ASG  PRO A   13   13    T          Turn    -66.70    144.99      57.3      1TG0
+ASG  TYR A   14   14    B        Bridge   -121.71    101.12      25.5      1TG0
+ASG  LYS A   15   15    C          Coil   -121.09    132.90     118.1      1TG0
+ASG  SER A   16   16    C          Coil   -147.50    171.92      29.7      1TG0
+ASG  ASP A   17   17    C          Coil    -93.31      8.40     160.3      1TG0
+ASG  TYR A   18   18    T          Turn   -102.89    127.28     160.7      1TG0
+ASG  GLU A   19   19    T          Turn    -59.64    -40.91     162.7      1TG0
+ASG  ASP A   20   20    T          Turn    -83.41     -2.14     115.8      1TG0
+ASG  ASP A   21   21    B        Bridge    -76.00    146.44      20.7      1TG0
+ASG  LEU A   22   22    C          Coil    -87.35    133.24       2.6      1TG0
+ASG  ASN A   23   23    C          Coil   -118.20    156.33      42.8      1TG0
+ASG  PHE A   24   24    B        Bridge   -168.92    161.10       1.3      1TG0
+ASG  GLU A   25   25    T          Turn    -92.84    164.47     109.5      1TG0
+ASG  LYS A   26   26    T          Turn    -50.06    141.56     105.5      1TG0
+ASG  ASP A   27   27    T          Turn     83.53     -5.97     121.5      1TG0
+ASG  GLN A   28   28    E        Strand    -64.55    130.34      56.5      1TG0
+ASG  GLU A   29   29    E        Strand    -84.72    134.50      91.7      1TG0
+ASG  ILE A   30   30    E        Strand   -132.04    142.42       1.0      1TG0
+ASG  ILE A   31   31    E        Strand    -96.05    118.63      67.1      1TG0
+ASG  VAL A   32   32    E        Strand    -78.11    119.90       0.0      1TG0
+ASG  THR A   33   33    E        Strand   -112.02    -10.81      47.1      1TG0
+ASG  SER A   34   34    E        Strand   -153.13    148.02      42.3      1TG0
+ASG  VAL A   35   35    E        Strand   -101.34    111.22      54.7      1TG0
+ASG  GLU A   36   36    E        Strand    -79.58    -46.43     101.9      1TG0
+ASG  ASP A   37   37    E        Strand   -165.37   -164.76      85.1      1TG0
+ASG  ALA A   38   38    T          Turn    -66.62    -22.68      90.5      1TG0
+ASG  GLU A   39   39    T          Turn   -102.13    -31.44     127.4      1TG0
+ASG  TRP A   40   40    E        Strand   -119.93    137.65      65.1      1TG0
+ASG  TYR A   41   41    E        Strand   -102.46    157.15      11.4      1TG0
+ASG  PHE A   42   42    E        Strand   -115.68    137.48      53.7      1TG0
+ASG  GLY A   43   43    E        Strand   -169.57   -166.47       0.0      1TG0
+ASG  GLU A   44   44    E        Strand   -149.76    160.30      53.1      1TG0
+ASG  TYR A   45   45    E        Strand   -155.22    164.42      29.7      1TG0
+ASG  GLN A   46   46    E        Strand    -96.91    118.91     126.4      1TG0
+ASG  ASP A   47   47    T          Turn    -79.11   -178.14      37.7      1TG0
+ASG  SER A   48   48    T          Turn    -72.17    -20.68     132.7      1TG0
+ASG  ASN A   49   49    T          Turn    -72.62     -5.97     132.8      1TG0
+ASG  GLY A   50   50    T          Turn     82.95      8.67      35.5      1TG0
+ASG  ASP A   51   51    C          Coil    -92.23    136.89      92.9      1TG0
+ASG  VAL A   52   52    E        Strand    -79.38    127.37      77.6      1TG0
+ASG  ILE A   53   53    E        Strand   -124.99    150.92      57.5      1TG0
+ASG  GLU A   54   54    E        Strand   -137.97    159.48     112.5      1TG0
+ASG  GLY A   55   55    E        Strand    158.80   -173.08       2.1      1TG0
+ASG  ILE A   56   56    E        Strand    -95.59    151.12      46.7      1TG0
+ASG  PHE A   57   57    E        Strand   -160.17    158.62       0.0      1TG0
+ASG  PRO A   58   58    E        Strand    -76.75    135.21      11.4      1TG0
+ASG  LYS A   59   59    G      310Helix    -54.08    -34.58      42.6      1TG0
+ASG  SER A   60   60    G      310Helix    -63.41    -18.84      98.2      1TG0
+ASG  PHE A   61   61    G      310Helix    -84.37     -8.40      61.2      1TG0
+ASG  VAL A   62   62    E        Strand   -127.51    165.10      17.8      1TG0
+ASG  ALA A   63   63    E        Strand   -124.32    141.83      39.9      1TG0
+ASG  VAL A   64   64    E        Strand    -58.92    136.62      72.3      1TG0
+ASG  GLN A   65   65    C          Coil    -76.69    130.20      57.0      1TG0
+ASG  GLY A   66   66    C          Coil     11.82    360.00     139.1      1TG0

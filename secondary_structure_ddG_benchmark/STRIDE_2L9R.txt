@@ -1,0 +1,122 @@
+REM  --------------------------------------------------------------------  2L9R
+REM                                                                        2L9R
+REM  STRIDE: Knowledge-based secondary structure assignment                2L9R
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         2L9R
+REM                                                                        2L9R
+REM  Residue accessible surface area calculation                           2L9R
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 2L9R
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       2L9R
+REM                                                                        2L9R
+REM  ------------------------ General information -----------------------  2L9R
+REM                                                                        2L9R
+HDR  TRANSCRIPTION                           22-FEB-11   2L9R              2L9R
+CMP  MOL_ID: 1;                                                            2L9R
+CMP   MOLECULE: HOMEOBOX PROTEIN NKX-3.1;                                  2L9R
+CMP   CHAIN: A;                                                            2L9R
+CMP   FRAGMENT: DNA BINDING HOMEOBOX RESIDUES 132-189;                     2L9R
+CMP   SYNONYM: HOMEOBOX PROTEIN NK-3 HOMOLOG A;                            2L9R
+CMP   ENGINEERED: YES                                                      2L9R
+SRC  MOL_ID: 1;                                                            2L9R
+SRC   ORGANISM_SCIENTIFIC: HOMO SAPIENS;                                   2L9R
+SRC   ORGANISM_COMMON: HUMAN;                                              2L9R
+SRC   ORGANISM_TAXID: 9606;                                                2L9R
+SRC   GENE: NKX3-1, NKX3.1, NKX3A;                                         2L9R
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 2L9R
+SRC   EXPRESSION_SYSTEM_TAXID: 562;                                        2L9R
+SRC   EXPRESSION_SYSTEM_VECTOR: PET 14-15C                                 2L9R
+AUT  G.LIU,R.XIAO,H.-W.LEE,K.HAMILTON,C.CICCOSANTI,H.B.WANG,T.B.AC         2L9R
+AUT   J.K.EVERETT,Y.J.HUANG,G.T.MONTELIONE,NORTHEAST STRUCTURAL GE         2L9R
+AUT   CONSORTIUM (NESG)                                                    2L9R
+REM                                                                        2L9R
+REM  -------------------- Secondary structure summary -------------------  2L9R
+REM                                                                        2L9R
+CHN  /home/proj/stride/tmp/tmpCQBE6Ipdb A                                  2L9R
+REM                                                                        2L9R
+REM                .         .         .         .         .               2L9R
+SEQ  1    MGHHHHHHSHMSHTQVIELERKFSHQKYLSAPERAHLAKNLKLTETQVKI   50          2L9R
+STR         TTTT      HHHHHHHHHHHHH     HHHHHHHHHHH   HHHHHH               2L9R
+REM                                                                        2L9R
+REM                .                                                       2L9R
+SEQ  51   WFQNRRYKTKRKQLSSELG                                  69          2L9R
+STR       HHHHHHHH  B TTTTB                                                2L9R
+REM                                                                        2L9R
+REM                                                                        2L9R
+REM                                                                        2L9R
+LOC  AlphaHelix   HIS    13 A      HIS     25 A                            2L9R
+LOC  AlphaHelix   ALA    31 A      LEU     41 A                            2L9R
+LOC  AlphaHelix   GLU    45 A      LYS     58 A                            2L9R
+LOC  TurnVIII     HIS     3 A      HIS      6 A                            2L9R
+LOC  TurnVIII     GLN    63 A      SER     66 A                            2L9R
+REM                                                                        2L9R
+REM  --------------- Detailed secondary structure assignment-------------  2L9R
+REM                                                                        2L9R
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      2L9R
+ASG  MET A    1    1    C          Coil    360.00    164.85     242.7      2L9R
+ASG  GLY A    2    2    C          Coil    162.91   -155.23      55.5      2L9R
+ASG  HIS A    3    3    T          Turn    -84.66    109.10     136.4      2L9R
+ASG  HIS A    4    4    T          Turn    -57.82    -33.94     188.4      2L9R
+ASG  HIS A    5    5    T          Turn   -149.56    123.12     132.4      2L9R
+ASG  HIS A    6    6    T          Turn   -149.18    125.62     123.1      2L9R
+ASG  HIS A    7    7    C          Coil   -169.42    174.58     117.1      2L9R
+ASG  HIS A    8    8    C          Coil    -72.11    104.10     144.7      2L9R
+ASG  SER A    9    9    C          Coil    -64.06    123.65      17.9      2L9R
+ASG  HIS A   10   10    C          Coil    -76.12     68.24     192.9      2L9R
+ASG  MET A   11   11    C          Coil    -67.95    158.06      37.3      2L9R
+ASG  SER A   12   12    C          Coil    -78.63    149.90      75.9      2L9R
+ASG  HIS A   13   13    H    AlphaHelix    -57.96    -44.08     158.4      2L9R
+ASG  THR A   14   14    H    AlphaHelix    -68.28    -34.51      98.0      2L9R
+ASG  GLN A   15   15    H    AlphaHelix    -66.66    -38.50      41.7      2L9R
+ASG  VAL A   16   16    H    AlphaHelix    -66.66    -33.50      32.9      2L9R
+ASG  ILE A   17   17    H    AlphaHelix    -58.27    -42.89      60.6      2L9R
+ASG  GLU A   18   18    H    AlphaHelix    -64.53    -40.82      73.6      2L9R
+ASG  LEU A   19   19    H    AlphaHelix    -59.04    -41.87       0.0      2L9R
+ASG  GLU A   20   20    H    AlphaHelix    -74.29    -28.26      74.9      2L9R
+ASG  ARG A   21   21    H    AlphaHelix    -68.20    -38.37     169.9      2L9R
+ASG  LYS A   22   22    H    AlphaHelix    -69.73    -42.28      44.9      2L9R
+ASG  PHE A   23   23    H    AlphaHelix    -63.60    -44.21      28.1      2L9R
+ASG  SER A   24   24    H    AlphaHelix    -56.03    -41.04      92.4      2L9R
+ASG  HIS A   25   25    H    AlphaHelix    -79.76    -44.73     159.3      2L9R
+ASG  GLN A   26   26    C          Coil   -142.28    128.17      47.9      2L9R
+ASG  LYS A   27   27    C          Coil    -79.85    -26.72      86.4      2L9R
+ASG  TYR A   28   28    C          Coil   -116.70    127.00     165.3      2L9R
+ASG  LEU A   29   29    C          Coil   -101.26    133.48      28.7      2L9R
+ASG  SER A   30   30    C          Coil    -84.43    176.85      72.3      2L9R
+ASG  ALA A   31   31    H    AlphaHelix    -50.16    -46.11      49.3      2L9R
+ASG  PRO A   32   32    H    AlphaHelix    -58.81    -52.72      90.3      2L9R
+ASG  GLU A   33   33    H    AlphaHelix    -65.10    -34.68      53.9      2L9R
+ASG  ARG A   34   34    H    AlphaHelix    -72.20    -44.65      55.3      2L9R
+ASG  ALA A   35   35    H    AlphaHelix    -69.68    -38.35      34.2      2L9R
+ASG  HIS A   36   36    H    AlphaHelix    -62.63    -50.20      93.1      2L9R
+ASG  LEU A   37   37    H    AlphaHelix    -66.20    -35.94       9.8      2L9R
+ASG  ALA A   38   38    H    AlphaHelix    -57.16    -61.47       4.4      2L9R
+ASG  LYS A   39   39    H    AlphaHelix    -62.95    -33.82     138.6      2L9R
+ASG  ASN A   40   40    H    AlphaHelix    -62.50    -36.96      98.7      2L9R
+ASG  LEU A   41   41    H    AlphaHelix   -101.48      5.11      23.7      2L9R
+ASG  LYS A   42   42    C          Coil     62.36     12.94     188.6      2L9R
+ASG  LEU A   43   43    C          Coil    -77.13    177.53      21.5      2L9R
+ASG  THR A   44   44    C          Coil   -105.23    156.23      45.1      2L9R
+ASG  GLU A   45   45    H    AlphaHelix    -53.14    -37.85      78.9      2L9R
+ASG  THR A   46   46    H    AlphaHelix    -57.34    -57.60      34.4      2L9R
+ASG  GLN A   47   47    H    AlphaHelix    -56.43    -45.39      38.6      2L9R
+ASG  VAL A   48   48    H    AlphaHelix    -63.17    -40.28       0.2      2L9R
+ASG  LYS A   49   49    H    AlphaHelix    -68.57    -37.74     103.9      2L9R
+ASG  ILE A   50   50    H    AlphaHelix    -62.83    -44.66      15.0      2L9R
+ASG  TRP A   51   51    H    AlphaHelix    -61.31    -57.94      16.6      2L9R
+ASG  PHE A   52   52    H    AlphaHelix    -58.63    -33.21       7.4      2L9R
+ASG  GLN A   53   53    H    AlphaHelix    -60.08    -55.35      99.4      2L9R
+ASG  ASN A   54   54    H    AlphaHelix    -61.09    -44.73      36.7      2L9R
+ASG  ARG A   55   55    H    AlphaHelix    -65.13    -33.39      68.8      2L9R
+ASG  ARG A   56   56    H    AlphaHelix    -79.13    -23.05      79.5      2L9R
+ASG  TYR A   57   57    H    AlphaHelix    -83.38    -26.06     135.1      2L9R
+ASG  LYS A   58   58    H    AlphaHelix    -90.75    -19.24     109.1      2L9R
+ASG  THR A   59   59    C          Coil    -83.95    150.13      69.4      2L9R
+ASG  LYS A   60   60    C          Coil    -62.73     96.98     137.6      2L9R
+ASG  ARG A   61   61    B        Bridge    -96.68    151.25     113.2      2L9R
+ASG  LYS A   62   62    C          Coil    -79.88     96.70     212.6      2L9R
+ASG  GLN A   63   63    T          Turn   -126.47   -155.18      81.9      2L9R
+ASG  LEU A   64   64    T          Turn    -66.27    -29.57     176.7      2L9R
+ASG  SER A   65   65    T          Turn   -148.45    160.48      82.1      2L9R
+ASG  SER A   66   66    T          Turn    -66.02    111.96      48.0      2L9R
+ASG  GLU A   67   67    B        Bridge    -75.51     93.30      30.5      2L9R
+ASG  LEU A   68   68    C          Coil   -114.96     90.98     121.3      2L9R
+ASG  GLY A   69   69    C          Coil    -62.83    360.00      63.2      2L9R

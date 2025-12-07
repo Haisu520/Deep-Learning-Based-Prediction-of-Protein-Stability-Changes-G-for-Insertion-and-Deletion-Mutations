@@ -1,0 +1,115 @@
+REM  --------------------------------------------------------------------  2N88
+REM                                                                        2N88
+REM  STRIDE: Knowledge-based secondary structure assignment                2N88
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         2N88
+REM                                                                        2N88
+REM  Residue accessible surface area calculation                           2N88
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 2N88
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       2N88
+REM                                                                        2N88
+REM  ------------------------ General information -----------------------  2N88
+REM                                                                        2N88
+HDR  PROTEIN BINDING                         06-OCT-15   2N88              2N88
+CMP  MOL_ID: 1;                                                            2N88
+CMP   MOLECULE: SIGNAL RECOGNITION PARTICLE 43 KDA PROTEIN, CHLORO         2N88
+CMP   CHAIN: A;                                                            2N88
+CMP   FRAGMENT: CD3 (UNP RESIDUES 316-373);                                2N88
+CMP   SYNONYM: CHROMO PROTEIN SRP43, CPSRP43;                              2N88
+CMP   ENGINEERED: YES                                                      2N88
+SRC  MOL_ID: 1;                                                            2N88
+SRC   ORGANISM_SCIENTIFIC: ARABIDOPSIS THALIANA;                           2N88
+SRC   ORGANISM_COMMON: MOUSE-EAR CRESS;                                    2N88
+SRC   ORGANISM_TAXID: 3702;                                                2N88
+SRC   GENE: CAO, CPSRP43, AT2G47450, T30B22.25;                            2N88
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 2N88
+SRC   EXPRESSION_SYSTEM_TAXID: 562;                                        2N88
+SRC   EXPRESSION_SYSTEM_VECTOR_TYPE: PLASMID;                              2N88
+SRC   EXPRESSION_SYSTEM_PLASMID: PETTRX_1A                                 2N88
+AUT  J.HENNIG,M.SATTLER                                                    2N88
+REM                                                                        2N88
+REM  -------------------- Secondary structure summary -------------------  2N88
+REM                                                                        2N88
+CHN  /home/proj/stride/tmp/tmpitvOcCpdb A                                  2N88
+REM                                                                        2N88
+REM                .         .         .         .         .               2N88
+SEQ  1    GLEYAVAESVIGKRVGDDGKTIEYLVKWTDMSDATWEPQDNVDSTLVLLY   50          2N88
+STR        TTTT EEEEEEEE TTTTT  EEEEEETTGGG EEEEGGG  HHHHHHH               2N88
+REM                                                                        2N88
+REM                                                                        2N88
+SEQ  51   QQQQPMNE                                             58          2N88
+STR       HHH                                                              2N88
+REM                                                                        2N88
+REM                                                                        2N88
+REM                                                                        2N88
+LOC  AlphaHelix   SER    92 A      GLN    101 A                            2N88
+LOC  310Helix     MET    79 A      ASP     81 A                            2N88
+LOC  310Helix     GLN    87 A      ASN     89 A                            2N88
+LOC  Strand       ALA    55 A      ARG     62 A                            2N88
+LOC  Strand       GLU    71 A      TRP     76 A                            2N88
+LOC  Strand       THR    83 A      PRO     86 A                            2N88
+LOC  TurnIV       LEU    50 A      ALA     53 A                            2N88
+LOC  TurnI        GLY    64 A      GLY     67 A                            2N88
+LOC  TurnIV       ASP    65 A      LYS     68 A                            2N88
+LOC  TurnI        TRP    76 A      MET     79 A                            2N88
+REM                                                                        2N88
+REM  --------------- Detailed secondary structure assignment-------------  2N88
+REM                                                                        2N88
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      2N88
+ASG  GLY A   49    1    C          Coil    360.00   -123.53     100.6      2N88
+ASG  LEU A   50    2    T          Turn   -119.32     43.93     121.0      2N88
+ASG  GLU A   51    3    T          Turn    -74.76    117.35     138.0      2N88
+ASG  TYR A   52    4    T          Turn     75.23    168.88     218.5      2N88
+ASG  ALA A   53    5    T          Turn   -152.33    151.27      49.5      2N88
+ASG  VAL A   54    6    C          Coil   -118.64    102.97      87.1      2N88
+ASG  ALA A   55    7    E        Strand    -67.36    117.05      25.6      2N88
+ASG  GLU A   56    8    E        Strand    -80.37    -46.90     108.4      2N88
+ASG  SER A   57    9    E        Strand   -164.39    173.64      41.3      2N88
+ASG  VAL A   58   10    E        Strand   -116.83    123.09       2.2      2N88
+ASG  ILE A   59   11    E        Strand   -123.18     -3.10      70.9      2N88
+ASG  GLY A   60   12    E        Strand   -136.43    153.99       9.4      2N88
+ASG  LYS A   61   13    E        Strand   -148.20    130.00      59.4      2N88
+ASG  ARG A   62   14    E        Strand   -123.90    112.36     154.9      2N88
+ASG  VAL A   63   15    C          Coil    -97.54    117.49      75.1      2N88
+ASG  GLY A   64   16    T          Turn    -91.25    122.16      22.9      2N88
+ASG  ASP A   65   17    T          Turn    -83.58    -35.59     158.5      2N88
+ASG  ASP A   66   18    T          Turn    -83.84     21.22     168.8      2N88
+ASG  GLY A   67   19    T          Turn    102.16     12.48      72.3      2N88
+ASG  LYS A   68   20    T          Turn    -86.42    133.56     111.9      2N88
+ASG  THR A   69   21    C          Coil    -59.16    139.03      80.2      2N88
+ASG  ILE A   70   22    C          Coil    -74.07    115.67      45.8      2N88
+ASG  GLU A   71   23    E        Strand   -102.61    151.42      48.7      2N88
+ASG  TYR A   72   24    E        Strand   -122.75    128.68       2.8      2N88
+ASG  LEU A   73   25    E        Strand    -79.56    105.12      36.9      2N88
+ASG  VAL A   74   26    E        Strand    -91.25    121.22       3.2      2N88
+ASG  LYS A   75   27    E        Strand    -93.53     99.31      90.2      2N88
+ASG  TRP A   76   28    E        Strand    -82.69    174.64      51.1      2N88
+ASG  THR A   77   29    T          Turn    -72.72    -12.48      89.1      2N88
+ASG  ASP A   78   30    T          Turn    -91.32     22.46      39.3      2N88
+ASG  MET A   79   31    G      310Helix    -55.41    -12.75     106.3      2N88
+ASG  SER A   80   32    G      310Helix    -59.40    -30.17     117.9      2N88
+ASG  ASP A   81   33    G      310Helix   -116.46     37.52     125.7      2N88
+ASG  ALA A   82   34    C          Coil    -51.34    135.10      40.0      2N88
+ASG  THR A   83   35    E        Strand   -128.01    146.57      60.3      2N88
+ASG  TRP A   84   36    E        Strand    -81.65    106.43      70.5      2N88
+ASG  GLU A   85   37    E        Strand   -101.82    147.57      50.5      2N88
+ASG  PRO A   86   38    E        Strand    -74.69    141.63      45.5      2N88
+ASG  GLN A   87   39    G      310Helix    -40.01    -46.30      81.0      2N88
+ASG  ASP A   88   40    G      310Helix    -54.84    -31.28     156.2      2N88
+ASG  ASN A   89   41    G      310Helix    -99.03    -24.23     104.7      2N88
+ASG  VAL A   90   42    C          Coil    -70.19    136.42       8.4      2N88
+ASG  ASP A   91   43    C          Coil    -57.83    115.16      80.6      2N88
+ASG  SER A   92   44    H    AlphaHelix    -71.21    -21.19      83.4      2N88
+ASG  THR A   93   45    H    AlphaHelix    -67.76    -43.15      89.5      2N88
+ASG  LEU A   94   46    H    AlphaHelix    -70.23    -39.10      22.6      2N88
+ASG  VAL A   95   47    H    AlphaHelix    -56.23    -41.93       9.0      2N88
+ASG  LEU A   96   48    H    AlphaHelix    -53.81    -35.54      95.4      2N88
+ASG  LEU A   97   49    H    AlphaHelix    -69.89    -32.75      93.8      2N88
+ASG  TYR A   98   50    H    AlphaHelix    -82.60    -42.24      31.3      2N88
+ASG  GLN A   99   51    H    AlphaHelix    -54.64    -38.84      89.7      2N88
+ASG  GLN A  100   52    H    AlphaHelix    -72.91    -16.86     151.5      2N88
+ASG  GLN A  101   53    H    AlphaHelix    -78.14    -15.16     121.7      2N88
+ASG  GLN A  102   54    C          Coil    -78.68    131.34      83.1      2N88
+ASG  PRO A  103   55    C          Coil    -67.44     92.13      91.2      2N88
+ASG  MET A  104   56    C          Coil    -96.03    128.24     145.8      2N88
+ASG  ASN A  105   57    C          Coil     67.38     74.86     142.8      2N88
+ASG  GLU A  106   58    C          Coil    -85.19    360.00     223.4      2N88

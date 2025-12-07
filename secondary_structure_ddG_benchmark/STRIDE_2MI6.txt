@@ -1,0 +1,122 @@
+REM  --------------------------------------------------------------------  2MI6
+REM                                                                        2MI6
+REM  STRIDE: Knowledge-based secondary structure assignment                2MI6
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         2MI6
+REM                                                                        2MI6
+REM  Residue accessible surface area calculation                           2MI6
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 2MI6
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       2MI6
+REM                                                                        2MI6
+REM  ------------------------ General information -----------------------  2MI6
+REM                                                                        2MI6
+HDR  TRANSCRIPTION                           09-DEC-13   2MI6              2MI6
+CMP  MOL_ID: 1;                                                            2MI6
+CMP   MOLECULE: TRANSCRIPTION TERMINATION/ANTITERMINATION PROTEIN          2MI6
+CMP   CHAIN: A;                                                            2MI6
+CMP   FRAGMENT: C-TERMINAL DOMAIN (UNP RESIDUES 178-238);                  2MI6
+CMP   ENGINEERED: YES                                                      2MI6
+SRC  MOL_ID: 1;                                                            2MI6
+SRC   ORGANISM_SCIENTIFIC: MYCOBACTERIUM TUBERCULOSIS;                     2MI6
+SRC   ORGANISM_TAXID: 1773;                                                2MI6
+SRC   GENE: NUSG, RV0639, MT0668, MTCY20H10.20;                            2MI6
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 2MI6
+SRC   EXPRESSION_SYSTEM_TAXID: 469008;                                     2MI6
+SRC   EXPRESSION_SYSTEM_STRAIN: BL21(DE3);                                 2MI6
+SRC   EXPRESSION_SYSTEM_VECTOR_TYPE: PLASMID;                              2MI6
+SRC   EXPRESSION_SYSTEM_PLASMID: PET101/D-TOPO                             2MI6
+AUT  M.STRAUSS,K.SCHWEIMER,P.ROESCH                                        2MI6
+REM                                                                        2MI6
+REM  -------------------- Secondary structure summary -------------------  2MI6
+REM                                                                        2MI6
+CHN  /home/proj/stride/tmp/tmpsKGYI8pdb A                                  2MI6
+REM                                                                        2MI6
+REM                .         .         .         .         .               2MI6
+SEQ  1    GRPVVEVDYEVGESVTVMDGPFATLPATISEVNAEQQKLKVLVSIFGRET   50          2MI6
+STR          TTTT  TTTEEEEE  TTTTTEEEEEEEEEGGG EEEEEE TTTT E               2MI6
+REM                                                                        2MI6
+REM                .                                                       2MI6
+SEQ  51   PVELTFGQVSKI                                         62          2MI6
+STR       EEEEETTTEEE                                                      2MI6
+REM                                                                        2MI6
+REM                                                                        2MI6
+REM                                                                        2MI6
+LOC  310Helix     ALA    34 A      GLN     36 A                            2MI6
+LOC  Strand       GLU    13 A      VAL     17 A                            2MI6
+LOC  Strand       LEU    25 A      ASN     33 A                            2MI6
+LOC  Strand       LYS    38 A      VAL     43 A                            2MI6
+LOC  Strand       THR    50 A      THR     55 A                            2MI6
+LOC  Strand       VAL    59 A      LYS     61 A                            2MI6
+LOC  TurnVIII     VAL     4 A      VAL      7 A                            2MI6
+LOC  TurnII       GLU    10 A      GLU     13 A                            2MI6
+LOC  TurnI        GLY    20 A      ALA     23 A                            2MI6
+LOC  TurnIV       PHE    22 A      LEU     25 A                            2MI6
+LOC  TurnIV       ILE    45 A      ARG     48 A                            2MI6
+LOC  TurnII       THR    55 A      GLN     58 A                            2MI6
+LOC  TurnIV       PHE    56 A      VAL     59 A                            2MI6
+LOC  TurnVIII     GLY    57 A      SER     60 A                            2MI6
+REM                                                                        2MI6
+REM  --------------- Detailed secondary structure assignment-------------  2MI6
+REM                                                                        2MI6
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      2MI6
+ASG  GLY A    1    1    C          Coil    360.00    121.53     130.7      2MI6
+ASG  ARG A    2    2    C          Coil   -122.41     94.09     219.6      2MI6
+ASG  PRO A    3    3    C          Coil    -70.27    146.33     119.9      2MI6
+ASG  VAL A    4    4    T          Turn   -110.63    139.21      89.8      2MI6
+ASG  VAL A    5    5    T          Turn    -59.63    -35.95     154.8      2MI6
+ASG  GLU A    6    6    T          Turn   -108.05    129.65      98.8      2MI6
+ASG  VAL A    7    7    T          Turn   -132.64     33.51     100.3      2MI6
+ASG  ASP A    8    8    C          Coil   -119.29    136.10     105.9      2MI6
+ASG  TYR A    9    9    C          Coil   -102.68    149.21      46.0      2MI6
+ASG  GLU A   10   10    T          Turn   -134.48    173.80     120.8      2MI6
+ASG  VAL A   11   11    T          Turn    -86.56    147.22      90.4      2MI6
+ASG  GLY A   12   12    T          Turn     96.27    -14.35      62.0      2MI6
+ASG  GLU A   13   13    E        Strand    -85.45    151.92      56.0      2MI6
+ASG  SER A   14   14    E        Strand    -99.38    138.63      49.5      2MI6
+ASG  VAL A   15   15    E        Strand   -140.83    152.08       0.0      2MI6
+ASG  THR A   16   16    E        Strand    -91.72    134.85      46.9      2MI6
+ASG  VAL A   17   17    E        Strand    -67.49    128.94       2.9      2MI6
+ASG  MET A   18   18    C          Coil   -113.75    -19.58     105.0      2MI6
+ASG  ASP A   19   19    C          Coil   -134.82    146.54      87.5      2MI6
+ASG  GLY A   20   20    T          Turn    110.58   -175.62      42.7      2MI6
+ASG  PRO A   21   21    T          Turn    -73.30    -20.17     118.2      2MI6
+ASG  PHE A   22   22    T          Turn    -96.24      9.89      53.3      2MI6
+ASG  ALA A   23   23    T          Turn    -44.57    132.33      34.7      2MI6
+ASG  THR A   24   24    T          Turn     80.10     47.86     117.8      2MI6
+ASG  LEU A   25   25    E        Strand   -151.18    146.11      68.2      2MI6
+ASG  PRO A   26   26    E        Strand    -70.62    128.80      97.4      2MI6
+ASG  ALA A   27   27    E        Strand   -140.45    161.64       1.9      2MI6
+ASG  THR A   28   28    E        Strand   -120.08    125.43      65.5      2MI6
+ASG  ILE A   29   29    E        Strand    -60.93    117.32       0.3      2MI6
+ASG  SER A   30   30    E        Strand   -103.30    -40.71      49.4      2MI6
+ASG  GLU A   31   31    E        Strand   -136.69    138.66     107.9      2MI6
+ASG  VAL A   32   32    E        Strand   -127.66    144.08      54.5      2MI6
+ASG  ASN A   33   33    E        Strand   -125.10     84.63      44.8      2MI6
+ASG  ALA A   34   34    G      310Helix    -66.59    -30.67      74.5      2MI6
+ASG  GLU A   35   35    G      310Helix    -57.67    -45.71     180.5      2MI6
+ASG  GLN A   36   36    G      310Helix   -100.81     15.88     111.3      2MI6
+ASG  GLN A   37   37    C          Coil     53.40     39.07     147.8      2MI6
+ASG  LYS A   38   38    E        Strand   -121.30    149.76      87.2      2MI6
+ASG  LEU A   39   39    E        Strand   -129.35    148.94       0.8      2MI6
+ASG  LYS A   40   40    E        Strand   -122.06    137.69      56.5      2MI6
+ASG  VAL A   41   41    E        Strand   -136.60    130.11       0.2      2MI6
+ASG  LEU A   42   42    E        Strand    -84.99    141.50      55.3      2MI6
+ASG  VAL A   43   43    E        Strand   -110.05    140.65       5.0      2MI6
+ASG  SER A   44   44    C          Coil   -104.21    129.49      84.3      2MI6
+ASG  ILE A   45   45    T          Turn   -140.83    149.04      56.3      2MI6
+ASG  PHE A   46   46    T          Turn    -40.94    107.24     189.9      2MI6
+ASG  GLY A   47   47    T          Turn     42.30     51.84      84.0      2MI6
+ASG  ARG A   48   48    T          Turn   -161.33     22.83     177.2      2MI6
+ASG  GLU A   49   49    C          Coil    -46.55    119.58     120.9      2MI6
+ASG  THR A   50   50    E        Strand   -134.20    122.49      70.8      2MI6
+ASG  PRO A   51   51    E        Strand    -70.69    136.98      74.0      2MI6
+ASG  VAL A   52   52    E        Strand   -130.42    142.91      26.5      2MI6
+ASG  GLU A   53   53    E        Strand   -101.15    148.18     110.0      2MI6
+ASG  LEU A   54   54    E        Strand   -149.11    174.84       7.3      2MI6
+ASG  THR A   55   55    E        Strand   -105.42    158.57      61.3      2MI6
+ASG  PHE A   56   56    T          Turn    -53.63    139.24      61.1      2MI6
+ASG  GLY A   57   57    T          Turn     96.09    -24.66      45.5      2MI6
+ASG  GLN A   58   58    T          Turn    -75.37     -1.19      38.0      2MI6
+ASG  VAL A   59   59    E        Strand   -132.48    149.66       4.1      2MI6
+ASG  SER A   60   60    E        Strand   -118.11    136.56      57.3      2MI6
+ASG  LYS A   61   61    E        Strand    -73.32    152.61      59.5      2MI6
+ASG  ILE A   62   62    C          Coil   -105.20    360.00     170.3      2MI6

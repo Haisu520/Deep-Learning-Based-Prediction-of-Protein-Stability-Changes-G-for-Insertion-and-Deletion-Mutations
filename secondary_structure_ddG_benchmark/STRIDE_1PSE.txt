@@ -1,0 +1,122 @@
+REM  --------------------------------------------------------------------  1PSE
+REM                                                                        1PSE
+REM  STRIDE: Knowledge-based secondary structure assignment                1PSE
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         1PSE
+REM                                                                        1PSE
+REM  Residue accessible surface area calculation                           1PSE
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 1PSE
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       1PSE
+REM                                                                        1PSE
+REM  ------------------------ General information -----------------------  1PSE
+REM                                                                        1PSE
+HDR  PHOTOSYSTEM I                           13-APR-94   1PSE              1PSE
+CMP  MOL_ID: 1;                                                            1PSE
+CMP   MOLECULE: PHOTOSYSTEM I ACCESSORY PROTEIN E;                         1PSE
+CMP   CHAIN: A;                                                            1PSE
+CMP   ENGINEERED: YES                                                      1PSE
+SRC  MOL_ID: 1;                                                            1PSE
+SRC   ORGANISM_SCIENTIFIC: SYNECHOCOCCUS SP.;                              1PSE
+SRC   ORGANISM_TAXID: 32049;                                               1PSE
+SRC   STRAIN: PCC 7002                                                     1PSE
+AUT  C.J.FALZONE,Y.-H.KAO,J.ZHAO,D.A.BRYANT,J.T.J.LECOMTE                  1PSE
+REM                                                                        1PSE
+REM  -------------------- Secondary structure summary -------------------  1PSE
+REM                                                                        1PSE
+CHN  /home/proj/stride/tmp/tmpLu7oFEpdb A                                  1PSE
+REM                                                                        1PSE
+REM                .         .         .         .         .               1PSE
+SEQ  1    AIERGSKVKILRKESYWYGDVGTVASIDKSGIIYPVIVRFNKVNYNGFSG   50          1PSE
+STR         TTTEEEEE TTTTTTTTEEEEEEEE    TTTTEEEE     TTTT                 1PSE
+REM                                                                        1PSE
+REM                .                                                       1PSE
+SEQ  51   SAGGLNTNNFAEHELEVVG                                  69          1PSE
+STR           TTEEEE GGGEEE                                                1PSE
+REM                                                                        1PSE
+REM                                                                        1PSE
+REM                                                                        1PSE
+LOC  310Helix     GLU    62 A      GLU     64 A                            1PSE
+LOC  Strand       SER     6 A      ILE     10 A                            1PSE
+LOC  Strand       ASP    20 A      ILE     27 A                            1PSE
+LOC  Strand       VAL    36 A      ARG     39 A                            1PSE
+LOC  Strand       THR    57 A      PHE     60 A                            1PSE
+LOC  Strand       LEU    65 A      VAL     67 A                            1PSE
+LOC  TurnII       GLU     3 A      SER      6 A                            1PSE
+LOC  TurnIV       ARG    12 A      SER     15 A                            1PSE
+LOC  TurnIV       SER    15 A      TYR     18 A                            1PSE
+LOC  TurnII       TRP    17 A      ASP     20 A                            1PSE
+LOC  TurnIV       ILE    32 A      PRO     35 A                            1PSE
+LOC  TurnIV       TYR    45 A      PHE     48 A                            1PSE
+LOC  TurnIV       LEU    55 A      ASN     58 A                            1PSE
+REM                                                                        1PSE
+REM  --------------- Detailed secondary structure assignment-------------  1PSE
+REM                                                                        1PSE
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      1PSE
+ASG  ALA A    1    1    C          Coil    360.00    -66.44     125.3      1PSE
+ASG  ILE A    2    2    C          Coil     60.13     78.17      19.4      1PSE
+ASG  GLU A    3    3    T          Turn    -87.38    177.84     137.5      1PSE
+ASG  ARG A    4    4    T          Turn    -90.13    126.37     194.2      1PSE
+ASG  GLY A    5    5    T          Turn     78.68     17.12      42.6      1PSE
+ASG  SER A    6    6    E        Strand    -90.57    162.15      16.7      1PSE
+ASG  LYS A    7    7    E        Strand    -85.83    115.58     114.6      1PSE
+ASG  VAL A    8    8    E        Strand   -116.85    124.54       0.0      1PSE
+ASG  LYS A    9    9    E        Strand    -79.55    113.48      70.6      1PSE
+ASG  ILE A   10   10    E        Strand    -61.13    131.25       0.0      1PSE
+ASG  LEU A   11   11    C          Coil   -115.99     27.01      38.9      1PSE
+ASG  ARG A   12   12    T          Turn    -85.64    119.77      82.2      1PSE
+ASG  LYS A   13   13    T          Turn    -54.87    -73.88     161.1      1PSE
+ASG  GLU A   14   14    T          Turn    -76.57     85.89     160.0      1PSE
+ASG  SER A   15   15    T          Turn   -152.03    139.92      25.4      1PSE
+ASG  TYR A   16   16    T          Turn    -63.97    -15.42     137.5      1PSE
+ASG  TRP A   17   17    T          Turn   -125.22     32.19      13.6      1PSE
+ASG  TYR A   18   18    T          Turn    -69.32    133.60     121.1      1PSE
+ASG  GLY A   19   19    T          Turn     89.56    -12.73      45.2      1PSE
+ASG  ASP A   20   20    E        Strand    -95.04   -171.01      98.0      1PSE
+ASG  VAL A   21   21    E        Strand   -132.39    129.73      63.0      1PSE
+ASG  GLY A   22   22    E        Strand   -112.36    157.45       1.6      1PSE
+ASG  THR A   23   23    E        Strand    -89.02    112.01      66.3      1PSE
+ASG  VAL A   24   24    E        Strand    -50.24    130.86       3.4      1PSE
+ASG  ALA A   25   25    E        Strand   -102.28    -48.35      27.3      1PSE
+ASG  SER A   26   26    E        Strand   -174.37    156.16      52.8      1PSE
+ASG  ILE A   27   27    E        Strand   -101.39    161.62      61.0      1PSE
+ASG  ASP A   28   28    C          Coil   -116.94    119.34      82.7      1PSE
+ASG  LYS A   29   29    C          Coil    -90.43     52.31     206.6      1PSE
+ASG  SER A   30   30    C          Coil   -100.78    -50.67      87.6      1PSE
+ASG  GLY A   31   31    C          Coil    129.62     -2.52      70.4      1PSE
+ASG  ILE A   32   32    T          Turn    -60.97   -173.06      89.4      1PSE
+ASG  ILE A   33   33    T          Turn    -90.04    -25.94     105.7      1PSE
+ASG  TYR A   34   34    T          Turn   -129.29     72.21      62.3      1PSE
+ASG  PRO A   35   35    T          Turn    -81.58    -15.34      22.3      1PSE
+ASG  VAL A   36   36    E        Strand    -89.39    111.14       0.0      1PSE
+ASG  ILE A   37   37    E        Strand    -91.21    117.66      42.9      1PSE
+ASG  VAL A   38   38    E        Strand    -94.00    162.98       0.0      1PSE
+ASG  ARG A   39   39    E        Strand   -105.21    152.69     145.5      1PSE
+ASG  PHE A   40   40    C          Coil   -148.86    124.70      10.9      1PSE
+ASG  ASN A   41   41    C          Coil    -61.97    -26.18     160.9      1PSE
+ASG  LYS A   42   42    C          Coil    -60.76    160.28     114.7      1PSE
+ASG  VAL A   43   43    C          Coil   -140.94    162.91      51.7      1PSE
+ASG  ASN A   44   44    C          Coil   -123.57    136.25      31.9      1PSE
+ASG  TYR A   45   45    T          Turn   -155.88     28.57     152.8      1PSE
+ASG  ASN A   46   46    T          Turn   -116.50     97.06     109.9      1PSE
+ASG  GLY A   47   47    T          Turn     62.71     78.03      79.5      1PSE
+ASG  PHE A   48   48    T          Turn   -120.00     32.55      88.5      1PSE
+ASG  SER A   49   49    C          Coil     60.15   -167.39     112.4      1PSE
+ASG  GLY A   50   50    C          Coil   -106.74     59.65      82.6      1PSE
+ASG  SER A   51   51    C          Coil   -154.16    103.00      96.7      1PSE
+ASG  ALA A   52   52    C          Coil     59.89   -175.09      88.6      1PSE
+ASG  GLY A   53   53    C          Coil   -155.78    139.31      22.4      1PSE
+ASG  GLY A   54   54    C          Coil     66.90    139.16      11.8      1PSE
+ASG  LEU A   55   55    T          Turn    -89.35    -61.11     100.4      1PSE
+ASG  ASN A   56   56    T          Turn     84.01    -39.75      69.3      1PSE
+ASG  THR A   57   57    E        Strand   -127.79    129.75      53.9      1PSE
+ASG  ASN A   58   58    E        Strand   -105.75    174.73      31.5      1PSE
+ASG  ASN A   59   59    E        Strand   -112.00    140.09      76.9      1PSE
+ASG  PHE A   60   60    E        Strand   -154.82    147.69       0.8      1PSE
+ASG  ALA A   61   61    C          Coil    -82.50    173.20       3.2      1PSE
+ASG  GLU A   62   62    G      310Helix    -63.40    -50.57     113.3      1PSE
+ASG  HIS A   63   63    G      310Helix    -69.09    -17.11     149.0      1PSE
+ASG  GLU A   64   64    G      310Helix    -79.42    -20.89      37.5      1PSE
+ASG  LEU A   65   65    E        Strand   -100.71    146.95      11.9      1PSE
+ASG  GLU A   66   66    E        Strand   -117.88     81.48      98.5      1PSE
+ASG  VAL A   67   67    E        Strand    -57.88    115.31      47.3      1PSE
+ASG  VAL A   68   68    C          Coil   -111.76    -30.42      88.8      1PSE
+ASG  GLY A   69   69    C          Coil     81.47    360.00      87.4      1PSE

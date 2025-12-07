@@ -1,0 +1,126 @@
+REM  --------------------------------------------------------------------  2O2W
+REM                                                                        2O2W
+REM  STRIDE: Knowledge-based secondary structure assignment                2O2W
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         2O2W
+REM                                                                        2O2W
+REM  Residue accessible surface area calculation                           2O2W
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 2O2W
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       2O2W
+REM                                                                        2O2W
+REM  ------------------------ General information -----------------------  2O2W
+REM                                                                        2O2W
+HDR  SIGNALING PROTEIN                       30-NOV-06   2O2W              2O2W
+CMP  MOL_ID: 1;                                                            2O2W
+CMP   MOLECULE: PONSIN;                                                    2O2W
+CMP   CHAIN: A;                                                            2O2W
+CMP   FRAGMENT: SRC HOMOLOGY 3 (SH3) DOMAIN;                               2O2W
+CMP   ENGINEERED: YES                                                      2O2W
+SRC  MOL_ID: 1;                                                            2O2W
+SRC   ORGANISM_SCIENTIFIC: HOMO SAPIENS;                                   2O2W
+SRC   ORGANISM_COMMON: HUMAN;                                              2O2W
+SRC   ORGANISM_TAXID: 9606;                                                2O2W
+SRC   GENE: SORBS1;                                                        2O2W
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 2O2W
+SRC   EXPRESSION_SYSTEM_TAXID: 562;                                        2O2W
+SRC   EXPRESSION_SYSTEM_VECTOR_TYPE: PLASMID;                              2O2W
+SRC   EXPRESSION_SYSTEM_PLASMID: PET151                                    2O2W
+AUT  N.PINOTSIS,I.MARGIOLAKI                                               2O2W
+REM                                                                        2O2W
+REM  -------------------- Secondary structure summary -------------------  2O2W
+REM                                                                        2O2W
+CHN  /home/proj/stride/tmp/tmpbq_tdOpdb A                                  2O2W
+REM                                                                        2O2W
+REM                .         .         .         .         .               2O2W
+SEQ  1    GIDPFTGEAIAKFNFNGDTQVEMSFRKGERITLLRQVDENWYEGRIPGTS   50          2O2W
+STR       TTTTTTEEEEE   B   TTTB  BTTTEEEEEEEEEETTEEEEETTTT                2O2W
+REM                                                                        2O2W
+REM                .                                                       2O2W
+SEQ  51   RQGIFPITYVDVIKRPL                                    67          2O2W
+STR        EEEEEGGGEEEEET                                                  2O2W
+REM                                                                        2O2W
+REM                                                                        2O2W
+REM                                                                        2O2W
+LOC  310Helix     ILE   874 A      TYR    876 A                            2O2W
+LOC  Strand       GLY   824 A      ALA    828 A                            2O2W
+LOC  Strand       GLU   846 A      ASP    855 A                            2O2W
+LOC  Strand       TRP   858 A      ARG    862 A                            2O2W
+LOC  Strand       GLN   869 A      PRO    873 A                            2O2W
+LOC  Strand       VAL   877 A      LYS    881 A                            2O2W
+LOC  TurnVIII     GLY   818 A      PRO    821 A                            2O2W
+LOC  TurnI        ASP   820 A      THR    823 A                            2O2W
+LOC  TurnI        THR   836 A      GLU    839 A                            2O2W
+LOC  TurnII       ARG   843 A      GLU    846 A                            2O2W
+LOC  TurnI        ASP   855 A      TRP    858 A                            2O2W
+LOC  TurnII       ILE   863 A      THR    866 A                            2O2W
+LOC  TurnVIII     VAL   879 A      ARG    882 A                            2O2W
+REM                                                                        2O2W
+REM  --------------- Detailed secondary structure assignment-------------  2O2W
+REM                                                                        2O2W
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      2O2W
+ASG  GLY A  818    1    T          Turn    360.00     26.69      49.2      2O2W
+ASG  ILE A  819    2    T          Turn    -60.55    -42.55     176.5      2O2W
+ASG  ASP A  820    3    T          Turn    -75.11    126.14      85.2      2O2W
+ASG  PRO A  821    4    T          Turn    -64.13    -19.10      91.5      2O2W
+ASG  PHE A  822    5    T          Turn    -68.38    -21.58     120.0      2O2W
+ASG  THR A  823    6    T          Turn    -73.72    140.71      14.0      2O2W
+ASG  GLY A  824    7    E        Strand   -101.93    155.54       0.0      2O2W
+ASG  GLU A  825    8    E        Strand   -109.92    130.97      21.4      2O2W
+ASG  ALA A  826    9    E        Strand   -134.34    150.76       1.0      2O2W
+ASG  ILE A  827   10    E        Strand   -113.94    144.94      77.0      2O2W
+ASG  ALA A  828   11    E        Strand    -70.19    130.98       5.2      2O2W
+ASG  LYS A  829   12    C          Coil    -97.90    -41.59     101.9      2O2W
+ASG  PHE A  830   13    C          Coil   -132.28    159.15     114.9      2O2W
+ASG  ASN A  831   14    C          Coil    -75.10    112.62      80.6      2O2W
+ASG  PHE A  832   15    B        Bridge   -102.11    126.60      13.8      2O2W
+ASG  ASN A  833   16    C          Coil   -104.88    125.25     119.8      2O2W
+ASG  GLY A  834   17    C          Coil    -79.99    146.98      19.1      2O2W
+ASG  ASP A  835   18    C          Coil   -107.95    -12.71     150.4      2O2W
+ASG  THR A  836   19    T          Turn   -114.27    164.76      78.6      2O2W
+ASG  GLN A  837   20    T          Turn    -60.12    -30.87     203.1      2O2W
+ASG  VAL A  838   21    T          Turn    -74.01    -27.04      93.9      2O2W
+ASG  GLU A  839   22    B        Bridge    -84.14    137.88      28.3      2O2W
+ASG  MET A  840   23    C          Coil    -93.00    125.76       6.6      2O2W
+ASG  SER A  841   24    C          Coil   -102.43    142.31      49.4      2O2W
+ASG  PHE A  842   25    B        Bridge   -152.12    173.31       9.4      2O2W
+ASG  ARG A  843   26    T          Turn    -96.39    162.11     178.2      2O2W
+ASG  LYS A  844   27    T          Turn    -80.79    144.46     142.6      2O2W
+ASG  GLY A  845   28    T          Turn     91.97     14.02      56.8      2O2W
+ASG  GLU A  846   29    E        Strand    -92.29    133.70      40.6      2O2W
+ASG  ARG A  847   30    E        Strand    -84.45    108.52     145.6      2O2W
+ASG  ILE A  848   31    E        Strand   -103.29    138.31       0.0      2O2W
+ASG  THR A  849   32    E        Strand    -91.86    138.15       1.8      2O2W
+ASG  LEU A  850   33    E        Strand    -99.41    121.02       0.0      2O2W
+ASG  LEU A  851   34    E        Strand    -76.54    -55.63      53.0      2O2W
+ASG  ARG A  852   35    E        Strand   -157.35    157.24     143.7      2O2W
+ASG  GLN A  853   36    E        Strand    -93.05    120.09      81.2      2O2W
+ASG  VAL A  854   37    E        Strand    -82.23    -34.64      81.5      2O2W
+ASG  ASP A  855   38    E        Strand   -154.49   -159.91      63.0      2O2W
+ASG  GLU A  856   39    T          Turn    -59.24    -25.98     149.9      2O2W
+ASG  ASN A  857   40    T          Turn   -111.86    -14.51      80.6      2O2W
+ASG  TRP A  858   41    E        Strand   -137.75    160.81      69.6      2O2W
+ASG  TYR A  859   42    E        Strand   -119.21    157.07      10.2      2O2W
+ASG  GLU A  860   43    E        Strand    -92.52    133.05      74.0      2O2W
+ASG  GLY A  861   44    E        Strand   -147.96    174.68       0.0      2O2W
+ASG  ARG A  862   45    E        Strand   -146.04    172.84      77.6      2O2W
+ASG  ILE A  863   46    T          Turn   -109.54    141.41      10.0      2O2W
+ASG  PRO A  864   47    T          Turn    -66.02    119.28      62.4      2O2W
+ASG  GLY A  865   48    T          Turn     72.26     18.29      87.4      2O2W
+ASG  THR A  866   49    T          Turn   -112.79    164.67      50.6      2O2W
+ASG  SER A  867   50    C          Coil    -80.45    -14.13     129.9      2O2W
+ASG  ARG A  868   51    C          Coil    -69.29    112.98      88.9      2O2W
+ASG  GLN A  869   52    E        Strand   -137.70    150.37     108.2      2O2W
+ASG  GLY A  870   53    E        Strand    171.72   -162.33       8.9      2O2W
+ASG  ILE A  871   54    E        Strand   -113.19    147.86      43.5      2O2W
+ASG  PHE A  872   55    E        Strand   -141.30    161.18       0.0      2O2W
+ASG  PRO A  873   56    E        Strand    -72.41    141.32      14.4      2O2W
+ASG  ILE A  874   57    G      310Helix    -59.24    -38.69      48.1      2O2W
+ASG  THR A  875   58    G      310Helix    -56.29    -41.44      92.8      2O2W
+ASG  TYR A  876   59    G      310Helix    -71.37    -18.85      80.8      2O2W
+ASG  VAL A  877   60    E        Strand   -114.70    141.23       9.8      2O2W
+ASG  ASP A  878   61    E        Strand    -88.15    112.07      66.5      2O2W
+ASG  VAL A  879   62    E        Strand    -87.35    113.56      47.4      2O2W
+ASG  ILE A  880   63    E        Strand    -74.00    -62.82     123.2      2O2W
+ASG  LYS A  881   64    E        Strand   -119.04    146.56      92.5      2O2W
+ASG  ARG A  882   65    T          Turn   -114.07    163.31     172.1      2O2W
+ASG  PRO A  883   66    C          Coil    -65.60    138.50      25.1      2O2W
+ASG  LEU A  884   67    C          Coil   -112.62    360.00     160.0      2O2W

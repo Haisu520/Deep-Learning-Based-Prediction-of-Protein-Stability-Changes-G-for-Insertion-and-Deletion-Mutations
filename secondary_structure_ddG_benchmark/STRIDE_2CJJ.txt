@@ -1,0 +1,115 @@
+REM  --------------------------------------------------------------------  2CJJ
+REM                                                                        2CJJ
+REM  STRIDE: Knowledge-based secondary structure assignment                2CJJ
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         2CJJ
+REM                                                                        2CJJ
+REM  Residue accessible surface area calculation                           2CJJ
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 2CJJ
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       2CJJ
+REM                                                                        2CJJ
+REM  ------------------------ General information -----------------------  2CJJ
+REM                                                                        2CJJ
+HDR  DNA BINDING PROTEIN                     04-APR-06   2CJJ              2CJJ
+CMP  MOL_ID: 1;                                                            2CJJ
+CMP   MOLECULE: RADIALIS;                                                  2CJJ
+CMP   CHAIN: A;                                                            2CJJ
+CMP   ENGINEERED: YES;                                                     2CJJ
+CMP   OTHER_DETAILS: 8 KDA PROTEOLYTIC FRAGMENT, MYB DOMAIN                2CJJ
+SRC  MOL_ID: 1;                                                            2CJJ
+SRC   ORGANISM_SCIENTIFIC: ANTIRRHINUM MAJUS;                              2CJJ
+SRC   ORGANISM_COMMON: GARDEN SNAPDRAGON;                                  2CJJ
+SRC   ORGANISM_TAXID: 4151;                                                2CJJ
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 2CJJ
+SRC   EXPRESSION_SYSTEM_TAXID: 469008;                                     2CJJ
+SRC   EXPRESSION_SYSTEM_STRAIN: BL21(DE3);                                 2CJJ
+SRC   EXPRESSION_SYSTEM_PLASMID: PRSET A                                   2CJJ
+AUT  C.E.M.STEVENSON,N.BURTON,M.M.COSTA,U.NATH,R.A.DIXON,E.S.COEN,         2CJJ
+AUT   D.M.LAWSON                                                           2CJJ
+REM                                                                        2CJJ
+REM  -------------------- Secondary structure summary -------------------  2CJJ
+REM                                                                        2CJJ
+CHN  /home/proj/stride/tmp/tmpmeq7HOpdb A                                  2CJJ
+REM                                                                        2CJJ
+REM                .         .         .         .         .               2CJJ
+SEQ  1    GRPWSAKENKAFERALAVYDKDTPDRWANVARAVEGRTPEEVKKHYEILV   50          2CJJ
+STR            HHHHHHHHHHHHH TTTTTTHHHHHHHHTTTT HHHHHHHHHHHH               2CJJ
+REM                                                                        2CJJ
+REM                .                                                       2CJJ
+SEQ  51   EDIKYIESGKVPF                                        63          2CJJ
+STR       HHHHHHHH                                                         2CJJ
+REM                                                                        2CJJ
+REM                                                                        2CJJ
+REM                                                                        2CJJ
+LOC  AlphaHelix   ALA    13 A      VAL     25 A                            2CJJ
+LOC  AlphaHelix   ARG    33 A      ALA     40 A                            2CJJ
+LOC  AlphaHelix   PRO    46 A      SER     65 A                            2CJJ
+LOC  TurnI        ASP    27 A      THR     30 A                            2CJJ
+LOC  TurnIV       THR    30 A      ARG     33 A                            2CJJ
+LOC  TurnII       VAL    41 A      ARG     44 A                            2CJJ
+REM                                                                        2CJJ
+REM  --------------- Detailed secondary structure assignment-------------  2CJJ
+REM                                                                        2CJJ
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      2CJJ
+ASG  GLY A    8    1    C          Coil    360.00    -17.26     107.6      2CJJ
+ASG  ARG A    9    2    C          Coil    -34.70    -62.08     113.4      2CJJ
+ASG  PRO A   10    3    C          Coil    -65.91    143.47     111.8      2CJJ
+ASG  TRP A   11    4    C          Coil    -71.08    130.34      58.2      2CJJ
+ASG  SER A   12    5    C          Coil    -85.60    162.38      51.1      2CJJ
+ASG  ALA A   13    6    H    AlphaHelix    -49.06    -43.86      75.1      2CJJ
+ASG  LYS A   14    7    H    AlphaHelix    -78.90    -30.19     171.5      2CJJ
+ASG  GLU A   15    8    H    AlphaHelix    -65.26    -42.33      36.6      2CJJ
+ASG  ASN A   16    9    H    AlphaHelix    -62.50    -40.21      59.7      2CJJ
+ASG  LYS A   17   10    H    AlphaHelix    -63.70    -43.26     133.9      2CJJ
+ASG  ALA A   18   11    H    AlphaHelix    -60.95    -49.21      26.5      2CJJ
+ASG  PHE A   19   12    H    AlphaHelix    -50.23    -50.92       0.4      2CJJ
+ASG  GLU A   20   13    H    AlphaHelix    -60.43    -38.46      83.0      2CJJ
+ASG  ARG A   21   14    H    AlphaHelix    -64.18    -38.99     154.0      2CJJ
+ASG  ALA A   22   15    H    AlphaHelix    -65.30    -34.27       6.2      2CJJ
+ASG  LEU A   23   16    H    AlphaHelix    -65.62    -25.40      24.9      2CJJ
+ASG  ALA A   24   17    H    AlphaHelix    -80.79    -44.74      81.7      2CJJ
+ASG  VAL A   25   18    H    AlphaHelix    -69.50    -40.51     102.8      2CJJ
+ASG  TYR A   26   19    C          Coil   -110.60     95.54      59.5      2CJJ
+ASG  ASP A   27   20    T          Turn    -71.51    173.80      81.1      2CJJ
+ASG  LYS A   28   21    T          Turn    -61.48    -19.17     121.0      2CJJ
+ASG  ASP A   29   22    T          Turn    -84.27    -22.64     131.9      2CJJ
+ASG  THR A   30   23    T          Turn    -48.44    124.11      30.1      2CJJ
+ASG  PRO A   31   24    T          Turn    -77.42    149.49     101.0      2CJJ
+ASG  ASP A   32   25    T          Turn     56.15     46.28     131.2      2CJJ
+ASG  ARG A   33   26    H    AlphaHelix    -61.27    -47.90      30.4      2CJJ
+ASG  TRP A   34   27    H    AlphaHelix    -67.65    -29.28      48.0      2CJJ
+ASG  ALA A   35   28    H    AlphaHelix    -71.58    -36.58      47.1      2CJJ
+ASG  ASN A   36   29    H    AlphaHelix    -72.72    -40.86      33.7      2CJJ
+ASG  VAL A   37   30    H    AlphaHelix    -64.40    -51.61       0.0      2CJJ
+ASG  ALA A   38   31    H    AlphaHelix    -62.11    -33.42       7.7      2CJJ
+ASG  ARG A   39   32    H    AlphaHelix    -59.06    -41.44     172.9      2CJJ
+ASG  ALA A   40   33    H    AlphaHelix    -76.44    -24.17      60.6      2CJJ
+ASG  VAL A   41   34    T          Turn    -95.88     97.19       3.6      2CJJ
+ASG  GLU A   42   35    T          Turn    -55.00    124.31     159.3      2CJJ
+ASG  GLY A   43   36    T          Turn     75.87     43.64      67.4      2CJJ
+ASG  ARG A   44   37    T          Turn   -149.13    129.54      13.7      2CJJ
+ASG  THR A   45   38    C          Coil    -89.83    160.52      67.3      2CJJ
+ASG  PRO A   46   39    H    AlphaHelix    -51.61    -37.22      48.4      2CJJ
+ASG  GLU A   47   40    H    AlphaHelix    -78.88    -35.35     137.2      2CJJ
+ASG  GLU A   48   41    H    AlphaHelix    -62.64    -38.79      60.6      2CJJ
+ASG  VAL A   49   42    H    AlphaHelix    -70.57    -34.94       0.0      2CJJ
+ASG  LYS A   50   43    H    AlphaHelix    -68.48    -47.21      96.2      2CJJ
+ASG  LYS A   51   44    H    AlphaHelix    -54.88    -35.26     104.7      2CJJ
+ASG  HIS A   52   45    H    AlphaHelix    -69.29    -39.69      31.7      2CJJ
+ASG  TYR A   53   46    H    AlphaHelix    -62.60    -46.19      72.6      2CJJ
+ASG  GLU A   54   47    H    AlphaHelix    -59.72    -43.55      86.4      2CJJ
+ASG  ILE A   55   48    H    AlphaHelix    -63.68    -41.17      67.9      2CJJ
+ASG  LEU A   56   49    H    AlphaHelix    -57.92    -48.24      48.1      2CJJ
+ASG  VAL A   57   50    H    AlphaHelix    -60.58    -43.28      41.5      2CJJ
+ASG  GLU A   58   51    H    AlphaHelix    -67.22    -35.43      86.1      2CJJ
+ASG  ASP A   59   52    H    AlphaHelix    -64.50    -46.28      92.0      2CJJ
+ASG  ILE A   60   53    H    AlphaHelix    -65.13    -42.81      72.8      2CJJ
+ASG  LYS A   61   54    H    AlphaHelix    -59.34    -46.82     107.5      2CJJ
+ASG  TYR A   62   55    H    AlphaHelix    -53.37    -52.66     123.2      2CJJ
+ASG  ILE A   63   56    H    AlphaHelix    -52.97    -43.10     134.1      2CJJ
+ASG  GLU A   64   57    H    AlphaHelix    -77.97    -31.51     158.8      2CJJ
+ASG  SER A   65   58    H    AlphaHelix   -115.79    -23.37      79.8      2CJJ
+ASG  GLY A   66   59    C          Coil     77.83     11.17      34.8      2CJJ
+ASG  LYS A   67   60    C          Coil   -131.88    130.95     151.1      2CJJ
+ASG  VAL A   68   61    C          Coil    -63.67    129.58      89.7      2CJJ
+ASG  PRO A   69   62    C          Coil    -66.77    159.46      35.1      2CJJ
+ASG  PHE A   70   63    C          Coil   -117.09    360.00     235.6      2CJJ

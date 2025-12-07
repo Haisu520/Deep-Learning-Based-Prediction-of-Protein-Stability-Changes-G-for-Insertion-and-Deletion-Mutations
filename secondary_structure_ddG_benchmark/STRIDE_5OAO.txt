@@ -1,0 +1,126 @@
+REM  --------------------------------------------------------------------  5OAO
+REM                                                                        5OAO
+REM  STRIDE: Knowledge-based secondary structure assignment                5OAO
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         5OAO
+REM                                                                        5OAO
+REM  Residue accessible surface area calculation                           5OAO
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 5OAO
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       5OAO
+REM                                                                        5OAO
+REM  ------------------------ General information -----------------------  5OAO
+REM                                                                        5OAO
+HDR  PROTEIN BINDING                         23-JUN-17   5OAO              5OAO
+CMP  MOL_ID: 1;                                                            5OAO
+CMP   MOLECULE: RST DOMAIN FROM THE RADICAL-INDUCED CELL DEATH1;           5OAO
+CMP   CHAIN: A;                                                            5OAO
+CMP   SYNONYM: PROTEIN RADICAL-INDUCED CELL DEATH 1;                       5OAO
+CMP   ENGINEERED: YES;                                                     5OAO
+CMP   OTHER_DETAILS: COMPLEXED WITH THE PEPTIDE DREB2A                     5OAO
+SRC  MOL_ID: 1;                                                            5OAO
+SRC   ORGANISM_SCIENTIFIC: ARABIDOPSIS THALIANA;                           5OAO
+SRC   ORGANISM_COMMON: MOUSE-EAR CRESS;                                    5OAO
+SRC   ORGANISM_TAXID: 3702;                                                5OAO
+SRC   GENE: RCD1, ATP8, CEO1, AT1G32230, F3C3.1;                           5OAO
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 5OAO
+SRC   EXPRESSION_SYSTEM_TAXID: 562                                         5OAO
+AUT  K.BUGGE,L.STABY,K.SKRIVER,B.B.KRAGELUND                               5OAO
+REM                                                                        5OAO
+REM  -------------------- Secondary structure summary -------------------  5OAO
+REM                                                                        5OAO
+CHN  /home/proj/stride/tmp/tmpniplZ2pdb A                                  5OAO
+REM                                                                        5OAO
+REM                .         .         .         .         .               5OAO
+SEQ  1    TTRPKSPWMPFPTLFAAISHKVAENDMLLINADYQQLRDKKMTRAEFVRK   50          5OAO
+STR       TTTT TTTT   HHHHHHHH   HHHHHHHHHHHHHHHHTTTTHHHHHHH               5OAO
+REM                                                                        5OAO
+REM                .         .                                             5OAO
+SEQ  51   LRVIVGDDLLRSTITTLQNQPKS                              73          5OAO
+STR       HHHHH HHHHHHHHHHHHHTTT                                           5OAO
+REM                                                                        5OAO
+REM                                                                        5OAO
+REM                                                                        5OAO
+LOC  AlphaHelix   THR   512 A      HIS    519 A                            5OAO
+LOC  AlphaHelix   GLU   523 A      ASP    538 A                            5OAO
+LOC  AlphaHelix   ARG   543 A      VAL    554 A                            5OAO
+LOC  AlphaHelix   ASP   556 A      ASN    568 A                            5OAO
+LOC  TurnIV       THR   500 A      PRO    503 A                            5OAO
+LOC  TurnVIII     SER   505 A      MET    508 A                            5OAO
+LOC  TurnVIII     LYS   539 A      THR    542 A                            5OAO
+LOC  GammaInv     GLN   569 A      LYS    571 A                            5OAO
+REM                                                                        5OAO
+REM  --------------- Detailed secondary structure assignment-------------  5OAO
+REM                                                                        5OAO
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      5OAO
+ASG  THR A  500    1    T          Turn    360.00    -36.69     182.5      5OAO
+ASG  THR A  501    2    T          Turn   -115.88    119.65     108.2      5OAO
+ASG  ARG A  502    3    T          Turn     55.64     67.86     225.9      5OAO
+ASG  PRO A  503    4    T          Turn    -72.51    152.23     112.3      5OAO
+ASG  LYS A  504    5    C          Coil   -111.37    128.76     210.1      5OAO
+ASG  SER A  505    6    T          Turn   -146.78    138.01      78.7      5OAO
+ASG  PRO A  506    7    T          Turn    -57.65    -35.36     129.6      5OAO
+ASG  TRP A  507    8    T          Turn    -82.54    135.67     215.2      5OAO
+ASG  MET A  508    9    T          Turn    -80.71    136.70     129.8      5OAO
+ASG  PRO A  509   10    C          Coil    -58.13    -36.70     130.1      5OAO
+ASG  PHE A  510   11    C          Coil    -74.15    149.48     103.1      5OAO
+ASG  PRO A  511   12    C          Coil    -70.12    166.56      50.4      5OAO
+ASG  THR A  512   13    H    AlphaHelix    -61.50    -41.51      88.6      5OAO
+ASG  LEU A  513   14    H    AlphaHelix    -60.87    -50.26      57.6      5OAO
+ASG  PHE A  514   15    H    AlphaHelix    -59.78    -41.03       5.4      5OAO
+ASG  ALA A  515   16    H    AlphaHelix    -60.11    -39.65      28.6      5OAO
+ASG  ALA A  516   17    H    AlphaHelix    -64.47    -44.42      20.6      5OAO
+ASG  ILE A  517   18    H    AlphaHelix    -71.88    -37.11       0.4      5OAO
+ASG  SER A  518   19    H    AlphaHelix    -59.22    -38.85      45.6      5OAO
+ASG  HIS A  519   20    H    AlphaHelix    -77.14     -4.30     163.5      5OAO
+ASG  LYS A  520   21    C          Coil   -124.54     14.77     132.3      5OAO
+ASG  VAL A  521   22    C          Coil   -142.42    159.52      27.0      5OAO
+ASG  ALA A  522   23    C          Coil    -71.90    151.44      50.1      5OAO
+ASG  GLU A  523   24    H    AlphaHelix    -64.12    -36.97     169.6      5OAO
+ASG  ASN A  524   25    H    AlphaHelix    -64.97    -40.41     119.6      5OAO
+ASG  ASP A  525   26    H    AlphaHelix    -62.17    -37.39      74.3      5OAO
+ASG  MET A  526   27    H    AlphaHelix    -67.40    -23.67      19.5      5OAO
+ASG  LEU A  527   28    H    AlphaHelix    -62.78    -41.14     108.1      5OAO
+ASG  LEU A  528   29    H    AlphaHelix    -70.47    -39.33     111.3      5OAO
+ASG  ILE A  529   30    H    AlphaHelix    -62.95    -44.57       1.0      5OAO
+ASG  ASN A  530   31    H    AlphaHelix    -62.63    -39.77      58.3      5OAO
+ASG  ALA A  531   32    H    AlphaHelix    -63.01    -39.38      49.9      5OAO
+ASG  ASP A  532   33    H    AlphaHelix    -66.43    -37.05      27.5      5OAO
+ASG  TYR A  533   34    H    AlphaHelix    -60.36    -41.11      66.9      5OAO
+ASG  GLN A  534   35    H    AlphaHelix    -63.17    -39.38      95.6      5OAO
+ASG  GLN A  535   36    H    AlphaHelix    -64.35    -39.46      72.9      5OAO
+ASG  LEU A  536   37    H    AlphaHelix    -64.67    -43.46      40.8      5OAO
+ASG  ARG A  537   38    H    AlphaHelix    -64.49    -38.19     171.6      5OAO
+ASG  ASP A  538   39    H    AlphaHelix    -77.97     -4.20      97.3      5OAO
+ASG  LYS A  539   40    T          Turn     66.55     37.10     189.9      5OAO
+ASG  LYS A  540   41    T          Turn   -103.44     -2.48     140.8      5OAO
+ASG  MET A  541   42    T          Turn   -134.34    139.68      13.6      5OAO
+ASG  THR A  542   43    T          Turn    -77.19    150.89      83.8      5OAO
+ASG  ARG A  543   44    H    AlphaHelix    -63.42    -39.46     202.1      5OAO
+ASG  ALA A  544   45    H    AlphaHelix    -62.45    -40.03      71.6      5OAO
+ASG  GLU A  545   46    H    AlphaHelix    -65.79    -37.93      83.8      5OAO
+ASG  PHE A  546   47    H    AlphaHelix    -63.09    -47.67      17.8      5OAO
+ASG  VAL A  547   48    H    AlphaHelix    -62.90    -42.76      70.2      5OAO
+ASG  ARG A  548   49    H    AlphaHelix    -58.93    -49.14     167.9      5OAO
+ASG  LYS A  549   50    H    AlphaHelix    -66.96    -37.68      76.4      5OAO
+ASG  LEU A  550   51    H    AlphaHelix    -63.27    -43.95      10.0      5OAO
+ASG  ARG A  551   52    H    AlphaHelix    -62.92    -39.22     115.9      5OAO
+ASG  VAL A  552   53    H    AlphaHelix    -64.92    -40.47     110.2      5OAO
+ASG  ILE A  553   54    H    AlphaHelix    -70.69    -49.79      47.5      5OAO
+ASG  VAL A  554   55    H    AlphaHelix    -77.14    -34.38      12.1      5OAO
+ASG  GLY A  555   56    C          Coil     91.63    147.95      25.1      5OAO
+ASG  ASP A  556   57    H    AlphaHelix    -62.42    -40.01     100.4      5OAO
+ASG  ASP A  557   58    H    AlphaHelix    -61.36    -18.70     136.8      5OAO
+ASG  LEU A  558   59    H    AlphaHelix   -100.11    -32.46      28.1      5OAO
+ASG  LEU A  559   60    H    AlphaHelix    -63.05    -43.31      41.9      5OAO
+ASG  ARG A  560   61    H    AlphaHelix    -61.99    -40.83     173.4      5OAO
+ASG  SER A  561   62    H    AlphaHelix    -63.24    -42.03      59.7      5OAO
+ASG  THR A  562   63    H    AlphaHelix    -64.62    -44.63       2.9      5OAO
+ASG  ILE A  563   64    H    AlphaHelix    -61.32    -43.98      76.0      5OAO
+ASG  THR A  564   65    H    AlphaHelix    -61.10    -42.23      76.6      5OAO
+ASG  THR A  565   66    H    AlphaHelix    -64.43    -42.25      61.1      5OAO
+ASG  LEU A  566   67    H    AlphaHelix    -62.73    -38.66      67.4      5OAO
+ASG  GLN A  567   68    H    AlphaHelix    -62.97    -40.47     149.8      5OAO
+ASG  ASN A  568   69    H    AlphaHelix    -96.57     57.43     121.3      5OAO
+ASG  GLN A  569   70    T          Turn   -133.38     88.94      75.6      5OAO
+ASG  PRO A  570   71    T          Turn    -83.93     64.27     116.2      5OAO
+ASG  LYS A  571   72    T          Turn   -128.73    147.73     165.6      5OAO
+ASG  SER A  572   73    C          Coil   -158.41    360.00     175.3      5OAO

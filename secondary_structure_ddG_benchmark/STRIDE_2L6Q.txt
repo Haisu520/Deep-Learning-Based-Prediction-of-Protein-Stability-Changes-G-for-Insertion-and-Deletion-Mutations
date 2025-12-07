@@ -1,0 +1,115 @@
+REM  --------------------------------------------------------------------  2L6Q
+REM                                                                        2L6Q
+REM  STRIDE: Knowledge-based secondary structure assignment                2L6Q
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         2L6Q
+REM                                                                        2L6Q
+REM  Residue accessible surface area calculation                           2L6Q
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 2L6Q
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       2L6Q
+REM                                                                        2L6Q
+REM  ------------------------ General information -----------------------  2L6Q
+REM                                                                        2L6Q
+HDR  VIRAL PROTEIN                           24-NOV-10   2L6Q              2L6Q
+CMP  MOL_ID: 1;                                                            2L6Q
+CMP   MOLECULE: HEAD-TO-TAIL JOINING PROTEIN W (GPW) FROM BACTERIO         2L6Q
+CMP   ORIGIN;                                                              2L6Q
+CMP   CHAIN: A;                                                            2L6Q
+CMP   FRAGMENT: UNP RESIDUES 1-62;                                         2L6Q
+CMP   ENGINEERED: YES                                                      2L6Q
+SRC  MOL_ID: 1;                                                            2L6Q
+SRC   ORGANISM_SCIENTIFIC: ENTEROBACTERIA PHAGE LAMBDA;                    2L6Q
+SRC   ORGANISM_TAXID: 10710;                                               2L6Q
+SRC   GENE: W;                                                             2L6Q
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 2L6Q
+SRC   EXPRESSION_SYSTEM_TAXID: 562;                                        2L6Q
+SRC   EXPRESSION_SYSTEM_VECTOR: PBAT VECTOR                                2L6Q
+AUT  L.SBORGI,A.VERMA,V.MUNOZ,E.DE ALBA                                    2L6Q
+REM                                                                        2L6Q
+REM  -------------------- Secondary structure summary -------------------  2L6Q
+REM                                                                        2L6Q
+CHN  /home/proj/stride/tmp/tmpYq86_Fpdb A                                  2L6Q
+REM                                                                        2L6Q
+REM                .         .         .         .         .               2L6Q
+SEQ  1    MVRQEELAAARAALHDLMTGKRVATVQKDGRRVEFTATSVSDLKKYIAEL   50          2L6Q
+STR         HHHHHHHHHHHHHHHH    EEEEEETTEEEEEEGGGHHHHHHHHHHH               2L6Q
+REM                                                                        2L6Q
+REM                .                                                       2L6Q
+SEQ  51   EVQTGMTQRRRG                                         62          2L6Q
+STR       HHH     TTT                                                      2L6Q
+REM                                                                        2L6Q
+REM                                                                        2L6Q
+REM                                                                        2L6Q
+LOC  AlphaHelix   ARG     3 A      MET     18 A                            2L6Q
+LOC  AlphaHelix   VAL    40 A      GLN     53 A                            2L6Q
+LOC  310Helix     ALA    37 A      SER     39 A                            2L6Q
+LOC  Strand       VAL    23 A      LYS     28 A                            2L6Q
+LOC  Strand       ARG    31 A      THR     36 A                            2L6Q
+LOC  TurnIV       GLN    27 A      GLY     30 A                            2L6Q
+LOC  TurnI'       LYS    28 A      ARG     31 A                            2L6Q
+LOC  GammaClassic  ARG    59 A      ARG     61 A                           2L6Q
+REM                                                                        2L6Q
+REM  --------------- Detailed secondary structure assignment-------------  2L6Q
+REM                                                                        2L6Q
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      2L6Q
+ASG  MET A    1    1    C          Coil    360.00    112.93     147.0      2L6Q
+ASG  VAL A    2    2    C          Coil   -144.01     83.78      85.9      2L6Q
+ASG  ARG A    3    3    H    AlphaHelix    -78.24     13.44      77.1      2L6Q
+ASG  GLN A    4    4    H    AlphaHelix    -43.52    -38.75     127.2      2L6Q
+ASG  GLU A    5    5    H    AlphaHelix    -74.68    -75.40     127.0      2L6Q
+ASG  GLU A    6    6    H    AlphaHelix    -47.30    -33.19      63.4      2L6Q
+ASG  LEU A    7    7    H    AlphaHelix    -56.12    -54.55      26.5      2L6Q
+ASG  ALA A    8    8    H    AlphaHelix    -53.49    -31.15      44.3      2L6Q
+ASG  ALA A    9    9    H    AlphaHelix    -70.88    -37.77      55.0      2L6Q
+ASG  ALA A   10   10    H    AlphaHelix    -65.54    -41.85       7.1      2L6Q
+ASG  ARG A   11   11    H    AlphaHelix    -58.76    -38.08     158.3      2L6Q
+ASG  ALA A   12   12    H    AlphaHelix    -60.20    -39.74      58.4      2L6Q
+ASG  ALA A   13   13    H    AlphaHelix    -58.23    -39.85      14.0      2L6Q
+ASG  LEU A   14   14    H    AlphaHelix    -61.14    -33.43      63.7      2L6Q
+ASG  HIS A   15   15    H    AlphaHelix    -75.68    -41.15     127.7      2L6Q
+ASG  ASP A   16   16    H    AlphaHelix    -76.27    -37.65      34.9      2L6Q
+ASG  LEU A   17   17    H    AlphaHelix    -69.82    -29.11      14.3      2L6Q
+ASG  MET A   18   18    H    AlphaHelix   -102.36      0.26     147.8      2L6Q
+ASG  THR A   19   19    C          Coil    -96.83    -23.19      86.1      2L6Q
+ASG  GLY A   20   20    C          Coil    165.67    -71.26      49.6      2L6Q
+ASG  LYS A   21   21    C          Coil    -45.69    130.39     135.0      2L6Q
+ASG  ARG A   22   22    C          Coil    -92.48    -15.11     202.8      2L6Q
+ASG  VAL A   23   23    E        Strand   -111.57    145.34      91.3      2L6Q
+ASG  ALA A   24   24    E        Strand   -151.93    132.34      12.7      2L6Q
+ASG  THR A   25   25    E        Strand   -107.83    156.01     104.3      2L6Q
+ASG  VAL A   26   26    E        Strand   -139.88    134.36      35.3      2L6Q
+ASG  GLN A   27   27    E        Strand    -88.24    103.42     161.4      2L6Q
+ASG  LYS A   28   28    E        Strand   -130.94    121.11      53.7      2L6Q
+ASG  ASP A   29   29    T          Turn     53.06     57.25     117.3      2L6Q
+ASG  GLY A   30   30    T          Turn     47.40     11.03      92.9      2L6Q
+ASG  ARG A   31   31    E        Strand   -114.77    130.01     162.1      2L6Q
+ASG  ARG A   32   32    E        Strand    -99.17    134.22     178.5      2L6Q
+ASG  VAL A   33   33    E        Strand   -127.73    144.29      53.9      2L6Q
+ASG  GLU A   34   34    E        Strand   -100.83    153.58     121.4      2L6Q
+ASG  PHE A   35   35    E        Strand   -141.21    136.32      40.8      2L6Q
+ASG  THR A   36   36    E        Strand   -117.87    153.03      68.9      2L6Q
+ASG  ALA A   37   37    G      310Helix    -45.81    -18.75      56.3      2L6Q
+ASG  THR A   38   38    G      310Helix    -69.51    -23.79     129.7      2L6Q
+ASG  SER A   39   39    G      310Helix   -111.25     16.24      23.6      2L6Q
+ASG  VAL A   40   40    H    AlphaHelix    -50.64    -12.45      48.9      2L6Q
+ASG  SER A   41   41    H    AlphaHelix    -84.99    -52.85      81.4      2L6Q
+ASG  ASP A   42   42    H    AlphaHelix    -60.69    -23.82      79.5      2L6Q
+ASG  LEU A   43   43    H    AlphaHelix    -74.00    -41.56       9.6      2L6Q
+ASG  LYS A   44   44    H    AlphaHelix    -51.37    -37.16     126.9      2L6Q
+ASG  LYS A   45   45    H    AlphaHelix    -70.31    -45.86     154.2      2L6Q
+ASG  TYR A   46   46    H    AlphaHelix    -53.09    -28.84      67.2      2L6Q
+ASG  ILE A   47   47    H    AlphaHelix    -79.51    -33.47      35.9      2L6Q
+ASG  ALA A   48   48    H    AlphaHelix    -74.17    -37.04      55.7      2L6Q
+ASG  GLU A   49   49    H    AlphaHelix    -68.37    -33.86     113.4      2L6Q
+ASG  LEU A   50   50    H    AlphaHelix    -72.07    -32.27      14.6      2L6Q
+ASG  GLU A   51   51    H    AlphaHelix    -66.54    -29.42      90.7      2L6Q
+ASG  VAL A   52   52    H    AlphaHelix    -82.37    -20.47      98.1      2L6Q
+ASG  GLN A   53   53    H    AlphaHelix    -92.01     -8.13      94.1      2L6Q
+ASG  THR A   54   54    C          Coil   -122.01    -16.53      31.7      2L6Q
+ASG  GLY A   55   55    C          Coil    -73.64   -168.84      32.1      2L6Q
+ASG  MET A   56   56    C          Coil   -139.03     63.11     188.9      2L6Q
+ASG  THR A   57   57    C          Coil   -153.90   -162.48      81.0      2L6Q
+ASG  GLN A   58   58    C          Coil   -172.21    -27.00     154.8      2L6Q
+ASG  ARG A   59   59    T          Turn    -56.49     -8.93     177.8      2L6Q
+ASG  ARG A   60   60    T          Turn     68.77    -36.36     222.9      2L6Q
+ASG  ARG A   61   61    T          Turn    -72.61     -2.13     181.4      2L6Q
+ASG  GLY A   62   62    C          Coil    -65.98    360.00     113.9      2L6Q

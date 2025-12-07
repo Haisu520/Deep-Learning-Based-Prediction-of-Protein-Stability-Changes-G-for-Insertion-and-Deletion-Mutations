@@ -1,0 +1,107 @@
+REM  --------------------------------------------------------------------  4G3O
+REM                                                                        4G3O
+REM  STRIDE: Knowledge-based secondary structure assignment                4G3O
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         4G3O
+REM                                                                        4G3O
+REM  Residue accessible surface area calculation                           4G3O
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 4G3O
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       4G3O
+REM                                                                        4G3O
+REM  ------------------------ General information -----------------------  4G3O
+REM                                                                        4G3O
+HDR  LIGASE                                  15-JUL-12   4G3O              4G3O
+CMP  MOL_ID: 1;                                                            4G3O
+CMP   MOLECULE: E3 UBIQUITIN-PROTEIN LIGASE AMFR;                          4G3O
+CMP   CHAIN: A;                                                            4G3O
+CMP   FRAGMENT: CUE DOMAIN (UNP RESIDUES 456-498);                         4G3O
+CMP   SYNONYM: AUTOCRINE MOTILITY FACTOR RECEPTOR, ISOFORM 2, AMF          4G3O
+CMP   ISOFORM 2, RING FINGER PROTEIN 45, GP78;                             4G3O
+CMP   EC: 6.3.2.-;                                                         4G3O
+CMP   ENGINEERED: YES                                                      4G3O
+SRC  MOL_ID: 1;                                                            4G3O
+SRC   ORGANISM_SCIENTIFIC: HOMO SAPIENS;                                   4G3O
+SRC   ORGANISM_COMMON: HUMAN;                                              4G3O
+SRC   ORGANISM_TAXID: 9606;                                                4G3O
+SRC   GENE: AMFR, RNF45;                                                   4G3O
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 4G3O
+SRC   EXPRESSION_SYSTEM_TAXID: 511693;                                     4G3O
+SRC   EXPRESSION_SYSTEM_STRAIN: BL21;                                      4G3O
+SRC   EXPRESSION_SYSTEM_VECTOR_TYPE: PLASMID;                              4G3O
+SRC   EXPRESSION_SYSTEM_PLASMID: PET42A                                    4G3O
+AUT  G.KOZLOV,K.LEPAGE,K.GEHRING                                           4G3O
+REM                                                                        4G3O
+REM  -------------------- Secondary structure summary -------------------  4G3O
+REM                                                                        4G3O
+CHN  /home/proj/stride/tmp/tmp_JjyEYpdb A                                  4G3O
+REM                                                                        4G3O
+REM                .         .         .         .         .               4G3O
+SEQ  1    RGSENLYFQGQLNAMAHQIQEMFPQVPYHLVLQDLQLTRSVEITTDNILE   50          4G3O
+STR       HHHHHHHHHHHHHHHHHHHHHHTTTT HHHHHHHHHHH  HHHHHHHHHH               4G3O
+REM                                                                        4G3O
+REM                                                                        4G3O
+SEQ  51   GRI                                                  53          4G3O
+STR                                                                        4G3O
+REM                                                                        4G3O
+REM                                                                        4G3O
+REM                                                                        4G3O
+LOC  AlphaHelix   ARG   446 A      MET    467 A                            4G3O
+LOC  AlphaHelix   TYR   473 A      THR    483 A                            4G3O
+LOC  AlphaHelix   VAL   486 A      GLU    495 A                            4G3O
+LOC  TurnI        PHE   468 A      VAL    471 A                            4G3O
+REM                                                                        4G3O
+REM  --------------- Detailed secondary structure assignment-------------  4G3O
+REM                                                                        4G3O
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      4G3O
+ASG  ARG A  446    1    H    AlphaHelix    360.00    -41.42     250.5      4G3O
+ASG  GLY A  447    2    H    AlphaHelix    -57.83    -46.87      46.7      4G3O
+ASG  SER A  448    3    H    AlphaHelix    -57.41    -47.05      80.2      4G3O
+ASG  GLU A  449    4    H    AlphaHelix    -61.96    -38.42     146.5      4G3O
+ASG  ASN A  450    5    H    AlphaHelix    -71.12    -43.83      81.2      4G3O
+ASG  LEU A  451    6    H    AlphaHelix    -61.70    -42.61     137.2      4G3O
+ASG  TYR A  452    7    H    AlphaHelix    -60.36    -44.46     158.8      4G3O
+ASG  PHE A  453    8    H    AlphaHelix    -60.89    -38.10      66.0      4G3O
+ASG  GLN A  454    9    H    AlphaHelix    -61.32    -36.18      61.7      4G3O
+ASG  GLY A  455   10    H    AlphaHelix    -62.91    -39.55      39.1      4G3O
+ASG  GLN A  456   11    H    AlphaHelix    -65.27    -41.66      85.7      4G3O
+ASG  LEU A  457   12    H    AlphaHelix    -61.79    -40.44       0.0      4G3O
+ASG  ASN A  458   13    H    AlphaHelix    -59.00    -43.84      62.9      4G3O
+ASG  ALA A  459   14    H    AlphaHelix    -63.92    -40.87      45.9      4G3O
+ASG  MET A  460   15    H    AlphaHelix    -64.17    -38.72      31.5      4G3O
+ASG  ALA A  461   16    H    AlphaHelix    -65.58    -39.65       0.0      4G3O
+ASG  HIS A  462   17    H    AlphaHelix    -60.05    -41.04     103.3      4G3O
+ASG  GLN A  463   18    H    AlphaHelix    -68.28    -36.61      95.5      4G3O
+ASG  ILE A  464   19    H    AlphaHelix    -68.38    -41.61       1.4      4G3O
+ASG  GLN A  465   20    H    AlphaHelix    -62.03    -32.86      66.0      4G3O
+ASG  GLU A  466   21    H    AlphaHelix    -55.04    -40.55     168.8      4G3O
+ASG  MET A  467   22    H    AlphaHelix    -81.64    -29.38     134.6      4G3O
+ASG  PHE A  468   23    T          Turn   -130.22     68.96      23.9      4G3O
+ASG  PRO A  469   24    T          Turn    -67.04    -13.75      97.4      4G3O
+ASG  GLN A  470   25    T          Turn    -84.50     -6.25     145.0      4G3O
+ASG  VAL A  471   26    T          Turn   -100.02    125.24      13.9      4G3O
+ASG  PRO A  472   27    C          Coil    -55.10    134.91      58.6      4G3O
+ASG  TYR A  473   28    H    AlphaHelix    -53.24    -46.20      56.8      4G3O
+ASG  HIS A  474   29    H    AlphaHelix    -62.12    -33.01     105.9      4G3O
+ASG  LEU A  475   30    H    AlphaHelix    -71.69    -37.12      55.2      4G3O
+ASG  VAL A  476   31    H    AlphaHelix    -63.14    -47.16       0.0      4G3O
+ASG  LEU A  477   32    H    AlphaHelix    -68.03    -39.74      30.3      4G3O
+ASG  GLN A  478   33    H    AlphaHelix    -60.39    -43.38     111.0      4G3O
+ASG  ASP A  479   34    H    AlphaHelix    -63.89    -39.22      32.9      4G3O
+ASG  LEU A  480   35    H    AlphaHelix    -62.83    -26.58       0.0      4G3O
+ASG  GLN A  481   36    H    AlphaHelix    -61.31    -35.22      76.4      4G3O
+ASG  LEU A  482   37    H    AlphaHelix    -83.73    -43.36     142.4      4G3O
+ASG  THR A  483   38    H    AlphaHelix    -87.78    -32.07      26.2      4G3O
+ASG  ARG A  484   39    C          Coil     52.61     32.61     174.1      4G3O
+ASG  SER A  485   40    C          Coil   -152.74    119.23      28.0      4G3O
+ASG  VAL A  486   41    H    AlphaHelix    -55.72    -42.93      37.5      4G3O
+ASG  GLU A  487   42    H    AlphaHelix    -63.92    -46.17     142.3      4G3O
+ASG  ILE A  488   43    H    AlphaHelix    -68.26    -43.78      78.2      4G3O
+ASG  THR A  489   44    H    AlphaHelix    -63.77    -36.92       0.0      4G3O
+ASG  THR A  490   45    H    AlphaHelix    -63.42    -41.18      24.9      4G3O
+ASG  ASP A  491   46    H    AlphaHelix    -54.82    -49.60      68.4      4G3O
+ASG  ASN A  492   47    H    AlphaHelix    -58.84    -42.12      19.8      4G3O
+ASG  ILE A  493   48    H    AlphaHelix    -63.44    -47.13      18.4      4G3O
+ASG  LEU A  494   49    H    AlphaHelix    -69.61    -23.08     125.4      4G3O
+ASG  GLU A  495   50    H    AlphaHelix    -86.72     -3.06     107.5      4G3O
+ASG  GLY A  496   51    C          Coil     75.15     26.89      63.5      4G3O
+ASG  ARG A  497   52    C          Coil    -92.21    -17.16     172.8      4G3O
+ASG  ILE A  498   53    C          Coil   -118.69    360.00      64.4      4G3O

@@ -1,0 +1,114 @@
+REM  --------------------------------------------------------------------  2WNM
+REM                                                                        2WNM
+REM  STRIDE: Knowledge-based secondary structure assignment                2WNM
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         2WNM
+REM                                                                        2WNM
+REM  Residue accessible surface area calculation                           2WNM
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 2WNM
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       2WNM
+REM                                                                        2WNM
+REM  ------------------------ General information -----------------------  2WNM
+REM                                                                        2WNM
+HDR  HYDROLASE                               13-JUL-09   2WNM              2WNM
+CMP  MOL_ID: 1;                                                            2WNM
+CMP   MOLECULE: GENE 2;                                                    2WNM
+CMP   CHAIN: A;                                                            2WNM
+CMP   SYNONYM: GP2;                                                        2WNM
+CMP   ENGINEERED: YES                                                      2WNM
+SRC  MOL_ID: 1;                                                            2WNM
+SRC   ORGANISM_SCIENTIFIC: ENTEROBACTERIA PHAGE T7;                        2WNM
+SRC   ORGANISM_TAXID: 10760;                                               2WNM
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 2WNM
+SRC   EXPRESSION_SYSTEM_TAXID: 562;                                        2WNM
+SRC   EXPRESSION_SYSTEM_VECTOR_TYPE: PLASMID;                              2WNM
+SRC   EXPRESSION_SYSTEM_VECTOR: PET33B                                     2WNM
+AUT  B.CAMARA,M.LIU,A.SHADRINC,B.LIU,P.SIMPSON,R.WEINZIERL,K.SEVER         2WNM
+AUT   E.COTA,S.MATTHEWS,S.R.WIGNESHWERARAJ                                 2WNM
+REM                                                                        2WNM
+REM  -------------------- Secondary structure summary -------------------  2WNM
+REM                                                                        2WNM
+CHN  /home/proj/stride/tmp/tmpaoWXWtpdb A                                  2WNM
+REM                                                                        2WNM
+REM                .         .         .         .         .               2WNM
+SEQ  1    TGSLSVDNKKFWATVESSEHSFEVPIYAETLDEALELAEWQYVPAGFEVT   50          2WNM
+STR       TTTTTTTTTEEEEEEETTTTEEEEEEE   HHHHHHHHHHHHGGG  EEE               2WNM
+REM                                                                        2WNM
+REM                                                                        2WNM
+SEQ  51   RVRPCVAPK                                            59          2WNM
+STR       EEEE                                                             2WNM
+REM                                                                        2WNM
+REM                                                                        2WNM
+REM                                                                        2WNM
+LOC  AlphaHelix   LEU    56 A      TYR     67 A                            2WNM
+LOC  310Helix     VAL    68 A      ALA     70 A                            2WNM
+LOC  Strand       LYS    35 A      GLU     41 A                            2WNM
+LOC  Strand       SER    46 A      TYR     52 A                            2WNM
+LOC  Strand       GLU    73 A      PRO     79 A                            2WNM
+LOC  TurnVIII     THR    26 A      LEU     29 A                            2WNM
+LOC  TurnIV       SER    28 A      VAL     31 A                            2WNM
+LOC  TurnIV       SER    30 A      ASN     33 A                            2WNM
+LOC  TurnI        SER    42 A      HIS     45 A                            2WNM
+LOC  GammaInv     ASN    33 A      LYS     35 A                            2WNM
+REM                                                                        2WNM
+REM  --------------- Detailed secondary structure assignment-------------  2WNM
+REM                                                                        2WNM
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      2WNM
+ASG  THR A   26    1    T          Turn    360.00    117.25     159.6      2WNM
+ASG  GLY A   27    2    T          Turn    -74.78    -27.73      74.7      2WNM
+ASG  SER A   28    3    T          Turn    -95.21     84.88      53.2      2WNM
+ASG  LEU A   29    4    T          Turn    -99.24     -9.03      74.2      2WNM
+ASG  SER A   30    5    T          Turn    -81.02     38.52       2.4      2WNM
+ASG  VAL A   31    6    T          Turn    -74.07     85.89      88.1      2WNM
+ASG  ASP A   32    7    T          Turn     73.38    -32.18     157.7      2WNM
+ASG  ASN A   33    8    T          Turn    -68.33    145.94      89.0      2WNM
+ASG  LYS A   34    9    T          Turn    -73.69     86.08     101.0      2WNM
+ASG  LYS A   35   10    E        Strand    -76.98    129.70      16.3      2WNM
+ASG  PHE A   36   11    E        Strand   -123.26    158.60       7.6      2WNM
+ASG  TRP A   37   12    E        Strand   -119.45    106.86      52.5      2WNM
+ASG  ALA A   38   13    E        Strand    -89.57    114.92       0.0      2WNM
+ASG  THR A   39   14    E        Strand    -71.31     97.50       8.0      2WNM
+ASG  VAL A   40   15    E        Strand    -89.51    102.31       0.2      2WNM
+ASG  GLU A   41   16    E        Strand   -103.98    147.82      56.9      2WNM
+ASG  SER A   42   17    T          Turn   -133.27   -177.69      33.0      2WNM
+ASG  SER A   43   18    T          Turn    -62.08    -41.07     128.4      2WNM
+ASG  GLU A   44   19    T          Turn    -79.95    -44.40     152.0      2WNM
+ASG  HIS A   45   20    T          Turn   -150.93    146.28      89.1      2WNM
+ASG  SER A   46   21    E        Strand   -102.09    124.94      68.7      2WNM
+ASG  PHE A   47   22    E        Strand   -103.65    177.91     107.9      2WNM
+ASG  GLU A   48   23    E        Strand   -150.90    131.32      62.0      2WNM
+ASG  VAL A   49   24    E        Strand   -127.12    138.79      48.5      2WNM
+ASG  PRO A   50   25    E        Strand    -64.19    112.64      46.6      2WNM
+ASG  ILE A   51   26    E        Strand    -90.83    143.40       2.7      2WNM
+ASG  TYR A   52   27    E        Strand   -126.89    113.97      67.8      2WNM
+ASG  ALA A   53   28    C          Coil   -148.10   -173.04       9.5      2WNM
+ASG  GLU A   54   29    C          Coil    -93.29    -57.74     145.5      2WNM
+ASG  THR A   55   30    C          Coil   -100.59   -178.65      66.6      2WNM
+ASG  LEU A   56   31    H    AlphaHelix    -84.17    -31.65      61.0      2WNM
+ASG  ASP A   57   32    H    AlphaHelix    -65.69    -37.79     114.1      2WNM
+ASG  GLU A   58   33    H    AlphaHelix    -67.87    -46.82      73.2      2WNM
+ASG  ALA A   59   34    H    AlphaHelix    -58.43    -38.95       0.0      2WNM
+ASG  LEU A   60   35    H    AlphaHelix    -64.92    -49.27      59.3      2WNM
+ASG  GLU A   61   36    H    AlphaHelix    -67.08    -35.96     103.8      2WNM
+ASG  LEU A   62   37    H    AlphaHelix    -53.75    -48.93      42.3      2WNM
+ASG  ALA A   63   38    H    AlphaHelix    -55.63    -64.69       0.0      2WNM
+ASG  GLU A   64   39    H    AlphaHelix    -58.75    -15.74     116.1      2WNM
+ASG  TRP A   65   40    H    AlphaHelix    -90.76    -47.24     177.0      2WNM
+ASG  GLN A   66   41    H    AlphaHelix    -92.94    -25.93     109.9      2WNM
+ASG  TYR A   67   42    H    AlphaHelix    -93.59     21.69      19.8      2WNM
+ASG  VAL A   68   43    G      310Helix    -64.04    -54.53     107.3      2WNM
+ASG  PRO A   69   44    G      310Helix    -75.65      9.09     121.3      2WNM
+ASG  ALA A   70   45    G      310Helix    -80.34    -16.05      39.7      2WNM
+ASG  GLY A   71   46    C          Coil     89.53    -49.11      72.2      2WNM
+ASG  PHE A   72   47    C          Coil    -75.02    176.49      57.3      2WNM
+ASG  GLU A   73   48    E        Strand   -112.57    124.38     118.4      2WNM
+ASG  VAL A   74   49    E        Strand    -71.92    105.84      14.6      2WNM
+ASG  THR A   75   50    E        Strand    -94.03    -25.92      67.2      2WNM
+ASG  ARG A   76   51    E        Strand   -147.04    158.74     138.8      2WNM
+ASG  VAL A   77   52    E        Strand   -143.10    124.31      17.8      2WNM
+ASG  ARG A   78   53    E        Strand   -124.21    150.82     111.9      2WNM
+ASG  PRO A   79   54    E        Strand    -81.93    126.67      60.9      2WNM
+ASG  CYS A   80   55    C          Coil    -75.74    -38.87      29.8      2WNM
+ASG  VAL A   81   56    C          Coil     32.92     55.48     106.8      2WNM
+ASG  ALA A   82   57    C          Coil   -131.47    145.98      31.4      2WNM
+ASG  PRO A   83   58    C          Coil    -77.14     -6.54     101.7      2WNM
+ASG  LYS A   84   59    C          Coil   -138.62    360.00     168.6      2WNM

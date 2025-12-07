@@ -1,0 +1,131 @@
+REM  --------------------------------------------------------------------  2MYX
+REM                                                                        2MYX
+REM  STRIDE: Knowledge-based secondary structure assignment                2MYX
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         2MYX
+REM                                                                        2MYX
+REM  Residue accessible surface area calculation                           2MYX
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 2MYX
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       2MYX
+REM                                                                        2MYX
+REM  ------------------------ General information -----------------------  2MYX
+REM                                                                        2MYX
+HDR  UBIQUITIN-BINDING PROTEIN               02-FEB-15   2MYX              2MYX
+CMP  MOL_ID: 1;                                                            2MYX
+CMP   MOLECULE: COUPLING OF UBIQUITIN CONJUGATION TO ER DEGRADATIO         2MYX
+CMP   1;                                                                   2MYX
+CMP   CHAIN: A;                                                            2MYX
+CMP   FRAGMENT: UNP RESIDUES 45-115 OF CUE1;                               2MYX
+CMP   SYNONYM: KINETOCHORE-DEFECT SUPPRESSOR 4;                            2MYX
+CMP   ENGINEERED: YES                                                      2MYX
+SRC  MOL_ID: 1;                                                            2MYX
+SRC   ORGANISM_SCIENTIFIC: SACCHAROMYCES CEREVISIAE S288C;                 2MYX
+SRC   ORGANISM_COMMON: BAKER'S YEAST;                                      2MYX
+SRC   ORGANISM_TAXID: 559292;                                              2MYX
+SRC   STRAIN: ATCC 204508 / S288C;                                         2MYX
+SRC   GENE: CUE1, KIS4, YM8156.06, YMR264W;                                2MYX
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 2MYX
+SRC   EXPRESSION_SYSTEM_TAXID: 562;                                        2MYX
+SRC   EXPRESSION_SYSTEM_STRAIN: T7 EXPRESS (NEB);                          2MYX
+SRC   EXPRESSION_SYSTEM_VECTOR_TYPE: PLASMID;                              2MYX
+SRC   EXPRESSION_SYSTEM_PLASMID: PET39(B)+                                 2MYX
+AUT  A.KNISS,V.V.ROGOV,F.LOEHR,P.GUENTERT,V.DOETSCH                        2MYX
+REM                                                                        2MYX
+REM  -------------------- Secondary structure summary -------------------  2MYX
+REM                                                                        2MYX
+CHN  /home/proj/stride/tmp/tmpWqKXeEpdb A                                  2MYX
+REM                                                                        2MYX
+REM                .         .         .         .         .               2MYX
+SEQ  1    GAMGPQGSTQNALRRTGRVNGGHPVTTQMVETVQNLAPNLHPEQIRYSLE   50          2MYX
+STR                      TTTT       HHHHHHHHHHTTTT HHHHHHHHH               2MYX
+REM                                                                        2MYX
+REM                .         .                                             2MYX
+SEQ  51   NTGSVEETVERYLRGDEFSFPPGFE                            75          2MYX
+STR       HH  HHHHHHHHHH      TTTT                                         2MYX
+REM                                                                        2MYX
+REM                                                                        2MYX
+REM                                                                        2MYX
+LOC  AlphaHelix   THR    67 A      LEU     76 A                            2MYX
+LOC  AlphaHelix   PRO    82 A      THR     92 A                            2MYX
+LOC  AlphaHelix   VAL    95 A      ARG    104 A                            2MYX
+LOC  TurnVIII     THR    56 A      VAL     59 A                            2MYX
+LOC  TurnI        ALA    77 A      LEU     80 A                            2MYX
+LOC  TurnII       PRO   111 A      PHE    114 A                            2MYX
+REM                                                                        2MYX
+REM  --------------- Detailed secondary structure assignment-------------  2MYX
+REM                                                                        2MYX
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      2MYX
+ASG  GLY A   41    1    C          Coil    360.00   -172.00     124.1      2MYX
+ASG  ALA A   42    2    C          Coil    -73.76    174.40     110.7      2MYX
+ASG  MET A   43    3    C          Coil   -155.26    166.65     183.2      2MYX
+ASG  GLY A   44    4    C          Coil    157.76     80.96      62.2      2MYX
+ASG  PRO A   45    5    C          Coil    -70.21     -9.29     134.4      2MYX
+ASG  GLN A   46    6    C          Coil     26.91     73.53     193.2      2MYX
+ASG  GLY A   47    7    C          Coil   -149.36    106.72      71.1      2MYX
+ASG  SER A   48    8    C          Coil    -97.05    169.48     116.4      2MYX
+ASG  THR A   49    9    C          Coil    -77.47     95.99     139.1      2MYX
+ASG  GLN A   50   10    C          Coil    -70.99     29.34     194.0      2MYX
+ASG  ASN A   51   11    C          Coil    -87.35     81.75     127.8      2MYX
+ASG  ALA A   52   12    C          Coil    -64.28   -178.73      83.0      2MYX
+ASG  LEU A   53   13    C          Coil    -49.32    139.56     152.5      2MYX
+ASG  ARG A   54   14    C          Coil    -45.88    134.82     203.9      2MYX
+ASG  ARG A   55   15    C          Coil    -43.66    114.01     239.6      2MYX
+ASG  THR A   56   16    T          Turn    -73.17    165.39      91.7      2MYX
+ASG  GLY A   57   17    T          Turn    -79.69    -56.77      80.2      2MYX
+ASG  ARG A   58   18    T          Turn   -146.73    112.11     219.1      2MYX
+ASG  VAL A   59   19    T          Turn    -82.15    103.11     111.7      2MYX
+ASG  ASN A   60   20    C          Coil   -140.59   -172.89     114.3      2MYX
+ASG  GLY A   61   21    C          Coil     94.38     34.78      81.8      2MYX
+ASG  GLY A   62   22    C          Coil    111.19    135.92      35.9      2MYX
+ASG  HIS A   63   23    C          Coil   -129.91    151.09      50.4      2MYX
+ASG  PRO A   64   24    C          Coil    -75.20    126.30     126.9      2MYX
+ASG  VAL A   65   25    C          Coil   -122.99    161.29      29.3      2MYX
+ASG  THR A   66   26    C          Coil   -124.40    166.24      69.5      2MYX
+ASG  THR A   67   27    H    AlphaHelix    -52.73    -41.85     118.2      2MYX
+ASG  GLN A   68   28    H    AlphaHelix    -56.92    -34.04     124.5      2MYX
+ASG  MET A   69   29    H    AlphaHelix    -70.32    -43.37      30.7      2MYX
+ASG  VAL A   70   30    H    AlphaHelix    -59.50    -55.98      28.5      2MYX
+ASG  GLU A   71   31    H    AlphaHelix    -59.66    -41.50     106.3      2MYX
+ASG  THR A   72   32    H    AlphaHelix    -55.01    -60.42      53.0      2MYX
+ASG  VAL A   73   33    H    AlphaHelix    -55.57    -46.22       0.0      2MYX
+ASG  GLN A   74   34    H    AlphaHelix    -54.90    -44.29      46.1      2MYX
+ASG  ASN A   75   35    H    AlphaHelix    -62.85    -44.19     107.3      2MYX
+ASG  LEU A   76   36    H    AlphaHelix    -79.41    -14.72     105.5      2MYX
+ASG  ALA A   77   37    T          Turn   -137.33     70.87       0.0      2MYX
+ASG  PRO A   78   38    T          Turn    -64.90    -23.16     100.7      2MYX
+ASG  ASN A   79   39    T          Turn    -71.29    -14.56     145.9      2MYX
+ASG  LEU A   80   40    T          Turn    -92.36    156.69      26.7      2MYX
+ASG  HIS A   81   41    C          Coil    -79.92    143.20      73.3      2MYX
+ASG  PRO A   82   42    H    AlphaHelix    -65.62    -29.12      55.7      2MYX
+ASG  GLU A   83   43    H    AlphaHelix    -76.82    -40.20      98.2      2MYX
+ASG  GLN A   84   44    H    AlphaHelix    -60.90    -35.34      31.7      2MYX
+ASG  ILE A   85   45    H    AlphaHelix    -56.57    -56.50       0.0      2MYX
+ASG  ARG A   86   46    H    AlphaHelix    -46.82    -46.65      76.4      2MYX
+ASG  TYR A   87   47    H    AlphaHelix    -64.59    -43.54      80.2      2MYX
+ASG  SER A   88   48    H    AlphaHelix    -64.59    -41.37       7.3      2MYX
+ASG  LEU A   89   49    H    AlphaHelix    -61.24    -37.97       0.0      2MYX
+ASG  GLU A   90   50    H    AlphaHelix    -72.05    -34.77      51.7      2MYX
+ASG  ASN A   91   51    H    AlphaHelix    -72.51    -50.61      81.7      2MYX
+ASG  THR A   92   52    H    AlphaHelix    -72.64    -41.59      41.7      2MYX
+ASG  GLY A   93   53    C          Coil     93.16     -6.12      29.1      2MYX
+ASG  SER A   94   54    C          Coil   -145.59    152.13      38.1      2MYX
+ASG  VAL A   95   55    H    AlphaHelix    -66.63    -50.62      24.1      2MYX
+ASG  GLU A   96   56    H    AlphaHelix    -52.32    -47.03     131.8      2MYX
+ASG  GLU A   97   57    H    AlphaHelix    -63.74    -43.24      89.0      2MYX
+ASG  THR A   98   58    H    AlphaHelix    -61.68    -37.05       0.0      2MYX
+ASG  VAL A   99   59    H    AlphaHelix    -73.80    -35.95      25.7      2MYX
+ASG  GLU A  100   60    H    AlphaHelix    -70.16    -40.50     103.9      2MYX
+ASG  ARG A  101   61    H    AlphaHelix    -76.35    -30.20      33.9      2MYX
+ASG  TYR A  102   62    H    AlphaHelix    -64.31    -54.59      60.9      2MYX
+ASG  LEU A  103   63    H    AlphaHelix    -60.15    -20.94     125.6      2MYX
+ASG  ARG A  104   64    H    AlphaHelix    -92.23     -6.26     190.2      2MYX
+ASG  GLY A  105   65    C          Coil     72.62     36.68      62.6      2MYX
+ASG  ASP A  106   66    C          Coil    -70.38   -178.68      71.2      2MYX
+ASG  GLU A  107   67    C          Coil    -80.20    134.77     154.2      2MYX
+ASG  PHE A  108   68    C          Coil   -129.07    110.51      27.4      2MYX
+ASG  SER A  109   69    C          Coil    -96.00    174.29      64.3      2MYX
+ASG  PHE A  110   70    C          Coil    -98.10    155.60      52.7      2MYX
+ASG  PRO A  111   71    T          Turn    -69.44    163.66       6.2      2MYX
+ASG  PRO A  112   72    T          Turn    -59.89    144.60      95.2      2MYX
+ASG  GLY A  113   73    T          Turn     85.24    -12.39      84.5      2MYX
+ASG  PHE A  114   74    T          Turn    -75.59    -46.54     101.8      2MYX
+ASG  GLU A  115   75    C          Coil    -77.92    360.00     199.3      2MYX

@@ -1,0 +1,98 @@
+REM  --------------------------------------------------------------------  2JVD
+REM                                                                        2JVD
+REM  STRIDE: Knowledge-based secondary structure assignment                2JVD
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         2JVD
+REM                                                                        2JVD
+REM  Residue accessible surface area calculation                           2JVD
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 2JVD
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       2JVD
+REM                                                                        2JVD
+REM  ------------------------ General information -----------------------  2JVD
+REM                                                                        2JVD
+HDR  STRUCTURAL GENOMICS, UNKNOWN FUNCTION   18-SEP-07   2JVD              2JVD
+CMP  MOL_ID: 1;                                                            2JVD
+CMP   MOLECULE: UPF0291 PROTEIN YNZC;                                      2JVD
+CMP   CHAIN: A;                                                            2JVD
+CMP   FRAGMENT: RESIDUES 1-46;                                             2JVD
+CMP   ENGINEERED: YES                                                      2JVD
+SRC  MOL_ID: 1;                                                            2JVD
+SRC   ORGANISM_SCIENTIFIC: BACILLUS SUBTILIS;                              2JVD
+SRC   ORGANISM_TAXID: 1423;                                                2JVD
+SRC   STRAIN: 168;                                                         2JVD
+SRC   GENE: YNZC, BSU17880;                                                2JVD
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 2JVD
+SRC   EXPRESSION_SYSTEM_TAXID: 562;                                        2JVD
+SRC   EXPRESSION_SYSTEM_STRAIN: BL21(DE3)MGK;                              2JVD
+SRC   EXPRESSION_SYSTEM_VECTOR_TYPE: PLASMID;                              2JVD
+SRC   EXPRESSION_SYSTEM_VECTOR: SR384-1-46-21.1;                           2JVD
+SRC   EXPRESSION_SYSTEM_PLASMID: PET21                                     2JVD
+AUT  J.M.ARAMINI,S.SHARMA,Y.J.HUANG,L.ZHAO,L.A.OWENS,K.STOKES,M.JI         2JVD
+AUT   R.XIAO,M.C.BARAN,G.V.T.SWAPNA,T.B.ACTON,G.T.MONTELIONE,NORTH         2JVD
+AUT   STRUCTURAL GENOMICS CONSORTIUM (NESG)                                2JVD
+REM                                                                        2JVD
+REM  -------------------- Secondary structure summary -------------------  2JVD
+REM                                                                        2JVD
+CHN  /home/proj/stride/tmp/tmpEjVYW8pdb A                                  2JVD
+REM                                                                        2JVD
+REM                .         .         .         .                         2JVD
+SEQ  1    MISNAKIARINELAAKAKAGVITEEEKAEQQKLRQEYLKGFRSSMKLE     48          2JVD
+STR          HHHHHHHHHHHHHHHH    HHHHHHHHHHHHHHHTTT  GGG                   2JVD
+REM                                                                        2JVD
+REM                                                                        2JVD
+REM                                                                        2JVD
+LOC  AlphaHelix   ASN     4 A      ALA     19 A                            2JVD
+LOC  AlphaHelix   GLU    24 A      LEU     38 A                            2JVD
+LOC  310Helix     SER    44 A      LYS     46 A                            2JVD
+LOC  TurnII       LEU    38 A      PHE     41 A                            2JVD
+REM                                                                        2JVD
+REM  --------------- Detailed secondary structure assignment-------------  2JVD
+REM                                                                        2JVD
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      2JVD
+ASG  MET A    1    1    C          Coil    360.00    175.32     180.9      2JVD
+ASG  ILE A    2    2    C          Coil   -133.53    145.30      40.5      2JVD
+ASG  SER A    3    3    C          Coil   -120.37    170.87      67.1      2JVD
+ASG  ASN A    4    4    H    AlphaHelix    -53.66    -39.77     121.7      2JVD
+ASG  ALA A    5    5    H    AlphaHelix    -56.50    -43.57      70.3      2JVD
+ASG  LYS A    6    6    H    AlphaHelix    -74.91    -31.25      99.2      2JVD
+ASG  ILE A    7    7    H    AlphaHelix    -61.28    -45.30      58.9      2JVD
+ASG  ALA A    8    8    H    AlphaHelix    -59.84    -42.60      59.6      2JVD
+ASG  ARG A    9    9    H    AlphaHelix    -56.31    -43.67      49.1      2JVD
+ASG  ILE A   10   10    H    AlphaHelix    -60.97    -51.78      17.4      2JVD
+ASG  ASN A   11   11    H    AlphaHelix    -60.89    -32.78     107.1      2JVD
+ASG  GLU A   12   12    H    AlphaHelix    -61.59    -54.93      87.5      2JVD
+ASG  LEU A   13   13    H    AlphaHelix    -63.53    -44.82       0.0      2JVD
+ASG  ALA A   14   14    H    AlphaHelix    -54.81    -43.83      30.9      2JVD
+ASG  ALA A   15   15    H    AlphaHelix    -62.13    -39.85      54.9      2JVD
+ASG  LYS A   16   16    H    AlphaHelix    -61.47    -38.71      54.3      2JVD
+ASG  ALA A   17   17    H    AlphaHelix    -70.04    -46.47      43.2      2JVD
+ASG  LYS A   18   18    H    AlphaHelix    -61.70    -31.84     183.1      2JVD
+ASG  ALA A   19   19    H    AlphaHelix    -79.47    -41.71      76.0      2JVD
+ASG  GLY A   20   20    C          Coil    111.92     -5.23      58.3      2JVD
+ASG  VAL A   21   21    C          Coil    -90.08     13.42     112.2      2JVD
+ASG  ILE A   22   22    C          Coil    -84.14    128.43      25.6      2JVD
+ASG  THR A   23   23    C          Coil    -84.43    165.67      79.4      2JVD
+ASG  GLU A   24   24    H    AlphaHelix    -56.70    -39.18     136.2      2JVD
+ASG  GLU A   25   25    H    AlphaHelix    -64.28    -47.40     147.8      2JVD
+ASG  GLU A   26   26    H    AlphaHelix    -59.33    -44.50      26.3      2JVD
+ASG  LYS A   27   27    H    AlphaHelix    -56.95    -46.74      72.4      2JVD
+ASG  ALA A   28   28    H    AlphaHelix    -58.64    -48.08      58.0      2JVD
+ASG  GLU A   29   29    H    AlphaHelix    -65.88    -41.68      72.3      2JVD
+ASG  GLN A   30   30    H    AlphaHelix    -52.17    -57.65      23.5      2JVD
+ASG  GLN A   31   31    H    AlphaHelix    -53.87    -44.29     117.4      2JVD
+ASG  LYS A   32   32    H    AlphaHelix    -64.24    -51.58     116.0      2JVD
+ASG  LEU A   33   33    H    AlphaHelix    -59.74    -37.41       9.8      2JVD
+ASG  ARG A   34   34    H    AlphaHelix    -59.96    -38.82     142.9      2JVD
+ASG  GLN A   35   35    H    AlphaHelix    -66.77    -42.59     112.2      2JVD
+ASG  GLU A   36   36    H    AlphaHelix    -56.39    -31.22      33.7      2JVD
+ASG  TYR A   37   37    H    AlphaHelix    -78.09    -40.32     101.3      2JVD
+ASG  LEU A   38   38    H    AlphaHelix    -67.26    -11.74      97.9      2JVD
+ASG  LYS A   39   39    T          Turn    -50.07     99.65     139.0      2JVD
+ASG  GLY A   40   40    T          Turn     86.99    -12.79      74.5      2JVD
+ASG  PHE A   41   41    T          Turn    -73.85    121.08     108.6      2JVD
+ASG  ARG A   42   42    C          Coil   -111.22    161.56     160.2      2JVD
+ASG  SER A   43   43    C          Coil    -83.13     95.14      50.2      2JVD
+ASG  SER A   44   44    G      310Helix    -56.77    -37.44     109.7      2JVD
+ASG  MET A   45   45    G      310Helix    -60.40    -25.53     186.0      2JVD
+ASG  LYS A   46   46    G      310Helix   -117.73     -6.87     160.2      2JVD
+ASG  LEU A   47   47    C          Coil     62.84     22.23     157.4      2JVD
+ASG  GLU A   48   48    C          Coil    -78.04    360.00     135.6      2JVD
