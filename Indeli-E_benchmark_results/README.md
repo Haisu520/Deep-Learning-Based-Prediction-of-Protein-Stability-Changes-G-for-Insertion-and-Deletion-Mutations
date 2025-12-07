@@ -1,1 +1,1 @@
-NB! rSASA file in this part is different from that in my model.
+NB! rSASA file in this part is different from that in my model. The benchmarking dataset is downloaded from  the supplementary dataset uploaded on "Fitness Effects of Single Amino Acid Insertions and Deletions in TEM-1 β-Lactamase"(https://pubmed.ncbi.nlm.nih.gov/31034887/)
