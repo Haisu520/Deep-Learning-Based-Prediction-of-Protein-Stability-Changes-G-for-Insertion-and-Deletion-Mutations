@@ -1,0 +1,110 @@
+REM  --------------------------------------------------------------------  2RRU
+REM                                                                        2RRU
+REM  STRIDE: Knowledge-based secondary structure assignment                2RRU
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         2RRU
+REM                                                                        2RRU
+REM  Residue accessible surface area calculation                           2RRU
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 2RRU
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       2RRU
+REM                                                                        2RRU
+REM  ------------------------ General information -----------------------  2RRU
+REM                                                                        2RRU
+HDR  PROTEIN BINDING                         09-JUN-11   2RRU              2RRU
+CMP  MOL_ID: 1;                                                            2RRU
+CMP   MOLECULE: SEQUESTOSOME-1;                                            2RRU
+CMP   CHAIN: A;                                                            2RRU
+CMP   FRAGMENT: UBA DOMAIN (UNP RESIDUES 393-438);                         2RRU
+CMP   SYNONYM: STONE14, UBIQUITIN-BINDING PROTEIN P62;                     2RRU
+CMP   ENGINEERED: YES                                                      2RRU
+SRC  MOL_ID: 1;                                                            2RRU
+SRC   ORGANISM_SCIENTIFIC: MUS MUSCULUS;                                   2RRU
+SRC   ORGANISM_COMMON: MOUSE;                                              2RRU
+SRC   ORGANISM_TAXID: 10090;                                               2RRU
+SRC   GENE: SQSTM1, A170, STAP;                                            2RRU
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 2RRU
+SRC   EXPRESSION_SYSTEM_TAXID: 562;                                        2RRU
+SRC   EXPRESSION_SYSTEM_VECTOR_TYPE: VECTOR;                               2RRU
+SRC   EXPRESSION_SYSTEM_VECTOR: PGEX-6P1                                   2RRU
+AUT  S.ISOGAI,D.MORIMOTO,K.ARITA,S.UNZAI,T.TENNO,J.HASEGAWA,Y.SOU,         2RRU
+AUT   M.KOMATSU,K.TANAKA,M.SHIRAKAWA,H.TOCHIO                              2RRU
+REM                                                                        2RRU
+REM  -------------------- Secondary structure summary -------------------  2RRU
+REM                                                                        2RRU
+CHN  /home/proj/stride/tmp/tmpnQXImopdb A                                  2RRU
+REM                                                                        2RRU
+REM                .         .         .         .         .               2RRU
+SEQ  1    GPLGSEADPRLIESLSQMLSMGFSDEGGWLTRLLQTKNYDIGAALDTIQY   50          2RRU
+STR               HHHHHHHHHHHHH   TTTTHHHHHHHHHTTTHHHHHTTTTT               2RRU
+REM                                                                        2RRU
+REM                                                                        2RRU
+SEQ  51   SKH                                                  53          2RRU
+STR                                                                        2RRU
+REM                                                                        2RRU
+REM                                                                        2RRU
+REM                                                                        2RRU
+LOC  AlphaHelix   PRO     9 A      MET     21 A                            2RRU
+LOC  AlphaHelix   TRP    29 A      LYS     37 A                            2RRU
+LOC  AlphaHelix   ILE    41 A      LEU     45 A                            2RRU
+LOC  TurnII       ASP    25 A      GLY     28 A                            2RRU
+LOC  TurnIV       GLU    26 A      TRP     29 A                            2RRU
+LOC  TurnIV       LYS    37 A      ASP     40 A                            2RRU
+LOC  TurnIV       LEU    45 A      ILE     48 A                            2RRU
+LOC  TurnIV       ASP    46 A      GLN     49 A                            2RRU
+LOC  TurnIV       THR    47 A      TYR     50 A                            2RRU
+REM                                                                        2RRU
+REM  --------------- Detailed secondary structure assignment-------------  2RRU
+REM                                                                        2RRU
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      2RRU
+ASG  GLY A    1    1    C          Coil    360.00     74.92     120.9      2RRU
+ASG  PRO A    2    2    C          Coil    -69.77    164.25     130.1      2RRU
+ASG  LEU A    3    3    C          Coil   -101.94    149.61     168.3      2RRU
+ASG  GLY A    4    4    C          Coil     59.26   -112.51      84.9      2RRU
+ASG  SER A    5    5    C          Coil   -168.49    143.12      90.8      2RRU
+ASG  GLU A    6    6    C          Coil   -106.43    173.85     166.2      2RRU
+ASG  ALA A    7    7    C          Coil   -145.25   -175.79      41.1      2RRU
+ASG  ASP A    8    8    C          Coil   -125.37    160.02      83.9      2RRU
+ASG  PRO A    9    9    H    AlphaHelix    -69.78    -32.83      91.3      2RRU
+ASG  ARG A   10   10    H    AlphaHelix    -90.95     12.28     178.8      2RRU
+ASG  LEU A   11   11    H    AlphaHelix   -119.93    -48.23       1.2      2RRU
+ASG  ILE A   12   12    H    AlphaHelix    -54.28    -29.78      81.6      2RRU
+ASG  GLU A   13   13    H    AlphaHelix    -55.32    -39.32      75.6      2RRU
+ASG  SER A   14   14    H    AlphaHelix    -74.58    -53.25       0.0      2RRU
+ASG  LEU A   15   15    H    AlphaHelix    -49.00    -38.97      20.6      2RRU
+ASG  SER A   16   16    H    AlphaHelix    -51.15    -34.94      75.3      2RRU
+ASG  GLN A   17   17    H    AlphaHelix    -79.51    -40.46      95.8      2RRU
+ASG  MET A   18   18    H    AlphaHelix    -64.21    -53.73       0.0      2RRU
+ASG  LEU A   19   19    H    AlphaHelix    -56.26    -38.95      87.6      2RRU
+ASG  SER A   20   20    H    AlphaHelix    -74.45    -28.39     108.2      2RRU
+ASG  MET A   21   21    H    AlphaHelix    -78.38    -25.63      87.2      2RRU
+ASG  GLY A   22   22    C          Coil    124.69     48.37      60.0      2RRU
+ASG  PHE A   23   23    C          Coil   -137.27   -175.56      50.8      2RRU
+ASG  SER A   24   24    C          Coil   -157.77   -169.56      52.8      2RRU
+ASG  ASP A   25   25    T          Turn   -126.79     26.92      79.9      2RRU
+ASG  GLU A   26   26    T          Turn    -55.36    115.29     163.6      2RRU
+ASG  GLY A   27   27    T          Turn     92.70    -37.00      96.9      2RRU
+ASG  GLY A   28   28    T          Turn    112.85     43.85      26.9      2RRU
+ASG  TRP A   29   29    H    AlphaHelix    -94.96    -20.57      74.1      2RRU
+ASG  LEU A   30   30    H    AlphaHelix   -106.91     -1.47       0.0      2RRU
+ASG  THR A   31   31    H    AlphaHelix    -89.22    -19.56      33.5      2RRU
+ASG  ARG A   32   32    H    AlphaHelix   -119.41    -28.49     177.5      2RRU
+ASG  LEU A   33   33    H    AlphaHelix    -51.51    -59.21      13.5      2RRU
+ASG  LEU A   34   34    H    AlphaHelix    -51.64    -47.28       0.0      2RRU
+ASG  GLN A   35   35    H    AlphaHelix    -53.75    -31.01      87.4      2RRU
+ASG  THR A   36   36    H    AlphaHelix    -86.95    -20.89     113.5      2RRU
+ASG  LYS A   37   37    H    AlphaHelix   -101.93     15.29      84.6      2RRU
+ASG  ASN A   38   38    T          Turn     59.12     42.10     121.5      2RRU
+ASG  TYR A   39   39    T          Turn     52.79     61.29      74.8      2RRU
+ASG  ASP A   40   40    T          Turn   -111.46    149.68      72.8      2RRU
+ASG  ILE A   41   41    H    AlphaHelix    -99.28    -30.95      32.6      2RRU
+ASG  GLY A   42   42    H    AlphaHelix    -82.29    -22.74      57.0      2RRU
+ASG  ALA A   43   43    H    AlphaHelix    -86.97    -36.55      32.6      2RRU
+ASG  ALA A   44   44    H    AlphaHelix    -70.88    -25.28       0.0      2RRU
+ASG  LEU A   45   45    H    AlphaHelix    -68.80    -21.47      66.8      2RRU
+ASG  ASP A   46   46    T          Turn   -112.33     41.78     110.5      2RRU
+ASG  THR A   47   47    T          Turn   -132.04      9.68      45.5      2RRU
+ASG  ILE A   48   48    T          Turn   -110.14    -35.08      69.1      2RRU
+ASG  GLN A   49   49    T          Turn    -51.54    -54.62     162.3      2RRU
+ASG  TYR A   50   50    T          Turn   -161.35   -170.07     124.6      2RRU
+ASG  SER A   51   51    C          Coil   -116.29    -67.76     110.4      2RRU
+ASG  LYS A   52   52    C          Coil   -122.88    -49.55     195.2      2RRU
+ASG  HIS A   53   53    C          Coil    -82.46    360.00     198.2      2RRU

@@ -1,0 +1,84 @@
+REM  --------------------------------------------------------------------  2GP8
+REM                                                                        2GP8
+REM  STRIDE: Knowledge-based secondary structure assignment                2GP8
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         2GP8
+REM                                                                        2GP8
+REM  Residue accessible surface area calculation                           2GP8
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 2GP8
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       2GP8
+REM                                                                        2GP8
+REM  ------------------------ General information -----------------------  2GP8
+REM                                                                        2GP8
+HDR  VIRAL PROTEIN                           11-MAY-99   2GP8              2GP8
+CMP  MOL_ID: 1;                                                            2GP8
+CMP   MOLECULE: PROTEIN (SCAFFOLDING PROTEIN);                             2GP8
+CMP   CHAIN: A;                                                            2GP8
+CMP   FRAGMENT: C-TERMINAL FUNCTIONAL DOMAIN;                              2GP8
+CMP   ENGINEERED: YES                                                      2GP8
+SRC  MOL_ID: 1;                                                            2GP8
+SRC   ORGANISM_SCIENTIFIC: ENTEROBACTERIA PHAGE P22;                       2GP8
+SRC   ORGANISM_TAXID: 10754;                                               2GP8
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 2GP8
+SRC   EXPRESSION_SYSTEM_TAXID: 562;                                        2GP8
+SRC   EXPRESSION_SYSTEM_STRAIN: NF1829;                                    2GP8
+SRC   EXPRESSION_SYSTEM_VECTOR_TYPE: PLASMID;                              2GP8
+SRC   EXPRESSION_SYSTEM_PLASMID: PET3A                                     2GP8
+AUT  Y.SUN,M.H.PARKER,P.WEIGELE,S.CASJENS,P.E.PREVELIGE JR.,N.R.KR         2GP8
+REM                                                                        2GP8
+REM  -------------------- Secondary structure summary -------------------  2GP8
+REM                                                                        2GP8
+CHN  /home/proj/stride/tmp/tmpGICW1Fpdb A                                  2GP8
+REM                                                                        2GP8
+REM                .         .         .         .                         2GP8
+SEQ  1    ITGDVSAANKDAIRKQMDAAASKGDVETYRKLKAKLKGIR             40          2GP8
+STR            HHHHHHHHHHHHHHHHHTTTHHHHHHHHHHHH                            2GP8
+REM                                                                        2GP8
+REM                                                                        2GP8
+REM                                                                        2GP8
+LOC  AlphaHelix   SER   269 A      SER    285 A                            2GP8
+LOC  AlphaHelix   VAL   289 A      LYS    300 A                            2GP8
+LOC  TurnIV       LYS   286 A      VAL    289 A                            2GP8
+REM                                                                        2GP8
+REM  --------------- Detailed secondary structure assignment-------------  2GP8
+REM                                                                        2GP8
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      2GP8
+ASG  ILE A  264    1    C          Coil    360.00    142.15     199.2      2GP8
+ASG  THR A  265    2    C          Coil    -88.84     30.83     144.9      2GP8
+ASG  GLY A  266    3    C          Coil    -91.36     49.66      45.0      2GP8
+ASG  ASP A  267    4    C          Coil    -88.19     53.06     102.2      2GP8
+ASG  VAL A  268    5    C          Coil    -48.36    176.89      99.9      2GP8
+ASG  SER A  269    6    H    AlphaHelix    -33.77    -37.52      54.4      2GP8
+ASG  ALA A  270    7    H    AlphaHelix    -45.94    -62.84      78.2      2GP8
+ASG  ALA A  271    8    H    AlphaHelix    -71.29    -55.48      25.6      2GP8
+ASG  ASN A  272    9    H    AlphaHelix    -45.53    -59.54      93.4      2GP8
+ASG  LYS A  273   10    H    AlphaHelix    -42.92    -58.41      96.0      2GP8
+ASG  ASP A  274   11    H    AlphaHelix    -44.52    -65.67     103.3      2GP8
+ASG  ALA A  275   12    H    AlphaHelix    -43.15    -67.01      52.1      2GP8
+ASG  ILE A  276   13    H    AlphaHelix    -43.04    -45.52      37.3      2GP8
+ASG  ARG A  277   14    H    AlphaHelix    -49.61    -62.10     127.2      2GP8
+ASG  LYS A  278   15    H    AlphaHelix    -43.63    -67.25     154.8      2GP8
+ASG  GLN A  279   16    H    AlphaHelix    -42.95    -50.92     135.1      2GP8
+ASG  MET A  280   17    H    AlphaHelix    -57.54    -60.99      10.4      2GP8
+ASG  ASP A  281   18    H    AlphaHelix    -43.51    -53.24     107.5      2GP8
+ASG  ALA A  282   19    H    AlphaHelix    -53.64    -70.40      55.5      2GP8
+ASG  ALA A  283   20    H    AlphaHelix    -59.06    -13.99      17.2      2GP8
+ASG  ALA A  284   21    H    AlphaHelix    -74.99    -78.65       5.1      2GP8
+ASG  SER A  285   22    H    AlphaHelix    -84.86     44.79     110.1      2GP8
+ASG  LYS A  286   23    T          Turn   -131.26     -3.16     167.7      2GP8
+ASG  GLY A  287   24    T          Turn    113.26    -46.45      64.8      2GP8
+ASG  ASP A  288   25    T          Turn    -79.28     57.30      93.4      2GP8
+ASG  VAL A  289   26    H    AlphaHelix    -65.86    -18.32      61.9      2GP8
+ASG  GLU A  290   27    H    AlphaHelix    -46.43    -69.98     156.2      2GP8
+ASG  THR A  291   28    H    AlphaHelix    -51.10    -46.48      62.4      2GP8
+ASG  TYR A  292   29    H    AlphaHelix    -47.84    -63.59      64.9      2GP8
+ASG  ARG A  293   30    H    AlphaHelix    -42.65    -65.83     192.6      2GP8
+ASG  LYS A  294   31    H    AlphaHelix    -42.90    -67.14     167.1      2GP8
+ASG  LEU A  295   32    H    AlphaHelix    -42.93    -56.45      44.0      2GP8
+ASG  LYS A  296   33    H    AlphaHelix    -43.21    -60.66     112.7      2GP8
+ASG  ALA A  297   34    H    AlphaHelix    -42.41    -66.13      62.9      2GP8
+ASG  LYS A  298   35    H    AlphaHelix    -44.94    -59.08     167.8      2GP8
+ASG  LEU A  299   36    H    AlphaHelix    -46.28    -33.73      38.1      2GP8
+ASG  LYS A  300   37    H    AlphaHelix    -73.83     -8.63     182.7      2GP8
+ASG  GLY A  301   38    C          Coil   -117.99     -9.90      57.8      2GP8
+ASG  ILE A  302   39    C          Coil    -47.35    102.94      68.9      2GP8
+ASG  ARG A  303   40    C          Coil    -57.03    360.00     277.4      2GP8

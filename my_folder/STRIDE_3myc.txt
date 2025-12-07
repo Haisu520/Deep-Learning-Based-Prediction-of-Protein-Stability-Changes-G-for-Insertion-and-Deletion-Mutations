@@ -1,0 +1,121 @@
+REM  --------------------------------------------------------------------  3MYC
+REM                                                                        3MYC
+REM  STRIDE: Knowledge-based secondary structure assignment                3MYC
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         3MYC
+REM                                                                        3MYC
+REM  Residue accessible surface area calculation                           3MYC
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 3MYC
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       3MYC
+REM                                                                        3MYC
+REM  ------------------------ General information -----------------------  3MYC
+REM                                                                        3MYC
+HDR  STRUCTURAL PROTEIN                      10-MAY-10   3MYC              3MYC
+CMP  MOL_ID: 1;                                                            3MYC
+CMP   MOLECULE: VILLIN-1;                                                  3MYC
+CMP   CHAIN: A;                                                            3MYC
+CMP   FRAGMENT: VILLIN HEADPIECE (UNP RESIDUES 760-826);                   3MYC
+CMP   ENGINEERED: YES;                                                     3MYC
+CMP   MUTATION: YES                                                        3MYC
+SRC  MOL_ID: 1;                                                            3MYC
+SRC   ORGANISM_SCIENTIFIC: GALLUS GALLUS;                                  3MYC
+SRC   ORGANISM_COMMON: BANTAM,CHICKENS;                                    3MYC
+SRC   ORGANISM_TAXID: 9031;                                                3MYC
+SRC   GENE: VIL, VIL1;                                                     3MYC
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 3MYC
+SRC   EXPRESSION_SYSTEM_TAXID: 469008;                                     3MYC
+SRC   EXPRESSION_SYSTEM_STRAIN: BL21(DE3);                                 3MYC
+SRC   EXPRESSION_SYSTEM_VECTOR_TYPE: PLASMID;                              3MYC
+SRC   EXPRESSION_SYSTEM_PLASMID: PET-24A                                   3MYC
+AUT  J.W.BROWN,J.D.FARELLI,C.J.MCKNIGHT                                    3MYC
+REM                                                                        3MYC
+REM  -------------------- Secondary structure summary -------------------  3MYC
+REM                                                                        3MYC
+CHN  /home/proj/stride/tmp/tmpAUoSYEpdb A                                  3MYC
+REM                                                                        3MYC
+REM                .         .         .         .         .               3MYC
+SEQ  1    LETFPLDVLVNTAAEDLPRGVDPSRKENFLSDEDFKAVFGMTRSAFANLP   50          3MYC
+STR            HHHHHH  GGG TTTTTTTTGGGG  HHHHHHHH   HHHHHH                 3MYC
+REM                                                                        3MYC
+REM                .                                                       3MYC
+SEQ  51   LWKQQNLKKEKGLF                                       64          3MYC
+STR       HHHHHHHHHHH                                                      3MYC
+REM                                                                        3MYC
+REM                                                                        3MYC
+REM                                                                        3MYC
+LOC  AlphaHelix   LEU    18 A      ASN     23 A                            3MYC
+LOC  AlphaHelix   ASP    44 A      PHE     51 A                            3MYC
+LOC  AlphaHelix   ARG    55 A      ASN     60 A                            3MYC
+LOC  AlphaHelix   LEU    63 A      LYS     73 A                            3MYC
+LOC  310Helix     ALA    26 A      ASP     28 A                            3MYC
+LOC  310Helix     LYS    38 A      PHE     41 A                            3MYC
+LOC  TurnI        PRO    30 A      VAL     33 A                            3MYC
+LOC  TurnI        ASP    34 A      ARG     37 A                            3MYC
+LOC  TurnIV       PRO    35 A      LYS     38 A                            3MYC
+REM                                                                        3MYC
+REM  --------------- Detailed secondary structure assignment-------------  3MYC
+REM                                                                        3MYC
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      3MYC
+ASG  LEU A   13    1    C          Coil    360.00    138.57     150.9      3MYC
+ASG  GLU A   14    2    C          Coil    -70.76    143.12     112.8      3MYC
+ASG  THR A   15    3    C          Coil   -101.39    150.65      88.0      3MYC
+ASG  PHE A   16    4    C          Coil   -131.16    145.55      33.5      3MYC
+ASG  PRO A   17    5    C          Coil    -53.52    143.10      78.3      3MYC
+ASG  LEU A   18    6    H    AlphaHelix    -46.64    -50.33      53.6      3MYC
+ASG  ASP A   19    7    H    AlphaHelix    -57.82    -36.70     112.8      3MYC
+ASG  VAL A   20    8    H    AlphaHelix    -65.92    -45.71      53.0      3MYC
+ASG  LEU A   21    9    H    AlphaHelix    -67.92    -34.39       0.0      3MYC
+ASG  VAL A   22   10    H    AlphaHelix    -73.66    -45.71      40.3      3MYC
+ASG  ASN A   23   11    H    AlphaHelix   -114.19     48.62     111.6      3MYC
+ASG  THR A   24   12    C          Coil   -129.23    130.01      37.5      3MYC
+ASG  ALA A   25   13    C          Coil    -59.88    147.05      60.2      3MYC
+ASG  ALA A   26   14    G      310Helix    -49.44    -45.82      81.6      3MYC
+ASG  GLU A   27   15    G      310Helix    -64.93    -22.96     172.9      3MYC
+ASG  ASP A   28   16    G      310Helix    -97.25      0.34     114.6      3MYC
+ASG  LEU A   29   17    C          Coil    -60.33    136.91      24.3      3MYC
+ASG  PRO A   30   18    T          Turn    -54.24    143.39      39.3      3MYC
+ASG  ARG A   31   19    T          Turn    -58.85    -31.28     230.0      3MYC
+ASG  GLY A   32   20    T          Turn    -79.16    -11.26      28.7      3MYC
+ASG  VAL A   33   21    T          Turn    -85.03    121.31       8.2      3MYC
+ASG  ASP A   34   22    T          Turn    -74.29    112.47      75.8      3MYC
+ASG  PRO A   35   23    T          Turn    -65.70    -15.83      67.6      3MYC
+ASG  SER A   36   24    T          Turn    -90.53     -6.26      79.1      3MYC
+ASG  ARG A   37   25    T          Turn   -136.68     49.43      72.2      3MYC
+ASG  LYS A   38   26    G      310Helix    -56.62    -32.55      17.0      3MYC
+ASG  GLU A   39   27    G      310Helix    -60.81    -27.16       1.0      3MYC
+ASG  ASN A   40   28    G      310Helix    -69.66    -14.89      63.1      3MYC
+ASG  PHE A   41   29    G      310Helix   -104.52      1.94      10.8      3MYC
+ASG  LEU A   42   30    C          Coil    -77.69    150.67       1.4      3MYC
+ASG  SER A   43   31    C          Coil    -62.28    160.75      35.0      3MYC
+ASG  ASP A   44   32    H    AlphaHelix    -58.64    -40.35     121.0      3MYC
+ASG  GLU A   45   33    H    AlphaHelix    -59.69    -49.60     152.6      3MYC
+ASG  ASP A   46   34    H    AlphaHelix    -64.87    -40.59      37.3      3MYC
+ASG  PHE A   47   35    H    AlphaHelix    -56.91    -47.82       5.8      3MYC
+ASG  LYS A   48   36    H    AlphaHelix    -61.26    -45.95     150.5      3MYC
+ASG  ALA A   49   37    H    AlphaHelix    -59.85    -42.82      82.1      3MYC
+ASG  VAL A   50   38    H    AlphaHelix    -75.81    -48.19      20.5      3MYC
+ASG  PHE A   51   39    H    AlphaHelix    -98.57    -29.10      18.7      3MYC
+ASG  GLY A   52   40    C          Coil     73.82     17.17      62.3      3MYC
+ASG  MET A   53   41    C          Coil   -144.63    168.26      68.7      3MYC
+ASG  THR A   54   42    C          Coil    -71.10    159.22      92.3      3MYC
+ASG  ARG A   55   43    H    AlphaHelix    -56.98    -41.85      75.6      3MYC
+ASG  SER A   56   44    H    AlphaHelix    -63.65    -42.06      77.1      3MYC
+ASG  ALA A   57   45    H    AlphaHelix    -62.36    -42.80      40.3      3MYC
+ASG  PHE A   58   46    H    AlphaHelix    -62.68    -45.74       3.2      3MYC
+ASG  ALA A   59   47    H    AlphaHelix    -64.58    -21.06      50.4      3MYC
+ASG  ASN A   60   48    H    AlphaHelix    -84.63    -11.57     131.5      3MYC
+ASG  LEU A   61   49    C          Coil    -67.93    148.44      52.4      3MYC
+ASG  PRO A   62   50    C          Coil    -56.08    145.99      66.9      3MYC
+ASG  LEU A   63   51    H    AlphaHelix    -55.17    -44.02      91.3      3MYC
+ASG  TRP A   64   52    H    AlphaHelix    -57.04    -32.58     157.1      3MYC
+ASG  LYS A   65   53    H    AlphaHelix    -78.56    -37.74      84.6      3MYC
+ASG  GLN A   66   54    H    AlphaHelix    -55.50    -49.91       8.4      3MYC
+ASG  GLN A   67   55    H    AlphaHelix    -61.72    -44.41      61.5      3MYC
+ASG  ASN A   68   56    H    AlphaHelix    -63.98    -41.98      62.7      3MYC
+ASG  LEU A   69   57    H    AlphaHelix    -59.41    -45.25      47.3      3MYC
+ASG  LYS A   70   58    H    AlphaHelix    -62.48    -35.66       4.8      3MYC
+ASG  LYS A   71   59    H    AlphaHelix    -54.77    -54.22     102.2      3MYC
+ASG  GLU A   72   60    H    AlphaHelix    -60.33    -34.25     184.5      3MYC
+ASG  LYS A   73   61    H    AlphaHelix    -85.76     -0.34      82.2      3MYC
+ASG  GLY A   74   62    C          Coil     79.76     17.16      30.0      3MYC
+ASG  LEU A   75   63    C          Coil   -111.96      4.73       0.0      3MYC
+ASG  PHE A   76   64    C          Coil    -69.77    360.00     123.1      3MYC
