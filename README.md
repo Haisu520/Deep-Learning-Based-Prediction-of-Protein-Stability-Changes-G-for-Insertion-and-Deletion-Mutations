@@ -1,1 +1,1 @@
-
+The modified version of IndeLLM can be accessed on web link:https://colab.research.google.com/drive/1mp4fc9P6Z0hMjC4iFPLi01R4Rvo00wEB#scrollTo=4XuDbBG-GBFd, with adding benchmarking part, batching datasets
