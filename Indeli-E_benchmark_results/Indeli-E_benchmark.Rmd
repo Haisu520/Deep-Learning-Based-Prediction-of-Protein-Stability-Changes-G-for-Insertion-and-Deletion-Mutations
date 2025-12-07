@@ -1,0 +1,774 @@
+---
+title: "Bioinformatics_Project_1"
+author: "Haisu Xia"
+output: pdf_document
+date: "2024-12-8"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Get INDEL datasets from literature
+
+This is to get the prepared dataset for further analysis provided by the reference. For more details see"Random Single Amino Acid Deletion Sampling Unveils Structural Tolerance and the Benefits of Helical Registry Shift on GFP Folding and Structure, DOI:10.1016/j.str.2014.03.014" and "Fitness Effects of Single Amino Acid Insertions and Deletions in TEM-1 β-Lactamase. DOI:10.1016/j.jmb.2019.04.030"
+```{r Necessary packages}
+library(readxl)
+library(dplyr)
+library(ggplot2)
+library(bio3d)
+library(seqinr)
+library(grpreg)
+library(glmnet)
+library(glinternet)
+```
+
+```{r Prepare for dataset}
+
+# Original TEM1-β protein sequence
+tem_sequence <- "MSIQHFRVALIPFFAAFCLPVFAHPETLVKVKDAEDQLGARVGYIELDLNSGKILESFRPEERFPMMSTFKVLLCGAVLSRVDAGQEQLGRRIHYSQNDLVEYSPVTEKHLTDGMTVRELCSAAITMSDNTAANLLLTTIGGPKELTAFLHNMGDHVTRLDRWEPELNEAIPNDERDTTMPAAMATTLRKLLTGELLTLASRQQLIDWMEADKVAGPLLRSALPAGWFIADKSGAGERGSRGIIAALGPDGKPSRIVVIYTTGSQATMDERNRQIAEIGASLIKHW"
+
+# Load Excel file
+file_path <- "NIHMS1528810-supplement-1.xlsx"
+
+# Load S1. Insertion Counts & Fitness data
+s1_data <- read_excel(file_path, sheet = "S1. Insertion Counts & Fitness")
+
+# Load S2. Deletion Counts & Fitness data
+s2_data <- read_excel(file_path, sheet = "S2. Deletion Counts & Fitness")
+
+# Function to process data
+process_fitness_data <- function(data) {
+  data %>%
+    dplyr::filter(Fitness != "-") %>%                   # Remove "-" rows
+    dplyr::mutate(Fitness = as.numeric(Fitness)) %>%   # Transfer to numeric value
+    dplyr::group_by(`Ambler Position`) %>%
+    dplyr::ungroup()
+}
+
+# Apply function to filter data
+s1_filtered <- process_fitness_data(s1_data) %>%
+  dplyr::rename(Pos = Position)
+
+s2_filtered <- process_fitness_data(s2_data) %>%
+  dplyr::rename(Pos = Position)
+
+
+# Save results for further analysis
+write.csv(s1_filtered, "S1_Max_Fitness.csv", row.names = FALSE) # S1 represents Insertion
+write.csv(s2_filtered, "S2_Max_Fitness.csv", row.names = FALSE) # S2 represents Deletion
+
+# Function to process S1 table "Insertion"
+generate_variant_insert <- function(sequence, position, inserted_aa) {
+  # Insert AA to target position
+  before <- substr(sequence, 1, position)
+  after <- substr(sequence, position + 1, nchar(sequence))
+  paste0(before, inserted_aa, after)
+}
+
+# Function to process S2 table "Deletion"
+generate_variant_delete <- function(sequence, position) {
+  before <- substr(sequence, 1, position - 1)
+  after <- substr(sequence, position + 1, nchar(sequence))
+  paste0(before, after)
+}
+
+# Generate Variant dataframe for deletions
+variant_sequences_del <- s2_filtered %>%
+  dplyr::mutate(
+    Variant_Sequence = sapply(Pos, function(pos) generate_variant_delete(tem_sequence, pos)),
+    InDel = "Del",
+    AA = `WT AA`  # Get Deleted AA from dataframe
+  ) %>%
+  dplyr::select(Pos, Variant_Sequence, Fitness, InDel, AA)
+
+# Generate Variant dataframe for insertions
+variant_sequences_ins <- s1_filtered %>%
+  dplyr::mutate(
+    Variant_Sequence = mapply(generate_variant_insert, 
+                            rep(list(tem_sequence), nrow(.)),
+                            Pos,
+                            `Inserted AA`),
+    InDel = "In",
+    AA = `Inserted AA`
+  ) %>%
+  dplyr::filter(AA == "A") %>%  
+  dplyr::select(Pos, Variant_Sequence, Fitness, InDel, AA)
+
+
+# Combine both datasets
+variant_sequences <- rbind(variant_sequences_del, variant_sequences_ins)
+
+write.csv(variant_sequences, "Variant_sequences.csv", row.names = FALSE)
+
+```
+
+```{r Statistical analyize for Deleltions}
+
+variant_sequences <- read.csv("Variant_sequences.csv")
+
+# Extracted deletion sequences and insertion sequences from variant_sequences.csv
+del_variants <- variant_sequences %>%
+  filter(InDel == "Del")
+in_variants <- variant_sequences %>%
+  filter(InDel == "In")
+
+# calculate statistic value for deletion and insertion
+aa_stats_del <- del_variants %>%
+  group_by(AA) %>%
+  summarise(
+    mean_fitness = mean(Fitness),
+    se_fitness = sd(Fitness)/sqrt(n()),
+    n = n()
+  )
+
+aa_stats_in <- in_variants %>%
+  group_by(AA) %>%
+  summarise(
+    mean_fitness = mean(Fitness),
+    se_fitness = sd(Fitness)/sqrt(n()),
+    n = n()
+  )
+
+# Kruskal-Wallis test 
+kw_result <- kruskal.test(Fitness ~ AA, data = del_variants)
+print("\nKruskal-Wallis Test Results for Deletion:")
+print(kw_result)
+
+kw_result <- kruskal.test(Fitness ~ Pos, data = del_variants)
+print("\nKruskal-Wallis Test Results for Deletion:")
+print(kw_result)
+
+kw_result <- kruskal.test(Fitness ~ Pos, data = in_variants)
+print("\nKruskal-Wallis Test Results for Insertion:")
+print(kw_result)
+
+dir.create("plots", showWarnings = FALSE)
+
+p1 <- ggplot(del_variants, aes(x = reorder(AA, Fitness, FUN = median), y = Fitness)) +
+  geom_boxplot(aes(fill = AA), alpha = 0.7) +
+  geom_jitter(width = 0.2, alpha = 0.5) +
+  theme_minimal() +
+  labs(
+    title = "Distribution of Fitness Values by Deleted Amino Acid",
+    x = "Deleted Amino Acid",
+    y = "Fitness"
+  ) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))+
+  theme(
+    panel.background = element_rect(fill = "white", color = "white"),
+    plot.background = element_rect(fill = "white", color = "white")
+  ) 
+ggsave("plots/boxplot_deletion.png", p1, width = 12, height = 8, dpi = 300)
+
+p3 <- ggplot(aa_stats_del, aes(x = reorder(AA, mean_fitness), y = mean_fitness)) +
+  geom_bar(stat = "identity", aes(fill = AA), alpha = 0.7) +
+  geom_errorbar(aes(ymin = mean_fitness - se_fitness, 
+                    ymax = mean_fitness + se_fitness),
+                width = 0.2) +
+  theme_minimal() +
+  labs(
+    title = "Mean Fitness by Deleted Amino Acid",
+    x = "Deleted Amino Acid",
+    y = "Mean Fitness"
+  ) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))+
+  theme(
+    panel.background = element_rect(fill = "white", color = "white"),
+    plot.background = element_rect(fill = "white", color = "white")
+  ) 
+ggsave("plots/barplot_deletion.png", p3, width = 12, height = 8, dpi = 300)
+
+print(p1)
+print(p2)
+print(p3)
+```
+```{r INDELi-e Analysis}
+pdb_file <- "D:/Rdata/Bioinformatics_Project_1/1zg4.pdb"
+stride_file <- "D:/Rdata/Bioinformatics_Project_1/STRIDE.txt" 
+read_pdb_file <- read.pdb(pdb_file, verbose=F)
+
+## extract pdb info info into a df
+extract_pdb_info<-function(x){
+  x<-data.frame(x$atom)
+  x<-x[,c(5:7)]
+  x<- x %>% distinct(resno, chain, .keep_all=T)
+  x$resid<-a(paste(substr(x$resid,1,1),
+                   tolower(substr(x$resid,2,3)),
+                   sep=""))
+  
+  x<-x[!is.na(x$resid),]
+  return(x)
+}
+
+strucutre_info <- extract_pdb_info(read_pdb_file)
+
+extract_stride_info <- function(stride_file) {
+  # Load stride content
+  stride_content <- readLines(stride_file)
+  
+  # filter ASG lines
+  asg_lines <- grep("^ASG", stride_content, value = TRUE)
+  
+  # extract Structure line and ACC line
+  stride_data <- data.frame(
+    Structure = substr(asg_lines, 25, 25), 
+    ACC = as.numeric(substr(asg_lines, 65, 71))
+  )
+  
+  return(stride_data)
+}
+
+
+strucutre_info_2 <- extract_stride_info(stride_file)
+
+### now merge pdb and stride info. 
+strucutre_info_final <- bind_cols(strucutre_info, strucutre_info_2)
+
+## rename resno to Pos
+colnames(strucutre_info_final)[3] <- "Pos"
+
+## add pdb_name column with your pdb identifier
+strucutre_info_final$pdb_name <- "1zg4"
+
+### Step 2: load the rSASA
+# the df strucutre should be: "pdb_name", "Pos", "rSASA"
+# make sure the "pdb_name" matches between strucutre_info_final and df_rsasa
+
+## replace ".." with path to your rSASA folder
+df_rsasa <- read.delim("D:/Rdata/Bioinformatics_Project_1/1zg4_rSASA.txt")
+
+## make sure there is only one rSASA value per Pos!
+
+##############################################################################
+### Step 3: load the functions and run the structural encoding
+
+## load functions "structural_features_data.R" and "encoded_data_for_predictor.R" located in the Functions folder
+folder_location <- "D:/Rdata/Bioinformatics_Project_1/Functions"
+
+script_files <- list.files(path = folder_location, pattern = "\\.R$", full.names = TRUE)
+
+for (script_file in script_files) {
+  source(script_file)
+}
+
+## run: structural_features_data.R (ignore warnings)
+result <- tryCatch(
+  structural_features_data(strucutre_info_final, df_rsasa),
+  warning = function(w) {
+    message("警告信息：", conditionMessage(w))
+    return(NULL)
+  },
+  error = function(e) {
+    message("错误信息：", conditionMessage(e))
+    stop(e)
+  }
+)
+# if you encounter errors here - please check your rSASA df: are pdb_names matching? Do you have one rSASA value per position?
+
+##############################################################################
+### Step 4: run the simplified structural encoding for INDELi and add ESM1v predictions
+
+### now simplified encoding for predictor
+result <- encoded_data_for_predictor(encoded_sec_struc)
+simple_encoded_sec_struc <- result[[1]]
+
+## add predictions; replace ".." with path to your esm1v prediction folder
+# the df format should be "Pos", "esm1v" (the average substitution score per position)
+esm1v_pred <- read.csv("D:/Rdata/Bioinformatics_Project_1/ESM1v_scores.txt", sep="")
+
+# remember to reverse the esm1v score if needed. it has to match ddG (more negative=stable, more positive=unstable)
+esm1v_pred$esm1v <- esm1v_pred$esm1v * -1
+
+simple_encoded_sec_struc <- merge(simple_encoded_sec_struc, esm1v_pred[,c("Pos", "esm1v")])
+
+
+##############################################################################
+### Step 5: load the INDELi-E model (pre-trained) for predicting 1aa deletions, one-hot encode your data and save predictions
+
+## load the pre-trained model
+load("D:/Rdata/Bioinformatics_Project_1/INDELiE_deletions_model_pretrained.RData")
+
+
+## one-hot encode your data
+one_hot_encoded_df <- simple_encoded_sec_struc[,c(3:7,10:12)] %>%
+  mutate(resid = as.factor(resid),
+         simple_struc = as.factor(simple_struc),
+         structure_before = as.factor(structure_before),
+         structure_after = as.factor(structure_after),
+         align_to_center = as.factor(align_to_center),
+         align_to_center_termini = as.factor(align_to_center_termini),
+         length = as.factor(length)) %>%
+  model.matrix(~ . - 1, data = .)
+
+
+## rename columns
+result <- rename_columns(one_hot_encoded_df, simple_encoded_sec_struc)
+one_hot_encoded_df <- result[[1]]
+
+## you need to add any columns that are missing so the training df matches the one_hot_encoded_df columns.
+missing<-names(pred_training[!(names(pred_training) %in% names(one_hot_encoded_df))])
+
+for (o in missing){
+  one_hot_encoded_df[[o]] <- 0
+}
+
+### run the predictions for 1aa deletions 
+columns_to_include <- which(!names(one_hot_encoded_df) %in% c("ddG_ML_ins", "ddG_ML_subs"))
+
+r_new<-model.matrix(fpred, model.frame(one_hot_encoded_df[,columns_to_include]))[,-1]
+one_hot_encoded_df$predicted_INDELi<-predict(r_best_model_indeliE, s = r_best_lambda_indeliE, newx = r_new)
+
+indeliE_dels<-data.frame(protein=one_hot_encoded_df$domain, Pos=one_hot_encoded_df$Pos, esm1v=one_hot_encoded_df$esm1v, INDELiE=one_hot_encoded_df$predicted_INDELi)
+
+write.table(indeliE_dels, "D:/Rdata/Bioinformatics_Project_1/indeliE_dels.txt", row.names=F, quote=F)
+
+
+##############################################################################
+### Step 5: load the INDELi-E model (pre-trained) for predicting 1aa insertions
+
+## load the pre-trained model.
+load("D:/Rdata/Bioinformatics_Project_1/INDELiE_insertions_model_pretrained.RData")
+
+### run the predictions for 1aa insertions
+columns_to_include <- which(!names(one_hot_encoded_df) %in% c("ddG_ML_dels", "ddG_ML_subs"))
+
+r_new<-model.matrix(fpred, model.frame(one_hot_encoded_df[,columns_to_include]))[,-1]
+one_hot_encoded_df$predicted_INDELi<-predict(r_best_model_indeliE, s = r_best_lambda_indeliE, newx = r_new)
+
+indeliE_ins<-data.frame(protein=one_hot_encoded_df$domain, Pos=one_hot_encoded_df$Pos, esm1v=one_hot_encoded_df$esm1v, INDELiE=one_hot_encoded_df$predicted_INDELi)
+
+write.table(indeliE_ins, "D:/Rdata/Bioinformatics_Project_1/indeliE_ins.txt", row.names=F, quote=F)
+```
+
+```{r Plots for IndeliE and ESM-Variant}
+
+# Load the uploaded data for deletions and insertions
+deletions_path = "D:/Rdata/Bioinformatics_Project_1/indeliE_dels.txt"
+insertions_path = "D:/Rdata/Bioinformatics_Project_1/indeliE_ins.txt"
+reality_combined <- dplyr::inner_join(del_variants, in_variants, by = "Pos",suffix = c("_Deletion", "_Insertion"))
+deletions <- read.table(deletions_path, sep = " ", header = TRUE, fill = TRUE, blank.lines.skip = TRUE)
+insertions <- read.table(insertions_path, sep = " ", header = TRUE, fill = TRUE, blank.lines.skip = TRUE)
+
+# esm-variant case
+deletions_esm_path = "D:/Rdata/Bioinformatics_Project_1/results_deletions.csv"
+insertions_esm_path = "D:/Rdata/Bioinformatics_Project_1/results_insertions.csv"
+
+esm_deletions <- read.csv(deletions_esm_path, header = TRUE)
+esm_insertions <- read.csv(insertions_esm_path, header = TRUE)
+
+# Merge data
+
+# Add esm_score to deletions and insertion dataframe
+deletions <- merge(deletions, 
+                  esm_deletions[, c("position", "esm_score")], 
+                  by.x = "Pos", 
+                  by.y = "position", 
+                  all.x = TRUE)
+
+insertions <- merge(insertions, 
+                  esm_insertions[, c("position", "esm_score")], 
+                  by.x = "Pos", 
+                  by.y = "position", 
+                  all.x = TRUE)
+
+deletions$Type <- "Deletion"
+insertions$Type <- "Insertion"
+
+combined <- rbind(deletions, insertions)
+
+#  (s1) for Deletion
+p1 <- ggplot(reality_combined, aes(x = Fitness_Deletion)) +
+  geom_histogram(bins = 50, fill = "skyblue", color = "black", alpha = 0.7) +
+  labs(title = "Fitness Distribution for Deletions[Indeli]", x = "Fitness score", y = "Frequency")+
+  theme(
+    panel.background = element_rect(fill = "white", color = "white"),
+    plot.background = element_rect(fill = "white", color = "white")
+  )  +
+  theme_minimal()
+
+print(p1)
+
+
+# (s1) for Insertion
+p2 <- ggplot(reality_combined, aes(Fitness_Insertion)) +
+  geom_histogram(bins = 50, fill = "salmon", color = "black", alpha = 0.7) +
+  labs(title = "Fitness Distribution for Insertions(Alanine)[Indeli]", x = "Fitness score", y = "Frequency") +
+  theme(
+    panel.background = element_rect(fill = "white", color = "white"),
+    plot.background = element_rect(fill = "white", color = "white")
+  )  +
+  theme_minimal()
+
+print(p2)
+#  (esm_1b) for Deletion
+p3 <- ggplot(deletions, aes(x = esm_score)) +
+  geom_histogram(bins = 50, fill = "skyblue", color = "black", alpha = 0.7) +
+  labs(title = "Fitness Distribution for Deletions[ESM1b]", x = "Fitness score", y = "Frequency") +
+  theme(
+    panel.background = element_rect(fill = "white", color = "white"),
+    plot.background = element_rect(fill = "white", color = "white")
+  )  +
+  theme_minimal()
+
+print(p3)
+
+# (esm_1b) for Insertion
+p4 <- ggplot(insertions, aes(x = esm_score)) +
+  geom_histogram(bins = 50, fill = "salmon", color = "black", alpha = 0.7) +
+  labs(title = "Fitness Distribution for Insertions(Alanine)[ESM-Variant]", x = "Fitness score", y = "Frequency") +
+  theme(
+    panel.background = element_rect(fill = "white", color = "white"),
+    plot.background = element_rect(fill = "white", color = "white")
+  )  +
+  theme_minimal()
+
+print(p4)
+
+
+```
+
+
+```{r Comparision sites analysis}
+
+# Merge the data
+prediction_combined <- merge(deletions, insertions , by = "Pos", suffixes = c("_Deletion", "_Insertion"))
+write.table(prediction_combined, "prediction_combined.txt", row.names = FALSE, sep = "\t", quote = FALSE)
+write.table(reality_combined, "prediction_combined.txt", row.names = FALSE, sep = "\t", quote = FALSE)
+
+# Calculate Pearson correlation and linear model for INDELi and ESM_variant
+cor_value <- cor(prediction_combined$esm_score_Insertion, prediction_combined$esm_score_Deletion, method = "pearson")
+lm_model <- lm(esm_score_Deletion ~ esm_score_Insertion, data = prediction_combined)
+lm_eq <- sprintf("y = %.3fx + %.3f", coef(lm_model)[2], coef(lm_model)[1])
+
+comparison <- ggplot(prediction_combined, aes(x = esm_score_Insertion, y = esm_score_Deletion)) +
+  geom_point(color = "blue", size = 3) +
+  geom_smooth(method = "lm", color = "red") +
+  labs(title = "Fitness value Comparison ESM-Variant(Whole sequence): Insertions(Alanine) vs Deletions",
+       x = "Fitness (Insertions(Alanine))",
+       y = "Fitness (Deletions)") +
+  theme_minimal() +
+  theme(
+    panel.background = element_rect(fill = "white", color = "white"),
+    plot.background = element_rect(fill = "white", color = "white")
+  ) +
+  # Move annotations to top left by adjusting x and y coordinates
+  annotate("text", 
+           x = -20,  # Set to left side of x-axis
+           y = 0,    # Set to top of y-axis
+           label = sprintf("Pearson r = %.3f", cor_value),
+           hjust = 0,
+           vjust = 1) +
+  annotate("text", 
+           x = -20,  # Same x position as above
+           y = -2,   # Slightly below the first annotation
+           label = lm_eq,
+           hjust = 0,
+           vjust = 1)
+
+# Save the plot
+ggsave("plots/prediction_combined_Comparison_plot_esm_(Whole sequence).png", comparison, width = 12, height = 8, dpi = 300)
+
+# INDELi-E
+cor_value <- cor(prediction_combined$s1_Insertion, prediction_combined$s1_Deletion, method = "pearson")
+lm_model <- lm(s1_Deletion ~ s1_Insertion, data = prediction_combined)
+lm_eq <- sprintf("y = %.3fx + %.3f", coef(lm_model)[2], coef(lm_model)[1])
+
+# Create the plot with annotations
+comparison <- ggplot(prediction_combined, aes(x = s1_Insertion, y = s1_Deletion)) +
+  geom_point(color = "blue", size = 3) +
+  geom_smooth(method = "lm", color = "red") +
+  labs(title = "Fitness value Comparison INDELi-E (Whole sequence): Insertions(Alanine) vs Deletions",
+       x = "Fitness (Insertions(Alanine))",
+       y = "Fitness (Deletions)") +
+  theme_minimal() +
+  theme(
+    panel.background = element_rect(fill = "white", color = "white"),
+    plot.background = element_rect(fill = "white", color = "white")
+  ) +
+  annotate("text", 
+           x = min(prediction_combined$s1_Insertion), 
+           y = max(prediction_combined$s1_Deletion),
+           label = sprintf("Pearson r = %.3f", cor_value),
+           hjust = 0,
+           vjust = 1) +
+  annotate("text", 
+           x = min(prediction_combined$s1_Insertion), 
+           y = max(prediction_combined$s1_Deletion) * 0.95,
+           label = lm_eq,
+           hjust = 0,
+           vjust = 1)
+
+# Save the plot
+ggsave("plots/prediction_combined_Comparison_plot_INDELi_E(Whole sequence).png", comparison, width = 12, height = 8, dpi = 300)
+
+# Extract outliers and save them(Pos info from Uniprot represents domain)
+prediction_combined$residuals <- residuals(lm_model)
+outliers <- prediction_combined[
+  abs(prediction_combined$residuals) > 0.2 & 
+  prediction_combined$Pos > 48 & 
+  prediction_combined$Pos < 261, 
+]
+print(outliers)
+write.table(outliers, "outliers.txt", row.names = FALSE, sep = "\t", quote = FALSE)
+
+comparison <- ggplot(outliers, aes(x = s1_Insertion, y = s1_Deletion)) +
+  geom_point(color = "blue", size = 3) +
+  geom_text(aes(label = Pos), vjust = -1, size = 3) +
+  labs(title = "Predictions Fitness value Comparison for Outliers INDELi-E(Domain)",
+       x = "Predictions Fitness value (Insertions Alanine)",
+       y = "Predictions Fitness value(Deletions)") +
+  theme_minimal() +
+  theme(
+    panel.background = element_rect(fill = "white", color = "white"),
+    plot.background = element_rect(fill = "white", color = "white")
+  )
+ggsave("plots/Comparison_outliers_plot(Domain).png", comparison, width = 12, height = 8, dpi = 300)
+
+# Calculate Pearson correlation and linear model
+cor_value <- cor(reality_combined$Fitness_Insertion, reality_combined$Fitness_Deletion, method = "pearson")
+lm_model <- lm(Fitness_Deletion ~ Fitness_Insertion, data = reality_combined)
+lm_eq <- sprintf("y = %.3fx + %.3f", coef(lm_model)[2], coef(lm_model)[1])
+
+# Create the plot with annotations
+comparison <- ggplot(reality_combined, aes(x = Fitness_Insertion, y = Fitness_Deletion)) +
+  geom_point(color = "blue", size = 3) +
+  geom_smooth(method = "lm", color = "red") +
+  labs(title = "Fitness value Reality Comparison(Whole sequence): Insertions(Alanine) vs Deletions",
+       x = "Fitness (Insertions(Alanine))",
+       y = "Fitness (Deletions)") +
+  theme_minimal() +
+  theme(
+    panel.background = element_rect(fill = "white", color = "white"),
+    plot.background = element_rect(fill = "white", color = "white")
+  ) +
+  annotate("text", 
+           x = min(reality_combined$Fitness_Insertion), 
+           y = max(reality_combined$Fitness_Deletion),
+           label = sprintf("Pearson r = %.3f", cor_value),
+           hjust = 0,
+           vjust = 1) +
+  annotate("text", 
+           x = min(reality_combined$Fitness_Insertion), 
+           y = max(reality_combined$Fitness_Deletion) * 0.95,
+           label = lm_eq,
+           hjust = 0,
+           vjust = 1)
+
+# Save the plot
+ggsave("plots/reality_combined_Comparison_plot(Whole sequence).png", comparison, width = 12, height = 8, dpi = 300)
+
+# Extract outliers and save them(Pos info from Uniprot represents domain)
+reality_combined$residuals <- residuals(lm_model)
+outliers <- reality_combined[
+  abs(reality_combined$residuals) > 0.2 & 
+  reality_combined$Pos > 48 & 
+  reality_combined$Pos < 261, 
+]
+print(outliers)
+# write.table(outliers, "outliers.txt", row.names = FALSE, sep = "\t", quote = FALSE)
+
+comparison <- ggplot(outliers, aes(x = Fitness_Insertion, y = Fitness_Insertion)) +
+  geom_point(color = "blue", size = 3) +
+  geom_text(aes(label = Pos), vjust = -1, size = 3) +
+  labs(title = "Predictions Fitness value Comparison for Outliers(Domain)",
+       x = "Predictions Fitness value (Insertions Alanine)",
+       y = "Predictions Fitness value(Deletions)") +
+  theme_minimal() +
+  theme(
+    panel.background = element_rect(fill = "white", color = "white"),
+    plot.background = element_rect(fill = "white", color = "white")
+  )
+ggsave("plots/reality_Comparison_outliers_plot(Domain).png", comparison, width = 12, height = 8, dpi = 300)
+```
+
+```{r Comparsion with reality and prediction}
+insertion_combined <- dplyr::inner_join(in_variants, insertions, by = "Pos")
+deletion_combined <- dplyr::inner_join(del_variants, deletions, by = "Pos")
+
+# For Deletions comparison plot
+cor_value_del <- cor(deletion_combined$s1, deletion_combined$Fitness, method = "pearson")
+lm_model_del <- lm(Fitness ~ s1, data = deletion_combined)
+lm_eq_del <- sprintf("y = %.3fx + %.3f", coef(lm_model_del)[2], coef(lm_model_del)[1])
+
+# Plot Fitness value comparison for Deletions
+comparison <- ggplot(deletion_combined, aes(x = s1, y = Fitness)) +
+  geom_point(color = "blue", size = 3) +
+  geom_smooth(method = "lm", color = "red") +
+  labs(title = "Fitness value Comparison INDELi-E(Whole sequence): Deletions(Predicted) vs Deletions(Real)",
+       x = "Fitness (Deletions(Predicted))",
+       y = "Fitness (Deletions(Real))") +
+  theme_minimal() +
+  theme(
+    panel.background = element_rect(fill = "white", color = "white"),
+    plot.background = element_rect(fill = "white", color = "white")
+  ) +
+  annotate("text", 
+           x = min(deletion_combined$s1), 
+           y = max(deletion_combined$Fitness),
+           label = sprintf("Pearson r = %.3f", cor_value_del),
+           hjust = 0,
+           vjust = 1) +
+  annotate("text", 
+           x = min(deletion_combined$s1), 
+           y = max(deletion_combined$Fitness) * 0.95,
+           label = lm_eq_del,
+           hjust = 0,
+           vjust = 1)
+ggsave("plots/prediction_reality_Comparison_deletion_plot(Whole sequence).png", comparison, width = 12, height = 8, dpi = 300)
+
+# For Insertions comparison plot
+cor_value_in <- cor(insertion_combined$s1, insertion_combined$Fitness, method = "pearson")
+lm_model_in <- lm(Fitness ~ s1, data = insertion_combined)
+lm_eq_in <- sprintf("y = %.3fx + %.3f", coef(lm_model_in)[2], coef(lm_model_in)[1])
+
+comparison <- ggplot(insertion_combined, aes(x = s1, y = Fitness)) +
+  geom_point(color = "blue", size = 3) +
+  geom_smooth(method = "lm", color = "red") +
+  labs(title = "Fitness value Comparison INDELi-E(Whole sequence) inserting Alanine: Insertions(Predicted) vs Insertions(Real)",
+       x = "Fitness (Insertions(Predicted))",
+       y = "Fitness (Insertions(Real))") +
+  theme_minimal() +
+  theme(
+    panel.background = element_rect(fill = "white", color = "white"),
+    plot.background = element_rect(fill = "white", color = "white")
+  ) +
+  annotate("text", 
+           x = min(insertion_combined$s1), 
+           y = max(insertion_combined$Fitness),
+           label = sprintf("Pearson r = %.3f", cor_value_in),
+           hjust = 0,
+           vjust = 1) +
+  annotate("text", 
+           x = min(insertion_combined$s1), 
+           y = max(insertion_combined$Fitness) * 0.95,
+           label = lm_eq_in,
+           hjust = 0,
+           vjust = 1)
+ggsave("plots/prediction_reality_Comparison_insertion_plot(Whole sequence).png", comparison, width = 12, height = 8, dpi = 300)
+
+# Plot Fitness value comparison for Deletions
+cor_value_del <- cor(deletion_combined$esm_score, deletion_combined$Fitness, method = "pearson")
+lm_model_del <- lm(Fitness ~ esm_score, data = deletion_combined)
+lm_eq_del <- sprintf("y = %.3fx + %.3f", coef(lm_model_del)[2], coef(lm_model_del)[1])
+
+# Plot Fitness value comparison for Deletions
+comparison <- ggplot(deletion_combined, aes(x = esm_score, y = Fitness)) +
+  geom_point(color = "blue", size = 3) +
+  geom_smooth(method = "lm", color = "red") +
+  labs(title = "Fitness value Comparison ESM-Variant(Whole sequence): Deletions(Predicted) vs Deletions(Real)",
+       x = "Fitness (Deletions(Predicted))",
+       y = "Fitness (Deletions(Real))") +
+  theme_minimal() +
+  theme(
+    panel.background = element_rect(fill = "white", color = "white"),
+    plot.background = element_rect(fill = "white", color = "white")
+  ) +
+  annotate("text", 
+           x = min(deletion_combined$esm_score), 
+           y = max(deletion_combined$Fitness),
+           label = sprintf("Pearson r = %.3f", cor_value_del),
+           hjust = 0,
+           vjust = 1) +
+  annotate("text", 
+           x = min(deletion_combined$esm_score), 
+           y = max(deletion_combined$Fitness) * 0.95,
+           label = lm_eq_del,
+           hjust = 0,
+           vjust = 1)
+ggsave("plots/prediction_reality_Comparison_deletion_plot_esm(Whole sequence).png", comparison, width = 12, height = 8, dpi = 300)
+
+# For Insertions comparison plot
+cor_value_in <- cor(insertion_combined$esm_score, insertion_combined$Fitness, method = "pearson")
+lm_model_in <- lm(Fitness ~ esm_score, data = insertion_combined)
+lm_eq_in <- sprintf("y = %.3fx + %.3f", coef(lm_model_in)[2], coef(lm_model_in)[1])
+
+comparison <- ggplot(insertion_combined, aes(x = esm_score, y = Fitness)) +
+  geom_point(color = "blue", size = 3) +
+  geom_smooth(method = "lm", color = "red") +
+  labs(title = "Fitness value Comparison ESM-Variant(Whole sequence) inserting Alanine: Insertions(Predicted) vs Insertions(Real)",
+       x = "Fitness (Insertions(Predicted))",
+       y = "Fitness (Insertions(Real))") +
+  theme_minimal() +
+  theme(
+    panel.background = element_rect(fill = "white", color = "white"),
+    plot.background = element_rect(fill = "white", color = "white")
+  ) +
+  annotate("text", 
+           x = min(insertion_combined$esm_score), 
+           y = max(insertion_combined$Fitness),
+           label = sprintf("Pearson r = %.3f", cor_value_in),
+           hjust = 0,
+           vjust = 1) +
+  annotate("text", 
+           x = min(insertion_combined$esm_score), 
+           y = max(insertion_combined$Fitness) * 0.95,
+           label = lm_eq_in,
+           hjust = 0,
+           vjust = 1)
+ggsave("plots/prediction_reality_Comparison_insertion_plot_esm(Whole sequence).png", comparison, width = 12, height = 8, dpi = 300)
+```
+
+```{r Pymol Deletion}
+
+# PyMOL>align 1zg4, Deletion_alphafold2
+# Match: read scoring matrix.
+# Match: assigning 286 x 285 pairwise scores.
+# MatchAlign: aligning residues (286 vs 285)...
+# MatchAlign: score 1453.000
+# ExecutiveAlign: 2203 atoms aligned.
+# ExecutiveRMS: 157 atoms rejected during cycle 1 (RMSD=1.89).
+# ExecutiveRMS: 107 atoms rejected during cycle 2 (RMSD=0.90).
+# ExecutiveRMS: 96 atoms rejected during cycle 3 (RMSD=0.41).
+# ExecutiveRMS: 80 atoms rejected during cycle 4 (RMSD=0.30).
+# ExecutiveRMS: 47 atoms rejected during cycle 5 (RMSD=0.27).
+# Executive: RMSD =    0.259 (1716 to 1716 atoms)
+# PyMOL>rms_cur 1zg4, Deletion_alphafold2
+# Executive: RMSD =    3.648 (1022 to 1022 atoms)
+# PyMOL>spectrum b, rainbow, 1zg4
+# Spectrum: range (41.00000 to 99.00000).
+# PyMOL>spectrum b, rainbow, Deletion_alphafold2
+# Spectrum: range (44.03000 to 98.94000).
+# PyMOL>select wt_atoms, 1zg4 and name CA+C+N+O
+# Selector: selection "wt_atoms" defined with 1144 atoms.
+# PyMOL>select mut_atoms, Deletion_alphafold2 and name CA+C+N+O
+# Selector: selection "mut_atoms" defined with 1140 atoms.
+# PyMOL>select interface_wt, (wt_atoms within 5 of mut_atoms)
+# Selector: selection "interface_wt" defined with 1084 atoms.
+# PyMOL>select interface_mut, (mut_atoms within 5 of wt_atoms)
+# Selector: selection "interface_mut" defined with 1081 atoms.
+# PyMOL>rms_cur interface_wt, interface_mut
+# Executive: RMSD =    1.905 (456 to 456 atoms)
+# PyMOL>dss interface_wt
+# PyMOL>dss interface_mut
+# PyMOL>show surface, interface_wt
+# PyMOL>show surface, interface_mut
+
+# PyMOL>rms_cur 1zg4, Insertion_alphafold2
+#  Executive: RMSD =    3.820 (1022 to 1022 atoms)
+# PyMOL>spectrum b, rainbow, Insertion_alphafold2
+# PyMOL>spectrum b, rainbow, 1zg4
+# Spectrum: range (41.00000 to 99.00000).
+# PyMOL>spectrum b, rainbow, Insertion_alphafold2
+# PyMOL>select wt_atoms, 1zg4 and name CA+C+N+O
+#  Selector: selection "wt_atoms" defined with 1144 atoms.
+# PyMOL>select mut_atoms, Insertion_alphafold2 and name CA+C+N+O
+# Selector: selection "mut_atoms" defined with 1148 atoms.
+# PyMOL>select interface_wt, (wt_atoms within 5 of mut_atoms)
+#  Selector: selection "interface_wt" defined with 1077 atoms.
+# PyMOL>select interface_mut, (mut_atoms within 5 of wt_atoms)
+#  Selector: selection "interface_mut" defined with 1081 atoms.
+# PyMOL>rms_cur interface_wt, interface_mut
+# Executive: RMSD =    1.869 (452 to 452 atoms)
+# PyMOL>dss interface_wt
+# PyMOL>dss interface_mut
+# PyMOL>show surface, interface_wt
+# PyMOL>show surface, interface_mut
+```
+![Structure site](D:/Rdata/Bioinformatics_Project_1/plots/115_site.png)
+![Structure site](D:/Rdata/Bioinformatics_Project_1/plots/Interface_plot_Insertion.png)
+![Structure site](D:/Rdata/Bioinformatics_Project_1/plots/Interface_plot_deletion.png)
+![Structure site](D:/Rdata/Bioinformatics_Project_1/plots/deletion_pae.png)
+![Structure site](D:/Rdata/Bioinformatics_Project_1/plots/deletion_plddt.png)
+![Structure site](D:/Rdata/Bioinformatics_Project_1/plots/Insertion_pae.png)
+![Structure site](D:/Rdata/Bioinformatics_Project_1/plots/Insertion_plddt.png)
