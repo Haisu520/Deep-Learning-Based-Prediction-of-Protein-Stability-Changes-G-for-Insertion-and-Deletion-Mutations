@@ -1,0 +1,85 @@
+REM  --------------------------------------------------------------------  1E0L
+REM                                                                        1E0L
+REM  STRIDE: Knowledge-based secondary structure assignment                1E0L
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         1E0L
+REM                                                                        1E0L
+REM  Residue accessible surface area calculation                           1E0L
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 1E0L
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       1E0L
+REM                                                                        1E0L
+REM  ------------------------ General information -----------------------  1E0L
+REM                                                                        1E0L
+HDR  SH3 DOMAIN                              30-MAR-00   1E0L              1E0L
+CMP  MOL_ID: 1;                                                            1E0L
+CMP   MOLECULE: FORMIN BINDING PROTEIN;                                    1E0L
+CMP   CHAIN: A;                                                            1E0L
+CMP   FRAGMENT: DOMAIN;                                                    1E0L
+CMP   ENGINEERED: YES                                                      1E0L
+SRC  MOL_ID: 1;                                                            1E0L
+SRC   ORGANISM_SCIENTIFIC: MUS MUSCULUS;                                   1E0L
+SRC   ORGANISM_COMMON: HOUSE MOUSE;                                        1E0L
+SRC   ORGANISM_TAXID: 10090;                                               1E0L
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 1E0L
+SRC   EXPRESSION_SYSTEM_TAXID: 562                                         1E0L
+AUT  M.J.MACIAS,V.GERVAIS,C.CIVERA,H.OSCHKINAT                             1E0L
+REM                                                                        1E0L
+REM  -------------------- Secondary structure summary -------------------  1E0L
+REM                                                                        1E0L
+CHN  /home/proj/stride/tmp/tmpvrbjuzpdb A                                  1E0L
+REM                                                                        1E0L
+REM                .         .         .                                   1E0L
+SEQ  1    GATAVSEWTEYKTADGKTYYYNNRTLESTWEKPQELK                37          1E0L
+STR       TTTTTT EEEEEETTTEEEEEETTTTEEE   TTTT                             1E0L
+REM                                                                        1E0L
+REM                                                                        1E0L
+REM                                                                        1E0L
+LOC  Strand       TRP     8 A      THR     13 A                            1E0L
+LOC  Strand       LYS    17 A      ASN     22 A                            1E0L
+LOC  Strand       GLU    27 A      THR     29 A                            1E0L
+LOC  TurnIV       GLY     1 A      ALA      4 A                            1E0L
+LOC  TurnIV       THR     3 A      SER      6 A                            1E0L
+LOC  TurnI        THR    13 A      GLY     16 A                            1E0L
+LOC  TurnI        ASN    22 A      THR     25 A                            1E0L
+LOC  TurnI        ASN    23 A      LEU     26 A                            1E0L
+LOC  TurnIV       PRO    33 A      LEU     36 A                            1E0L
+REM                                                                        1E0L
+REM  --------------- Detailed secondary structure assignment-------------  1E0L
+REM                                                                        1E0L
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      1E0L
+ASG  GLY A    1    1    T          Turn    360.00    140.46     129.2      1E0L
+ASG  ALA A    2    2    T          Turn   -171.97    120.95      78.7      1E0L
+ASG  THR A    3    3    T          Turn     50.59     34.09      90.0      1E0L
+ASG  ALA A    4    4    T          Turn    -88.74     56.35      68.0      1E0L
+ASG  VAL A    5    5    T          Turn     44.62     85.72      87.4      1E0L
+ASG  SER A    6    6    T          Turn    170.62   -172.06      78.6      1E0L
+ASG  GLU A    7    7    C          Coil     66.47     21.40      92.0      1E0L
+ASG  TRP A    8    8    E        Strand   -145.02    135.80      37.7      1E0L
+ASG  THR A    9    9    E        Strand   -118.60    143.18      47.4      1E0L
+ASG  GLU A   10   10    E        Strand    -92.57    148.01     107.8      1E0L
+ASG  TYR A   11   11    E        Strand   -144.12    144.53     117.2      1E0L
+ASG  LYS A   12   12    E        Strand   -107.96    128.13     150.8      1E0L
+ASG  THR A   13   13    E        Strand    -95.09    163.61      37.1      1E0L
+ASG  ALA A   14   14    T          Turn    -60.04    -27.73     110.3      1E0L
+ASG  ASP A   15   15    T          Turn    -65.28    -24.00     154.5      1E0L
+ASG  GLY A   16   16    T          Turn     98.71     31.37      56.7      1E0L
+ASG  LYS A   17   17    E        Strand   -117.58    148.28     114.5      1E0L
+ASG  THR A   18   18    E        Strand   -107.29    102.00      41.1      1E0L
+ASG  TYR A   19   19    E        Strand    -98.78    178.52      52.7      1E0L
+ASG  TYR A   20   20    E        Strand   -128.86    155.60      23.1      1E0L
+ASG  TYR A   21   21    E        Strand   -138.51    112.89      60.1      1E0L
+ASG  ASN A   22   22    E        Strand    -71.60    122.28       8.0      1E0L
+ASG  ASN A   23   23    T          Turn    -80.11    -58.08      43.7      1E0L
+ASG  ARG A   24   24    T          Turn    -45.44    -29.18     182.3      1E0L
+ASG  THR A   25   25    T          Turn   -112.57    -22.11      77.0      1E0L
+ASG  LEU A   26   26    T          Turn     65.60     46.64     118.1      1E0L
+ASG  GLU A   27   27    E        Strand   -122.53    124.70     116.8      1E0L
+ASG  SER A   28   28    E        Strand    -94.53    158.23      65.5      1E0L
+ASG  THR A   29   29    E        Strand   -164.54    153.74      43.1      1E0L
+ASG  TRP A   30   30    C          Coil    -90.31    -34.00     147.2      1E0L
+ASG  GLU A   31   31    C          Coil    -85.59    134.28     152.6      1E0L
+ASG  LYS A   32   32    C          Coil    -73.03    143.21      60.4      1E0L
+ASG  PRO A   33   33    T          Turn    -85.46     50.04      31.0      1E0L
+ASG  GLN A   34   34    T          Turn     31.10     36.11     150.2      1E0L
+ASG  GLU A   35   35    T          Turn   -153.85     24.15      41.2      1E0L
+ASG  LEU A   36   36    T          Turn   -135.03     44.53      24.6      1E0L
+ASG  LYS A   37   37    C          Coil   -117.61    360.00     209.9      1E0L

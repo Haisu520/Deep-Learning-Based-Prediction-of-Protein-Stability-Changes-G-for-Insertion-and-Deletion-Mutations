@@ -1,0 +1,118 @@
+REM  --------------------------------------------------------------------  1E6H
+REM                                                                        1E6H
+REM  STRIDE: Knowledge-based secondary structure assignment                1E6H
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         1E6H
+REM                                                                        1E6H
+REM  Residue accessible surface area calculation                           1E6H
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 1E6H
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       1E6H
+REM                                                                        1E6H
+REM  ------------------------ General information -----------------------  1E6H
+REM                                                                        1E6H
+HDR  SH3-DOMAIN                              17-AUG-00   1E6H              1E6H
+CMP  MOL_ID: 1;                                                            1E6H
+CMP   MOLECULE: SPECTRIN ALPHA CHAIN;                                      1E6H
+CMP   CHAIN: A;                                                            1E6H
+CMP   FRAGMENT: SH3-DOMAIN RESIDUES 964-1025;                              1E6H
+CMP   ENGINEERED: YES;                                                     1E6H
+CMP   MUTATION: YES                                                        1E6H
+SRC  MOL_ID: 1;                                                            1E6H
+SRC   ORGANISM_SCIENTIFIC: GALLUS GALLUS;                                  1E6H
+SRC   ORGANISM_COMMON: CHICKEN;                                            1E6H
+SRC   ORGANISM_TAXID: 9031;                                                1E6H
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI BL21(DE3);                       1E6H
+SRC   EXPRESSION_SYSTEM_TAXID: 469008;                                     1E6H
+SRC   EXPRESSION_SYSTEM_VECTOR: PBAT4;                                     1E6H
+SRC   EXPRESSION_SYSTEM_PLASMID: PBR322                                    1E6H
+AUT  M.C.VEGA,L.SERRANO                                                    1E6H
+REM                                                                        1E6H
+REM  -------------------- Secondary structure summary -------------------  1E6H
+REM                                                                        1E6H
+CHN  /home/proj/stride/tmp/tmpjnoG55pdb A                                  1E6H
+REM                                                                        1E6H
+REM                .         .         .         .         .               1E6H
+SEQ  1    DETGKELVLVLYDYQEKSPREVTIKKGDILTLLNSTNKDWWKIEVNDRQG   50          1E6H
+STR       TTTT  EEEE   B   TTTB  BTTTEEEEEEE  TTTEEEEEETTEEE               1E6H
+REM                                                                        1E6H
+REM                .                                                       1E6H
+SEQ  51   FVPAAYLKKLD                                          61          1E6H
+STR       EEEGGGEEEE                                                       1E6H
+REM                                                                        1E6H
+REM                                                                        1E6H
+REM                                                                        1E6H
+LOC  310Helix     ALA    55 A      TYR     57 A                            1E6H
+LOC  Strand       LEU     8 A      VAL     11 A                            1E6H
+LOC  Strand       ASP    29 A      ASN     35 A                            1E6H
+LOC  Strand       TRP    41 A      VAL     46 A                            1E6H
+LOC  Strand       ARG    49 A      PRO     54 A                            1E6H
+LOC  Strand       LEU    58 A      LEU     61 A                            1E6H
+LOC  TurnIV       ASP     2 A      GLY      5 A                            1E6H
+LOC  TurnI        SER    19 A      GLU     22 A                            1E6H
+LOC  TurnII       LYS    26 A      ASP     29 A                            1E6H
+LOC  TurnI        ASN    38 A      TRP     41 A                            1E6H
+LOC  TurnII'      VAL    46 A      ARG     49 A                            1E6H
+REM                                                                        1E6H
+REM  --------------- Detailed secondary structure assignment-------------  1E6H
+REM                                                                        1E6H
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      1E6H
+ASG  ASP A    2    1    T          Turn    360.00   -153.18     110.7      1E6H
+ASG  GLU A    3    2    T          Turn     26.27     44.85     118.4      1E6H
+ASG  THR A    4    3    T          Turn    101.60     79.16     108.1      1E6H
+ASG  GLY A    5    4    T          Turn    136.65    145.74      31.7      1E6H
+ASG  LYS A    6    5    C          Coil     93.70   -104.15     188.7      1E6H
+ASG  GLU A    7    6    C          Coil    -77.55    123.48      80.7      1E6H
+ASG  LEU A    8    7    E        Strand   -120.26    155.77      64.5      1E6H
+ASG  VAL A    9    8    E        Strand   -139.55    144.60       0.0      1E6H
+ASG  LEU A   10    9    E        Strand    -94.63    120.98      50.5      1E6H
+ASG  VAL A   11   10    E        Strand    -72.27    114.10       1.8      1E6H
+ASG  LEU A   12   11    C          Coil    -75.03    -33.17      54.6      1E6H
+ASG  TYR A   13   12    C          Coil   -149.43    156.12     125.5      1E6H
+ASG  ASP A   14   13    C          Coil    -62.49    151.46     102.4      1E6H
+ASG  TYR A   15   14    B        Bridge   -145.32    127.91      12.3      1E6H
+ASG  GLN A   16   15    C          Coil   -101.28    126.39     132.1      1E6H
+ASG  GLU A   17   16    C          Coil    -57.69    146.07      68.3      1E6H
+ASG  LYS A   18   17    C          Coil   -125.43    -24.41     162.4      1E6H
+ASG  SER A   19   18    T          Turn   -120.69    159.34      38.3      1E6H
+ASG  PRO A   20   19    T          Turn    -63.04    -13.90     145.7      1E6H
+ASG  ARG A   21   20    T          Turn    -96.56      4.27     151.7      1E6H
+ASG  GLU A   22   21    B        Bridge   -102.66    163.83       7.5      1E6H
+ASG  VAL A   23   22    C          Coil   -131.36    157.97       2.8      1E6H
+ASG  THR A   24   23    C          Coil    -97.96    131.31      30.1      1E6H
+ASG  ILE A   25   24    B        Bridge   -125.25    149.46       0.8      1E6H
+ASG  LYS A   26   25    T          Turn    -97.68    139.68     126.0      1E6H
+ASG  LYS A   27   26    T          Turn    -62.85    143.38     140.3      1E6H
+ASG  GLY A   28   27    T          Turn     83.44      1.65      47.4      1E6H
+ASG  ASP A   29   28    E        Strand    -85.88    147.45      67.4      1E6H
+ASG  ILE A   30   29    E        Strand   -107.39    117.96      95.3      1E6H
+ASG  LEU A   31   30    E        Strand   -128.21    162.14      15.0      1E6H
+ASG  THR A   32   31    E        Strand    -75.31    126.95      10.1      1E6H
+ASG  LEU A   33   32    E        Strand    -90.35    115.92       0.0      1E6H
+ASG  LEU A   34   33    E        Strand    -92.26    -29.51      28.5      1E6H
+ASG  ASN A   35   34    E        Strand   -162.43    115.09      66.3      1E6H
+ASG  SER A   36   35    C          Coil   -114.74     25.83      32.5      1E6H
+ASG  THR A   37   36    C          Coil    -71.69    -35.65     124.4      1E6H
+ASG  ASN A   38   37    T          Turn    -82.16    132.22      79.5      1E6H
+ASG  LYS A   39   38    T          Turn    -55.32    -41.63     172.8      1E6H
+ASG  ASP A   40   39    T          Turn   -101.60    -22.17      93.7      1E6H
+ASG  TRP A   41   40    E        Strand   -129.22    118.01      70.7      1E6H
+ASG  TRP A   42   41    E        Strand   -110.69    144.69      32.3      1E6H
+ASG  LYS A   43   42    E        Strand    -92.19    138.68      60.3      1E6H
+ASG  ILE A   44   43    E        Strand   -143.43    171.57       0.0      1E6H
+ASG  GLU A   45   44    E        Strand   -118.34    135.55      35.7      1E6H
+ASG  VAL A   46   45    E        Strand   -140.29    122.57       5.8      1E6H
+ASG  ASN A   47   46    T          Turn     56.32   -130.11     145.1      1E6H
+ASG  ASP A   48   47    T          Turn   -101.59     36.32     149.5      1E6H
+ASG  ARG A   49   48    E        Strand   -130.22    151.40      92.8      1E6H
+ASG  GLN A   50   49    E        Strand   -132.96    135.49      61.6      1E6H
+ASG  GLY A   51   50    E        Strand    177.47    178.60       4.2      1E6H
+ASG  PHE A   52   51    E        Strand    -93.86    155.91      67.1      1E6H
+ASG  VAL A   53   52    E        Strand   -153.08    172.46       0.0      1E6H
+ASG  PRO A   54   53    E        Strand    -70.07    137.34      16.8      1E6H
+ASG  ALA A   55   54    G      310Helix    -65.37    -36.86      10.8      1E6H
+ASG  ALA A   56   55    G      310Helix    -67.90    -12.32      76.6      1E6H
+ASG  TYR A   57   56    G      310Helix    -98.53     13.69      78.8      1E6H
+ASG  LEU A   58   57    E        Strand   -142.05    147.98       9.7      1E6H
+ASG  LYS A   59   58    E        Strand   -120.15    132.75     119.5      1E6H
+ASG  LYS A   60   59    E        Strand    -79.51    125.41      67.7      1E6H
+ASG  LEU A   61   60    E        Strand    -91.00    105.07      68.0      1E6H
+ASG  ASP A   62   61    C          Coil   -151.25    360.00     196.0      1E6H

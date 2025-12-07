@@ -1,0 +1,120 @@
+REM  --------------------------------------------------------------------  3I35
+REM                                                                        3I35
+REM  STRIDE: Knowledge-based secondary structure assignment                3I35
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         3I35
+REM                                                                        3I35
+REM  Residue accessible surface area calculation                           3I35
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 3I35
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       3I35
+REM                                                                        3I35
+REM  ------------------------ General information -----------------------  3I35
+REM                                                                        3I35
+HDR  TRANSPORT PROTEIN                       30-JUN-09   3I35              3I35
+CMP  MOL_ID: 1;                                                            3I35
+CMP   MOLECULE: LIM AND SH3 DOMAIN PROTEIN 1;                              3I35
+CMP   CHAIN: A;                                                            3I35
+CMP   FRAGMENT: SH3 DOMAIN;                                                3I35
+CMP   SYNONYM: LASP-1, MLN 50;                                             3I35
+CMP   ENGINEERED: YES                                                      3I35
+SRC  MOL_ID: 1;                                                            3I35
+SRC   ORGANISM_SCIENTIFIC: HOMO SAPIENS;                                   3I35
+SRC   ORGANISM_COMMON: HUMAN;                                              3I35
+SRC   ORGANISM_TAXID: 9606;                                                3I35
+SRC   GENE: LASP1, MLN50;                                                  3I35
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 3I35
+SRC   EXPRESSION_SYSTEM_TAXID: 562;                                        3I35
+SRC   EXPRESSION_SYSTEM_STRAIN: BL21(DE3)R3 PRARE;                         3I35
+SRC   EXPRESSION_SYSTEM_VECTOR_TYPE: PNIC-BSA4                             3I35
+AUT  M.I.SIPONEN,A.K.ROOS,C.H.ARROWSMITH,H.BERGLUND,C.BOUNTRA,R.CO         3I35
+AUT   A.M.EDWARDS,S.FLODIN,A.FLORES,S.GRASLUND,M.HAMMARSTROM,A.JOH         3I35
+AUT   I.JOHANSSON,T.KARLBERG,T.KOTENYOVA,A.KOTZSCH,T.KRAGH NIELSEN         3I35
+AUT   M.MOCHE,T.NYMAN,C.PERSSON,J.SAGEMARK,H.SCHUELER,P.SCHUTZ,            3I35
+AUT   A.G.THORSELL,L.TRESAUGUES,S.VAN DEN BERG,J.WEIGELT,M.WELIN,          3I35
+AUT   M.WISNIEWSKA,P.NORDLUND,STRUCTURAL GENOMICS CONSORTIUM (SGC)         3I35
+REM                                                                        3I35
+REM  -------------------- Secondary structure summary -------------------  3I35
+REM                                                                        3I35
+CHN  /home/proj/stride/tmp/tmpn8MaCrpdb A                                  3I35
+REM                                                                        3I35
+REM                .         .         .         .         .               3I35
+SEQ  1    KRYRAVYDYSAADEDEVSFQDGDTIVNVQQIDDGWMYGTVERTGDTGMLP   50          3I35
+STR         EEE   B   TTTB  BTTTEEEEEEEEEETTEEEEEEGGG EEEEEE               3I35
+REM                                                                        3I35
+REM                                                                        3I35
+SEQ  51   ANYVEAI                                              57          3I35
+STR       GGGEEE                                                           3I35
+REM                                                                        3I35
+REM                                                                        3I35
+REM                                                                        3I35
+LOC  310Helix     GLU   245 A      THR    247 A                            3I35
+LOC  310Helix     ALA   255 A      TYR    257 A                            3I35
+LOC  Strand       TYR   207 A      ALA    209 A                            3I35
+LOC  Strand       ASP   227 A      ASP    236 A                            3I35
+LOC  Strand       TRP   239 A      VAL    244 A                            3I35
+LOC  Strand       ASP   249 A      PRO    254 A                            3I35
+LOC  Strand       VAL   258 A      ALA    260 A                            3I35
+LOC  TurnI        ASP   217 A      GLU    220 A                            3I35
+LOC  TurnII       GLN   224 A      ASP    227 A                            3I35
+LOC  TurnIV       ILE   229 A      VAL    232 A                            3I35
+LOC  TurnI        ASP   236 A      TRP    239 A                            3I35
+REM                                                                        3I35
+REM  --------------- Detailed secondary structure assignment-------------  3I35
+REM                                                                        3I35
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      3I35
+ASG  LYS A  205    1    C          Coil    360.00     -4.23      97.9      3I35
+ASG  ARG A  206    2    C          Coil   -104.26    138.68     122.9      3I35
+ASG  TYR A  207    3    E        Strand   -128.53    160.83      46.5      3I35
+ASG  ARG A  208    4    E        Strand   -121.52    134.82      76.2      3I35
+ASG  ALA A  209    5    E        Strand    -71.68    132.49       0.9      3I35
+ASG  VAL A  210    6    C          Coil   -101.86    -14.53      35.6      3I35
+ASG  TYR A  211    7    C          Coil   -138.52    155.34     141.6      3I35
+ASG  ASP A  212    8    C          Coil    -61.11    145.28      98.3      3I35
+ASG  TYR A  213    9    B        Bridge   -141.37    135.20      37.9      3I35
+ASG  SER A  214   10    C          Coil   -106.78    119.37      97.8      3I35
+ASG  ALA A  215   11    C          Coil    -52.46    132.44      33.2      3I35
+ASG  ALA A  216   12    C          Coil    -78.28    -22.12      80.5      3I35
+ASG  ASP A  217   13    T          Turn   -161.22   -174.78      85.4      3I35
+ASG  GLU A  218   14    T          Turn    -71.03    -30.82     116.2      3I35
+ASG  ASP A  219   15    T          Turn    -82.60    -15.95     108.2      3I35
+ASG  GLU A  220   16    B        Bridge    -86.87    169.77      25.1      3I35
+ASG  VAL A  221   17    C          Coil   -117.68    155.71       0.0      3I35
+ASG  SER A  222   18    C          Coil   -109.45    151.55      49.5      3I35
+ASG  PHE A  223   19    B        Bridge   -162.78    166.15       7.7      3I35
+ASG  GLN A  224   20    T          Turn   -114.54    154.10     108.0      3I35
+ASG  ASP A  225   21    T          Turn    -48.17    129.49     103.8      3I35
+ASG  GLY A  226   22    T          Turn     95.76    -14.45      40.6      3I35
+ASG  ASP A  227   23    E        Strand    -67.33    144.86      14.1      3I35
+ASG  THR A  228   24    E        Strand    -94.45    134.74      23.3      3I35
+ASG  ILE A  229   25    E        Strand   -114.46    126.17       0.2      3I35
+ASG  VAL A  230   26    E        Strand   -120.99    166.67      21.4      3I35
+ASG  ASN A  231   27    E        Strand     55.65     41.30     119.1      3I35
+ASG  VAL A  232   28    E        Strand    -78.91    125.23      17.8      3I35
+ASG  GLN A  233   29    E        Strand   -113.80    140.76     140.7      3I35
+ASG  GLN A  234   30    E        Strand    -81.42    132.73     102.3      3I35
+ASG  ILE A  235   31    E        Strand    -99.59    -53.42      91.7      3I35
+ASG  ASP A  236   32    E        Strand   -152.45   -167.14      78.8      3I35
+ASG  ASP A  237   33    T          Turn    -55.69    -32.25     158.9      3I35
+ASG  GLY A  238   34    T          Turn    -95.03    -15.98      22.8      3I35
+ASG  TRP A  239   35    E        Strand   -141.78    137.96      66.5      3I35
+ASG  MET A  240   36    E        Strand   -124.14    165.67      10.2      3I35
+ASG  TYR A  241   37    E        Strand   -124.39    132.54     103.0      3I35
+ASG  GLY A  242   38    E        Strand   -175.87   -173.91       1.0      3I35
+ASG  THR A  243   39    E        Strand   -119.04    131.13      32.3      3I35
+ASG  VAL A  244   40    E        Strand    -80.71    109.36       0.2      3I35
+ASG  GLU A  245   41    G      310Helix    -56.52    -49.46     104.6      3I35
+ASG  ARG A  246   42    G      310Helix    -60.59    -32.56     137.8      3I35
+ASG  THR A  247   43    G      310Helix   -104.43    -14.23      73.1      3I35
+ASG  GLY A  248   44    C          Coil     74.84     12.13      51.4      3I35
+ASG  ASP A  249   45    E        Strand    -80.45    124.56      60.5      3I35
+ASG  THR A  250   46    E        Strand   -118.62    138.62      60.0      3I35
+ASG  GLY A  251   47    E        Strand    161.83   -162.79       1.7      3I35
+ASG  MET A  252   48    E        Strand    -83.35    140.03      55.7      3I35
+ASG  LEU A  253   49    E        Strand   -138.04    146.41       0.0      3I35
+ASG  PRO A  254   50    E        Strand    -76.37    128.93      12.2      3I35
+ASG  ALA A  255   51    G      310Helix    -64.21    -29.41      17.6      3I35
+ASG  ASN A  256   52    G      310Helix    -70.07    -13.89     139.1      3I35
+ASG  TYR A  257   53    G      310Helix    -91.49      0.81      82.4      3I35
+ASG  VAL A  258   54    E        Strand   -137.84    165.95      14.9      3I35
+ASG  GLU A  259   55    E        Strand   -138.80    144.38     111.9      3I35
+ASG  ALA A  260   56    E        Strand    -67.10    138.68      67.9      3I35
+ASG  ILE A  261   57    C          Coil    -93.28    360.00     114.3      3I35

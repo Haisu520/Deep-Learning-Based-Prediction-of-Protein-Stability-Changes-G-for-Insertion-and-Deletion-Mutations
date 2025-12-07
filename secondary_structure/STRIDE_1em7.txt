@@ -1,0 +1,108 @@
+REM  --------------------------------------------------------------------  1EM7
+REM                                                                        1EM7
+REM  STRIDE: Knowledge-based secondary structure assignment                1EM7
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         1EM7
+REM                                                                        1EM7
+REM  Residue accessible surface area calculation                           1EM7
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 1EM7
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       1EM7
+REM                                                                        1EM7
+REM  ------------------------ General information -----------------------  1EM7
+REM                                                                        1EM7
+HDR  MEMBRANE PROTEIN                        16-MAR-00   1EM7              1EM7
+CMP  MOL_ID: 1;                                                            1EM7
+CMP   MOLECULE: PROTEIN G;                                                 1EM7
+CMP   CHAIN: A;                                                            1EM7
+CMP   FRAGMENT: B1 DOMAIN;                                                 1EM7
+CMP   ENGINEERED: YES;                                                     1EM7
+CMP   MUTATION: YES                                                        1EM7
+SRC  MOL_ID: 1;                                                            1EM7
+SRC   ORGANISM_SCIENTIFIC: STREPTOCOCCUS SP.;                              1EM7
+SRC   ORGANISM_TAXID: 1306;                                                1EM7
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI BL21(DE3);                       1EM7
+SRC   EXPRESSION_SYSTEM_TAXID: 469008;                                     1EM7
+SRC   EXPRESSION_SYSTEM_STRAIN: BL21 (DE3);                                1EM7
+SRC   EXPRESSION_SYSTEM_VECTOR: PET-11                                     1EM7
+AUT  P.STROP,A.M.MARINESCU,S.L.MAYO                                        1EM7
+REM                                                                        1EM7
+REM  -------------------- Secondary structure summary -------------------  1EM7
+REM                                                                        1EM7
+CHN  /home/proj/stride/tmp/tmpGNhTVgpdb A                                  1EM7
+REM                                                                        1EM7
+REM                .         .         .         .         .               1EM7
+SEQ  1    TTYKLILNGKTLKGETTTEAVDAETAERVFKEYAKKNGVDGEWTYDDATK   50          1EM7
+STR        EEEEEEETTTT EEEEEE   HHHHHHHHHHHHHHH    EEEEEGGG                1EM7
+REM                                                                        1EM7
+REM                                                                        1EM7
+SEQ  51   TFTVTE                                               56          1EM7
+STR       EEEEE                                                            1EM7
+REM                                                                        1EM7
+REM                                                                        1EM7
+REM                                                                        1EM7
+LOC  AlphaHelix   ALA    23 A      ASN     37 A                            1EM7
+LOC  310Helix     ASP    47 A      THR     49 A                            1EM7
+LOC  Strand       THR     2 A      ASN      8 A                            1EM7
+LOC  Strand       GLY    14 A      GLU     19 A                            1EM7
+LOC  Strand       GLU    42 A      ASP     46 A                            1EM7
+LOC  Strand       THR    51 A      THR     55 A                            1EM7
+LOC  TurnIV       GLY     9 A      LEU     12 A                            1EM7
+REM                                                                        1EM7
+REM  --------------- Detailed secondary structure assignment-------------  1EM7
+REM                                                                        1EM7
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      1EM7
+ASG  THR A    1    1    C          Coil    360.00    143.04      76.3      1EM7
+ASG  THR A    2    2    E        Strand    -87.87    126.91      88.0      1EM7
+ASG  TYR A    3    3    E        Strand   -111.79    151.57      11.4      1EM7
+ASG  LYS A    4    4    E        Strand   -122.05    151.74      68.7      1EM7
+ASG  LEU A    5    5    E        Strand   -127.69    114.11       1.4      1EM7
+ASG  ILE A    6    6    E        Strand   -100.47    120.82      33.5      1EM7
+ASG  LEU A    7    7    E        Strand   -105.38    122.33       4.4      1EM7
+ASG  ASN A    8    8    E        Strand   -122.26    122.17      70.5      1EM7
+ASG  GLY A    9    9    T          Turn    165.14   -173.88      16.6      1EM7
+ASG  LYS A   10   10    T          Turn    -92.66    -18.28     211.2      1EM7
+ASG  THR A   11   11    T          Turn    -76.42    -54.17      89.6      1EM7
+ASG  LEU A   12   12    T          Turn   -153.96    136.86      54.1      1EM7
+ASG  LYS A   13   13    C          Coil   -122.68    125.48     164.8      1EM7
+ASG  GLY A   14   14    E        Strand    173.36   -170.95      34.6      1EM7
+ASG  GLU A   15   15    E        Strand   -144.98    136.56     114.6      1EM7
+ASG  THR A   16   16    E        Strand   -134.18    160.31      40.4      1EM7
+ASG  THR A   17   17    E        Strand   -129.18    160.84      89.4      1EM7
+ASG  THR A   18   18    E        Strand   -149.21    149.36      32.1      1EM7
+ASG  GLU A   19   19    E        Strand    -99.26    123.32     134.1      1EM7
+ASG  ALA A   20   20    C          Coil   -145.68    163.00       5.8      1EM7
+ASG  VAL A   21   21    C          Coil    -66.31    -36.25     124.5      1EM7
+ASG  ASP A   22   22    C          Coil   -149.32    175.69      66.2      1EM7
+ASG  ALA A   23   23    H    AlphaHelix    -71.19    -31.04      24.9      1EM7
+ASG  GLU A   24   24    H    AlphaHelix    -58.96    -47.67     128.2      1EM7
+ASG  THR A   25   25    H    AlphaHelix    -65.32    -48.93      58.4      1EM7
+ASG  ALA A   26   26    H    AlphaHelix    -53.52    -52.84       0.0      1EM7
+ASG  GLU A   27   27    H    AlphaHelix    -51.66    -36.08      58.3      1EM7
+ASG  ARG A   28   28    H    AlphaHelix    -64.94    -47.40     116.7      1EM7
+ASG  VAL A   29   29    H    AlphaHelix    -60.84    -49.75      58.2      1EM7
+ASG  PHE A   30   30    H    AlphaHelix    -62.02    -38.43       3.0      1EM7
+ASG  LYS A   31   31    H    AlphaHelix    -62.58    -40.83      71.0      1EM7
+ASG  GLU A   32   32    H    AlphaHelix    -65.67    -38.17     148.3      1EM7
+ASG  TYR A   33   33    H    AlphaHelix    -69.00    -44.72      71.0      1EM7
+ASG  ALA A   34   34    H    AlphaHelix    -62.50    -47.21       1.4      1EM7
+ASG  LYS A   35   35    H    AlphaHelix    -60.49    -47.10     152.8      1EM7
+ASG  LYS A   36   36    H    AlphaHelix    -55.31    -34.58     171.5      1EM7
+ASG  ASN A   37   37    H    AlphaHelix    -97.09     19.36      68.3      1EM7
+ASG  GLY A   38   38    C          Coil     65.32     34.00      56.4      1EM7
+ASG  VAL A   39   39    C          Coil   -110.21    137.39       7.1      1EM7
+ASG  ASP A   40   40    C          Coil   -113.83    -94.58     138.5      1EM7
+ASG  GLY A   41   41    C          Coil     55.11    175.72      28.4      1EM7
+ASG  GLU A   42   42    E        Strand    -92.01    127.32     157.7      1EM7
+ASG  TRP A   43   43    E        Strand    -97.13    133.08      52.7      1EM7
+ASG  THR A   44   44    E        Strand   -127.24    143.94      85.2      1EM7
+ASG  TYR A   45   45    E        Strand   -126.62    129.32      75.5      1EM7
+ASG  ASP A   46   46    E        Strand   -115.88    110.94      73.4      1EM7
+ASG  ASP A   47   47    G      310Helix    -60.68    -34.54     105.0      1EM7
+ASG  ALA A   48   48    G      310Helix    -66.00    -35.25      82.0      1EM7
+ASG  THR A   49   49    G      310Helix   -106.83      5.08      78.0      1EM7
+ASG  LYS A   50   50    C          Coil     49.00     39.83      82.7      1EM7
+ASG  THR A   51   51    E        Strand   -119.23    134.44      16.6      1EM7
+ASG  PHE A   52   52    E        Strand   -100.71    135.67       2.6      1EM7
+ASG  THR A   53   53    E        Strand   -122.51    128.93      45.1      1EM7
+ASG  VAL A   54   54    E        Strand   -120.07    123.00       0.0      1EM7
+ASG  THR A   55   55    E        Strand   -103.49    131.66      75.6      1EM7
+ASG  GLU A   56   56    C          Coil    -85.30    360.00      83.5      1EM7
