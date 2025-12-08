@@ -1,0 +1,25 @@
+¦¤¦¤G Prediction Models - All Features with Attention Weights
+======================================================================
+
+Top 4 Feature Attention Weights:
+----------------------------------------------------------------------
+
+DELETION:
+  charged_content                     importance: 0.314031  weight: 1.942
+  stability_risk_composite            importance: 0.207047  weight: 1.621
+  aromatic_content                    importance: 0.061563  weight: 1.185
+  proline_content                     importance: 0.055258  weight: 1.166
+
+INSERTION:
+  stability_risk_composite            importance: 0.390603  weight: 2.172
+  charged_content                     importance: 0.184191  weight: 1.553
+  aromatic_content                    importance: 0.076441  weight: 1.229
+  polar_content                       importance: 0.071130  weight: 1.213
+
+======================================================================
+Feature Groups Used:
+  - InDelLM predictions
+  - rSASA structural data
+  - Secondary structure data
+  - Sequence-based features
+  - Composite features (stability_risk, pathogenicity)
