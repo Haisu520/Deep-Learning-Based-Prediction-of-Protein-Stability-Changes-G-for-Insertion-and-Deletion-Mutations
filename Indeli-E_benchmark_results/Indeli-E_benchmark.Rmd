@@ -1,8 +1,8 @@
 ---
-title: "Bioinformatics_Project_1"
+title: "Indeli-E Benchmarking part"
 author: "Haisu Xia"
 output: pdf_document
-date: "2024-12-8"
+date: "2025-11-17"
 ---
 
 ```{r setup, include=FALSE}
@@ -471,3 +471,4 @@ cat(sprintf("  N:         %d mutations\n", nrow(insertion_combined)))
 cat("\n✓ Exported predictions to CSV files\n")
 cat("✓ Ready for three-model comparison in Python\n")
 ```
+
