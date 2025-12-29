@@ -1,1 +1,1 @@
-All datasets in dataset_benchmark are downloaded from huggingface(https://huggingface.co/datasets/genbio-ai/ProteinGYM-DMS/tree/main/indels)
+All datasets in dataset_benchmark are downloaded from huggingface(https://huggingface.co/datasets/genbio-ai/ProteinGYM-DMS/tree/main/indels) and used for ddG benchmarking
