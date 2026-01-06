@@ -192,7 +192,7 @@ Training details:
 - Retrieved using PDB IDs from experimental datasets
 
 **Language model:**
-- Modified IndelLM accessible via: https://colab.research.google.com/drive/1mp4fc9P6Z0hMjC4jFPLi01R4Rvo00wEB
+- Modified IndelLM accessible via: [https://colab.research.google.com/drive/1mp4fc9P6Z0hMjC4jFPLi01R4Rvo00wEB](https://colab.research.google.com/drive/1mp4fc9P6Z0hMjC4iFPLi01R4Rvo00wEB#scrollTo=oTL-RmsdX9AR)
 
 ## Known issues and limitations
 
